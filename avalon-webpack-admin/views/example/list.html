@@ -1,0 +1,29 @@
+<div ms-controller="list">
+    <div class="page-header">
+        <h1>
+            使用规范和示例
+            <small>
+                <i class="icon-double-angle-right"></i>
+                    <a href="http://114.113.112.13:8181/admin/document/useCriterion.doc">点我下载文档</a>
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <p style="font-size: 14px;margin-left:20px;text-indent: 2em;">该文档介绍框架的使用和规范，列举了几个简单的例子。</p>
+        <div class="col-xs-12">
+            <div>
+                <button ms-click="click_btn">点我</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <input ms-duplex="bind_event" type="text"/>
+                {{bind_event}}
+            </div>
+
+            <div style="margin-top: 20px;" ms-repeat="getProductList">
+                <p>{{el.cnName}}</p>
+            </div>
+        </div>
+    </div>
+</div>

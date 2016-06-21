@@ -1,0 +1,63 @@
+<div ms-controller="menuManage">
+    <div class="page-header">
+        <h1>
+            系统管理
+            <small>
+                <i class="icon-double-angle-right"></i>
+                菜单管理
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3" style="min-height: 300px; border: 1px solid #d5d5d5">
+            <div ms-widget="tree"></div>
+        </div>
+        <div class="col-lg-9">
+            <div style="" class="layui-layer-wrap">
+                <div style="padding: 20px;">
+                    <form class="form-horizontal" id="addSysMenu" action="" method="post">
+
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-sm-2 control-label"><label style="color: red;">*</label>从属菜单</label>-->
+                            <!--<div class="col-sm-10">-->
+                                <!--<input type="text" class="form-control menuName" name="menuName" id="menuName"-->
+                                       <!--placeholder="请输入菜单名称" value="" required="required" max="30">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><label style="color: red;">*</label>菜单名称</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control menuName" name="menuName" id="menuName"
+                                       placeholder="请输入菜单名称" value="" required="required" max="30" ms-duplex="menuData.name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><label style="color: red;">*</label>资源地址</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control menuUrl" name="menuUrl" id="menuUrl"
+                                       placeholder="请输入资源地址" value="" max="50" required="required" ms-duplex="menuData.myUrl">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><label style="color: red;">*</label>菜单图标</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control menuImg" name="menuImg" id="menuImg"
+                                       placeholder="请输入菜单图标" value="" max="30" required="required" ms-duplex="menuData.icon">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="btton" name="addSysMenuCommit" class="btn btn-primary btn-sm">确定</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

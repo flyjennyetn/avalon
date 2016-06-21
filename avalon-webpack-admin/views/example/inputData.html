@@ -1,0 +1,64 @@
+<div ms-controller="inputData">
+
+    <div class="form-group">
+        <label for="name" class="col-sm-3 control-label no-padding-right">姓名:</label>
+        <input type="text" class="form-control width-30" id="name" placeholder="name" ms-duplex="name">
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">性别:</label>
+        <div class="col-sm-9" style="padding-bottom: 15px;">
+            <select class="form-control width-40" id="form-field-select-1" ms-duplex="sex">
+                <option value="">&nbsp;</option>
+                <option value="M">男</option>
+                <option value="F">女</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="phone" class="col-sm-3 control-label no-padding-right">手机号:</label>
+        <input type="text" class="form-control width-30" id="phone" placeholder="phone" ms-duplex="phone">
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-3 control-label no-padding-right">邮箱:</label>
+        <input type="text" class="form-control width-30" id="email" placeholder="email" ms-duplex="email">
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="col-sm-3 control-label no-padding-right">图片:</label>
+        <div class="row">
+            <div class="col-xs-6">
+                <div id="uploader">
+                    <div class="queueList">
+                        <div id="dndArea" class="placeholder">
+                            <div id="filePicker"></div>
+                            <p>或将照片拖到这里，单次最多可选300张</p>
+                        </div>
+                    </div>
+                    <div class="statusBar" style="display:none;">
+                        <div class="progress">
+                            <span class="text">0%</span>
+                            <span class="percentage"></span>
+                        </div>
+                        <div class="info"></div>
+                        <div class="btns">
+                            <div id="filePicker2"></div>
+                            <div class="uploadBtn">开始上传</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .form-group .col-sm-3{
+        text-align: center;
+    }
+</style>

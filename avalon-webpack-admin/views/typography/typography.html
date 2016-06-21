@@ -1,0 +1,134 @@
+<style>
+    p{
+        font-size: 14px;
+        text-indent: 2em;
+        margin-left: 20px;
+    }
+    ul li{
+        list-style: none;
+    }
+    img{
+        width: 200px;
+        position: relative;
+        z-index: 33;
+    }
+    .ckewm{
+        cursor:pointer;
+        color: #003bb3;
+    }
+    .ewm{
+        display: none;
+        position: absolute;
+        right: 200px;
+        top:115px;
+    }
+    .ckewm:hover .ewm{
+        display: block;
+    }
+    b{
+        margin-left: -25px;
+    }
+</style>
+<div class="page-content" ms-controller="typography">
+    <div class="page-header">
+        <h1>
+            avalon框架
+            <small>
+                <i class="icon-double-angle-right"></i>
+                <a href="http://114.113.112.13:8181/admin/document/admin.zip">点我下载框架</a>
+                <!--(.page-header &gt; h1)-->
+            </small>
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div>
+        <p>框架构建者：何靖，技术维护人员：李其峰、荣倩倩。
+            <span class="ckewm">
+                查看相关微信号
+                <span class="ewm">
+                    <img src="images/hong.png" alt=""/>
+                    <img src="images/rong.png" alt=""/>
+                </span>
+            </span>
+        </p>
+        <ul>
+            <li>
+                <!--<h3>-->
+                    <!--前后端框架统一-->
+                    <!--&lt;!&ndash;<i class="icon-hand-right"></i>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<small><a href="http://114.113.112.13:8181/admin/document/advantage.doc">点我下载文档</a></small>&ndash;&gt;-->
+                <!--</h3>-->
+                <div id="treeChart" style="width:100%;height:700px;">
+                    <!--<img src="images/daotu.jpg" width="80%">-->
+                </div>
+                <p>
+                    <b>1.节约人力成本</b>
+                    <p>1.1释放后端开发人员工作</p>
+                    <p>1.2技术能力统一，资源可互相调配</p>
+                </p>
+                <p>
+                    <b>2.降低学习成本：</b>
+                    <p>2.1学习成本低，进入角色快：一套架构满足前后台功能、不用考虑页面效果怎么写、不用再考虑用户交互问题、不用考虑样式问题</p>
+                    <p>2.2丰富的学习资料库：已经集成所有UI控件、完整的开发文档、不断完善的实例、完整的接口系统</p>
+                </p>
+                <p>
+                    <b>3.减少服务器压力</b>
+                    <p>3.1减少请求次数</p>
+                    <p>3.2减少刷新次数</p>
+                    <p>3.3所有逻辑运算在前端，不用后台处理</p>
+                </p>
+            </li>
+            <li>
+                <h3>
+                    一、框架的介绍  <i class="icon-hand-right"></i>
+                    <small><a href="http://114.113.112.13:8181/admin/document/frameDesc.doc">点我下载文档</a></small>
+                </h3>
+                <p>在avalon框架的基础上，结合webpack搭建一套专属于自己的前端框架，引用现下比较流行的插件充实框架，更加方便后期开发。
+                    该版本为V1.1.0，5月30日第二次更新，增加框架模型介绍、框架运行步骤等内容，完善压缩打包功能说明。</p>
+            </li>
+            <li>
+                <h3>
+                    二、框架使用说明  <i class="icon-hand-right"></i>
+                    <small><a href="http://114.113.112.13:8181/admin/document/frameUse.doc">点我下载文档</a></small>
+                </h3>
+                <p>此文档介绍该框架的使用，包括怎样运行项目和新建一个view等。该文档版本为V1.0.0，5月30日第一次出稿，
+                    为了前端人员更加快速的熟悉和使用该框架，此文档诞生。
+                    由于是第一次出稿，不足和缺陷难免存在，但是后期会不断作出完善，更加精细的为大家介绍使用方法。</p>
+            </li>
+            <li>
+                <h3>
+                    三、插件引用说明  <i class="icon-hand-right"></i>
+                    <small><a href="http://114.113.112.13:8181/admin/document/plug_in.doc">点我下载文档</a></small>
+                </h3>
+                <p>此文档针对框架引用的九个框架分别做了介绍，简易的说明了各插件的使用方法。该文档版本为V1.0.0，5月30日第一次出稿，</p>
+                <div style="margin-left:15px;">
+                    <a href="http://avalonjs.github.io/#tutorial/home/index.html" target="_blank"><h5>1.avalon中文网：</h5></a>
+                    <p>该插件为avalon1.4.x版本，完美适配PC和移动端。
+                        avalon将所有前端代码彻底分成两部分，视图的处理通过绑定实现，业务逻辑则集中在一个个叫VM的对象中处理。</p>
+                    <a href="http://ued.qunar.com/oniui/index.html#!/widgets?widgetId=preview" target="_blank"><h5>2.oniui组件库：</h5></a>
+                    <p>该插件是基于avalon一款上传文件和图片的组件，去哪儿网的前端解决方案，兼容主流浏览器，支持预览、大文件和分块上传。</p>
+                    <a href="http://laydate.layui.com/" target="_blank"><h5>3.layer日期弹出层：</h5></a>
+                    <p>该插件为1.1版本 基于原生JavaScript，兼容所有主流浏览器的一款日期控件。
+                        该插件包含日期范围限制、开始日期设定、自定义日期格式、时间戳转换、当天的前后若干天返回、时分秒选择、智能响应、自动纠错、节日识别，快捷键操作等常规功能外，
+                        还拥有更多趋近完美的解决方案。还有人性皮肤体系，使用起来也非常方便。</p>
+                    <a href="http://fex.baidu.com/webuploader/getting-started.html" target="_blank"><h5>4.Web Uploader：</h5></a>
+                    <p>该插件是由百度 WebFE(FEX)团队开发的一个简单的以HTML5为主，FLASH为辅的现代文件上传组件。
+                        支持文件多选，类型过滤，拖拽(文件&文件夹)，截图工具图片直接粘贴等功能。
+                        并且采用大文件分片并发上传，极大的提高了文件上传效率。</p>
+                    <a href="http://www.bootcss.com/p/font-awesome/#icons-text-editor" target="_blank"><h5>5.图标库：</h5></a>
+                    <p>该插件为Font Awesome3.0版本，完全和Bootstrap 2.2.2版本兼容。
+                        兼容屏幕阅读器，可以用CSS控制图标样式，每个图标可以无限缩放。</p>
+                    <a href="http://echarts.baidu.com.cn/demo.html#scatter-anscombe-quartet" target="_blank"><h5>6.图表类型组件：</h5></a>
+                    <p>该插件为Echarts 3.0，有良好的适应效果，多种图标类型，更好的满足不同数据的处理需求。</p>
+                    <a href="https://select2.github.io/examples.html" target="_blank"><h5>7.下拉框样式（Select2）：</h5></a>
+                    <p>该插件为v4.0.3版本，可定制选择框,支持搜索、标签、远程数据集,还有许多其他高度使用的选项。</p>
+                    <a href="http://v3.bootcss.com/css/" target="_blank"><h5>8.全局css样式（Bootstrap）：</h5></a>
+                    <p>该插件版本为v3.3.5，适应所有设备，特性齐全。可以设置全局css样式，还有先进的栅格系统</p>
+                    <a href="http://layer.layui.com/" target="_blank"><h5>9.layer弹窗组件：</h5></a>
+                    <p>layer是一款web弹层组件，当前版本为2.3，兼容了包括IE6在内的所有主流浏览器。
+                        该插件尽可能地在以更少的代码展现更强健的功能，且格外注重性能的提升、易用和实用性，其中每一种弹层模式各具特色。</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div><!-- /.page-content -->
