@@ -1,0 +1,74 @@
+<div id="home" ms-controller="home">
+    <div class="content">
+        <!--<div class="themeImg"><img src="images/themeImg.png" alt=""/></div>-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ms-repeat="getHeadLine">
+                    <img ms-attr-src="el" width="100%">
+                    <!--<img src="images/themeImg.png" alt=""/>-->
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="schoolMenu">
+            <div class="primary" ms-on-click="primaryCourse">
+                <span><img src="images/primary.png" alt=""/></span>
+                <span class="textInfo">小学</span>
+            </div>
+            <div class="junior" ms-on-click="juniorCourse">
+                <span><img src="images/junior.png" alt=""/></span>
+                <span class="textInfo">初中</span>
+            </div>
+            <div class="high" ms-on-click="highCourse">
+                <span><img src="images/high.png" alt=""/></span>
+                <span class="textInfo">高中</span>
+            </div>
+        </div>
+        <img src="images/interval.png" alt=""/>
+    </div>
+    <ul class="primaryCourse">
+        <li ms-repeat="queryLessonGradeStage.pSchool">
+            <div class="showImg">
+                <img src="images/subject4_jTop.jpg" ms-on-click="studyVideo(el.lessonVideoId,el.lessonId)" alt=""/>
+            </div>
+            <div class="leftText">
+                <span class="courseName">{{el.lessonFname}}</span>
+                <div class="botTitle">
+                    <span class="tipLabel"><img src="images/tipLabel.png" alt=""/></span><span class="marPad">{{el.lessonSname}}</span><span class="marPad">{{el.extCode1}}</span>
+                    <!--<span class="marPad">教学视频</span>-->
+                </div>
+            </div>
+            <div class="test" ms-if="grade==0||grade==el.gradeId"><span><a ms-on-tap="learningLesson(el.gradeId,el.lessonId)">随堂考</a></span></div>
+        </li>
+    </ul>
+    <ul class="juniorCourse">
+        <li ms-repeat="queryLessonGradeStage.jSchool">
+            <div class="showImg">
+                <img src="images/subject4_jTop.jpg" ms-on-click="studyVideo(el.lessonVideoId,el.lessonId)" alt=""/>
+            </div>
+            <div class="leftText">
+                <span class="courseName">{{el.lessonFname}}</span>
+                <div class="botTitle">
+                    <span class="tipLabel"><img src="images/tipLabel.png" alt=""/></span><span class="marPad">{{el.lessonSname}}</span><span class="marPad">{{el.extCode1}}</span>
+                </div>
+            </div>
+            <div class="test" ms-if="grade==0||grade==el.gradeId"><span><a ms-on-tap="learningLesson(el.gradeId,el.lessonId)">随堂考</a></span></div>
+        </li>
+    </ul>
+    <ul class="highCourse">
+        <li ms-repeat="queryLessonGradeStage.sSchool">
+            <div class="showImg">
+                <img src="images/subject4_jTop.jpg" ms-on-click="studyVideo(el.lessonVideoId,el.lessonId)" alt=""/>
+            </div>
+            <div class="leftText">
+                <span class="courseName">{{el.lessonFname}}</span>
+                <div class="botTitle">
+                    <span class="tipLabel"><img src="images/tipLabel.png" alt=""/></span><span class="marPad">{{el.lessonSname}}</span><span class="marPad">{{el.extCode1}}</span>
+                </div>
+            </div>
+            <div class="test" ms-if="grade==0||grade==el.gradeId"><span><a ms-on-tap="learningLesson(el.gradeId,el.lessonId)">随堂考</a></span></div>
+        </li>
+    </ul>
+</div>
+
+

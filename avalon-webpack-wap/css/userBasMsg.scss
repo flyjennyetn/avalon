@@ -1,0 +1,83 @@
+#userBasMsg{
+  width: 100%;
+  .title {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    position: fixed;
+    background: #ffffff;
+    .goBack {
+      display: inline-block;
+      width: 1rem;
+      position: absolute;
+      left: 0.5rem;
+      img {
+        width: 100%;
+      }
+    }
+    .textCon {
+      display: inline-block;
+      text-align: center;
+      color: #34a150;
+    }
+  }
+  .userImg {
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    .showImg {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
+      background: #efefef;
+      margin: 0 auto;
+      img{
+        //width: 100%;
+        height: 5.5rem;
+        width: 5.5rem;
+        border-radius: 50%;
+      }
+    }
+    .userState {
+      font-size: 1.4rem;
+      padding: 2rem 0;
+      span{
+        vertical-align: middle;
+        img{
+          width: 0.5rem;
+          padding: 0 0.5rem;
+        }
+      }
+    }
+  }
+  ul{
+    padding: 0 1rem;
+    li{
+      border-bottom: 1px solid #E3E3E3;
+      padding: 1rem 0;
+      font-size: 0.8rem;
+      .left{
+        width: 20%;
+      }
+      .right{
+        outline: none;
+        text-align: right;
+        width: 80%;
+      }
+    }
+  }
+  .bottomCon{
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    img{
+      width: 0.8rem;
+    }
+    a{
+      text-decoration: underline;
+      color: #0000FF;
+    }
+  }
+}

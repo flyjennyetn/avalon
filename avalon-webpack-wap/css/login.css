@@ -1,0 +1,65 @@
+#login {
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4; }
+  #login .loginText {
+    padding: 4rem 0 2.5rem 0;
+    text-align: center;
+    position: relative;
+    font-size: 1.2rem; }
+    #login .loginText .goBack {
+      display: inline-block;
+      width: 1rem;
+      position: absolute;
+      left: 0.5rem;
+      top: 0.5rem; }
+      #login .loginText .goBack img {
+        width: 100%; }
+  #login .content {
+    padding: 0 1rem 2.5rem 1rem;
+    background: #ffffff; }
+    #login .content .item {
+      width: 100%;
+      position: relative; }
+      #login .content .item span {
+        width: 25%;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        text-align: left;
+        color: #a9a9a9;
+        padding: 1rem 0 0.5rem 0; }
+        #login .content .item span font {
+          color: #ff0000;
+          vertical-align: sub; }
+      #login .content .item input {
+        width: 70%;
+        outline: none;
+        /* padding-left: 0.5rem; */ }
+      #login .content .item .pwdBackLine {
+        width: 100%;
+        position: absolute;
+        bottom: -0.5rem; }
+        #login .content .item .pwdBackLine img {
+          width: 100%; }
+  #login .submit {
+    width: 100%;
+    padding-top: 2rem; }
+    #login .submit .button {
+      width: 75%;
+      height: 2.4rem;
+      line-height: 2.4rem;
+      border-radius: 1.2rem;
+      background: #66cc66;
+      text-align: center;
+      margin: 0 auto;
+      color: #ffffff; }
+    #login .submit .pwdBack {
+      width: 85%;
+      text-align: right;
+      padding: 0.5rem 0; }
+      #login .submit .pwdBack a {
+        text-decoration: underline;
+        font-size: 0.8rem;
+        color: #0000ff; }
+
+/*# sourceMappingURL=login.css.map */

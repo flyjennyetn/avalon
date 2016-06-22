@@ -1,0 +1,283 @@
+#myCourses {
+  width: 100%;
+  .aboutCourse{
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .title {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    position: fixed;
+    background: #fff;
+    z-index: 999;
+    .goBack {
+      display: inline-block;
+      width: 1rem;
+      position: absolute;
+      left: 0.5rem;
+      img {
+        width: 100%;
+      }
+    }
+    .textCon {
+      display: inline-block;
+      text-align: center;
+      color: #34a150;
+    }
+  }
+  .coursesMenu {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    position: relative;
+    padding-top: 2.5rem;
+    .menuInfoCon {
+      position: absolute;
+      width: 50%;
+      top: 2.0rem;
+      left: 1px;
+      background: #ffffff;
+      //border: 1px solid #E3E3E3;
+      display: none;
+      .upTab {
+        width: 100%;
+        position: absolute;
+        top: -8px;
+      }
+      .upClose {
+        //position: absolute;
+        //top: -6px;
+        //left: 45%;
+        //width: 12px;
+        //height: 10px;
+        //background: #fff;
+        //border-top: 1px solid #E3E3E3;
+        //border-left: 1px solid #E3E3E3;
+        //transform: rotate(45deg);
+        width: 100%;
+        position: absolute;
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+      div {
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+      }
+      .lines {
+        color: #1c98e7;
+        border-bottom: 1px solid #E3E3E3;
+        position: relative;
+        .trueImg {
+          display: inline-block;
+          width: 15%;
+          position: absolute;
+          left: 15%;
+          img {
+            width: 100%;
+          }
+        }
+        .textCon {
+          display: inline-block;
+          text-align: center;
+        }
+      }
+      .unLines {
+        border-bottom: 1px solid #E3E3E3;
+        position: relative;
+        .trueImg {
+          display: none;
+        }
+        .textCon {
+          display: inline-block;
+          text-align: center;
+        }
+      }
+    }
+    .menuInfoCon1 {
+      position: absolute;
+      width: 50%;
+      top: 2.0rem;
+      right: 1px;
+      background: #ffffff;
+      //border: 1px solid #E3E3E3;
+      display: none;
+      .upTab {
+        width: 100%;
+        position: absolute;
+        top: -8px;
+      }
+      .upClose {
+        width: 100%;
+        position: absolute;
+        img{
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+        }
+      }
+      div {
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+      }
+      .lines {
+        color: #1c98e7;
+        border-bottom: 1px solid #E3E3E3;
+        position: relative;
+        .trueImg {
+          display: inline-block;
+          width: 15%;
+          position: absolute;
+          left: 15%;
+          img {
+            width: 100%;
+          }
+        }
+        .textCon {
+          display: inline-block;
+          text-align: center;
+        }
+      }
+      .unLines {
+        border-bottom: 1px solid #E3E3E3;
+        position: relative;
+        .trueImg {
+          display: none;
+        }
+        .textCon {
+          display: inline-block;
+          text-align: center;
+        }
+      }
+    }
+    .menuCon {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      .menuName {
+        width: 43%;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 15px;
+        padding: 2vw 0 2vw 0;
+        border: 1px solid #ccc;
+      }
+      .bgColor{
+        color: #fff;
+        background: #2bac64;
+      }
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.6rem;
+        margin-left: 0.3rem;
+      }
+      .selectUp {
+        display: none;
+      }
+      .selectUp1 {
+        display: none;
+      }
+    }
+    .menuLine {
+      border-left: 1px solid #e3e3e3;
+    }
+  }
+  ul {
+    width: 100%;
+    li {
+      list-style: none;
+      width: 100%;
+      border-bottom: 1px solid #DDDDDD;
+      .showImg {
+        padding: 0.8rem;
+        img {
+          width: 100%;
+        }
+      }
+      .courseMsg {
+        padding: 0.5rem 0.8rem;
+        vertical-align: middle;
+        .conText {
+          width: 100%;
+          .leftText {
+            display: inline-block;
+            width: 100%;
+            .test{
+              height: 1.5rem;
+              width: 100%;
+              .courseName {
+                width: 25%;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                text-align: center;
+                background: #1c98e7;
+                font-size: 0.6rem;
+                color: #fff;
+                float: right;
+              }
+            }
+            .botTitle {
+              width: 100%;
+              padding: 0.1rem 0;
+              .tipLabel {
+                display: inline-block;
+                width: 0.8rem;
+                vertical-align: middle;
+                img {
+                  width: 100%;
+                }
+              }
+              .marPad {
+                font-size: 0.6rem;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 0.3rem;
+              }
+            }
+          }
+          .timeData {
+            width: 34%;
+            vertical-align: top;
+            text-align: right;
+            float: right;
+            img {
+              display: inline-block;
+              vertical-align: middle;
+              width: 0.8rem;
+            }
+            .time {
+              display: inline-block;
+              vertical-align: middle;
+              font-size: 0.6rem;
+              margin-left: 0.2rem;
+            }
+          }
+        }
+        .score {
+          width: 100%;
+          span {
+            font-size: 0.5rem;
+            display: inline-block;
+            width: 32%;
+          }
+        }
+      }
+    }
+    .noCourse {
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 2rem;
+      color: #ff0000;
+    }
+  }
+}

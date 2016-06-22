@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{%=o.htmlWebpackPlugin.options.title%}</title>
+    {% if (o.htmlWebpackPlugin.files.favicon) { %}
+    <link rel="shortcut icon" href="{%=o.htmlWebpackPlugin.files.favicon%}">
+    {% } %}
+    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
+    {% } %}
+    <script>
+//        if(!navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+//            window.location.href = 'http://www.qsndyr.com'
+//        }
+//        var _hmt = _hmt || [];
+//        (function() {
+//            var hm = document.createElement("script");
+//            hm.src = "//hm.baidu.com/hm.js?e253655863318018ce8165cb132177dc";
+//            var s = document.getElementsByTagName("script")[0];
+//            s.parentNode.insertBefore(hm, s);
+//        })();
+    </script>
+</head>
+<body ms-controller="root">
+    <div class="fillfather" ms-view=""></div>
+    <div ms-view="footer"></div>
+
+<script src="http://static.polyv.net/file/polyvplayer_v2.0.min.js"></script>
+{% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+<script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+{% } %}
+</body>
+</html>

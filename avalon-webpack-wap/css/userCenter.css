@@ -1,0 +1,69 @@
+#userCenter {
+  width: 100%; }
+  #userCenter .userImg {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0; }
+    #userCenter .userImg .showImg {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      background: #efefef;
+      margin: 0 auto; }
+    #userCenter .userImg .userState {
+      font-size: 0.6rem;
+      padding: 0.3rem 0; }
+      #userCenter .userImg .userState a {
+        color: #070707; }
+  #userCenter .basicMenu {
+    padding: 1rem 2rem 2rem 2rem;
+    background: #f4f4f4; }
+    #userCenter .basicMenu .classMsg {
+      display: inline-block;
+      width: 48%;
+      text-align: center; }
+      #userCenter .basicMenu .classMsg .circular {
+        width: 25vw;
+        height: 25vw;
+        line-height: 25vw;
+        border-radius: 50%;
+        background: #ffffff;
+        margin: 0 auto; }
+        #userCenter .basicMenu .classMsg .circular span {
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          margin: 0 auto; }
+          #userCenter .basicMenu .classMsg .circular span img {
+            width: 100%; }
+      #userCenter .basicMenu .classMsg .textMsg {
+        font-size: 0.6rem;
+        padding: 0.5rem 0; }
+        #userCenter .basicMenu .classMsg .textMsg a {
+          color: #818181; }
+  #userCenter .footer {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    bottom: 0;
+    background: #f6f2f1;
+    border-top: 1px solid #cdcdcd; }
+    #userCenter .footer .menu {
+      width: 90%;
+      margin: 0 auto; }
+      #userCenter .footer .menu div {
+        display: inline-block;
+        width: 31%;
+        text-align: center;
+        padding: 0.5rem 0; }
+        #userCenter .footer .menu div span {
+          display: inline-block;
+          width: 0.8rem;
+          height: 0.8rem; }
+          #userCenter .footer .menu div span img {
+            height: 100%; }
+        #userCenter .footer .menu div .textInfo {
+          width: 100%;
+          font-size: 0.6rem; }
+
+/*# sourceMappingURL=userCenter.css.map */

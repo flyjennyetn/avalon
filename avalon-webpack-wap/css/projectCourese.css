@@ -1,0 +1,57 @@
+#projectCourese {
+  width: 100%; }
+  #projectCourese .title {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #dddddd; }
+    #projectCourese .title .goBack {
+      display: inline-block;
+      width: 1rem;
+      position: absolute;
+      left: 0.5rem; }
+      #projectCourese .title .goBack img {
+        width: 100%; }
+    #projectCourese .title .textCon {
+      display: inline-block;
+      text-align: center;
+      color: #34a150; }
+  #projectCourese ul {
+    width: 100%;
+    padding-bottom: 3rem; }
+    #projectCourese ul li {
+      list-style: none;
+      border-bottom: 1px solid #DDDDDD;
+      padding: 0.8rem; }
+      #projectCourese ul li .titleMsg {
+        width: 100%;
+        padding: 0.1rem 0; }
+        #projectCourese ul li .titleMsg .tipLabel {
+          display: inline-block;
+          width: 0.8rem;
+          vertical-align: middle; }
+          #projectCourese ul li .titleMsg .tipLabel img {
+            width: 100%; }
+        #projectCourese ul li .titleMsg .marPad {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 0.3rem;
+          font-size: 0.8rem; }
+      #projectCourese ul li .showImg {
+        padding: 0.8rem 0;
+        position: relative; }
+        #projectCourese ul li .showImg img {
+          width: 100%; }
+        #projectCourese ul li .showImg .studyNum {
+          position: absolute;
+          top: 0;
+          right: 0.1rem;
+          font-size: 0.5rem; }
+      #projectCourese ul li .botTitle {
+        font-size: 0.8rem; }
+        #projectCourese ul li .botTitle p {
+          font-size: 0.6rem; }
+
+/*# sourceMappingURL=projectCourese.css.map */

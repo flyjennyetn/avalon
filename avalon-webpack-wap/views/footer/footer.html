@@ -1,0 +1,23 @@
+<div class="footer" ms-controller="footer"ms-if="hiddenState">
+    <div class="menu" >
+        <div>
+            <a href="#!/myCourses" class="link">
+                <span><img  ms-attr-src="directoryState == 'home' ? 'images/security.png' : 'images/unsecurity.png'" alt=""/></span>
+                <p class="textInfo"  ms-class="colorBottom:directoryState == 'home'">安全</p>
+            </a>
+        </div>
+        <div>
+            <a href="#!/projectCourese" class="link">
+                <span><img ms-attr-src="directoryState == 'subject' ? 'images/project.png' : 'images/unproject.png'" alt=""/></span>
+                <p class="textInfo" ms-class="colorBottom:directoryState == 'subject'">专题</p>
+            </a>
+
+        </div>
+        <div>
+            <a href="#!/userCenter" class="link">
+                <span><img ms-attr-src="directoryState == 'userCenter' ? 'images/mined.png' : 'images/mine.png'" alt=""/></span>
+                <p class="textInfo" ms-class="colorBottom:directoryState == 'userCenter'">我的</p>
+            </a>
+        </div>
+    </div>
+</div>

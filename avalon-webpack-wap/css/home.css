@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#home header {
+  width: 100%; }
+  #home header .topFormet {
+    width: 96%;
+    height: 1.5rem;
+    margin: 0 auto; }
+    #home header .topFormet img {
+      width: 100%; }
+  #home header .qsndyr {
+    width: 100%;
+    height: 1.5rem; }
+    #home header .qsndyr img {
+      width: 100%; }
+#home .content {
+  width: 100%; }
+  #home .content .themeImg {
+    width: 100%; }
+    #home .content .themeImg img {
+      width: 100%; }
+  #home .content .schoolMenu {
+    width: 93%;
+    margin: 0 auto;
+    padding: 1rem 0; }
+    #home .content .schoolMenu div {
+      display: inline-block;
+      width: 31%;
+      text-align: center;
+      color: #000; }
+      #home .content .schoolMenu div span {
+        display: inline-block;
+        width: 50%; }
+        #home .content .schoolMenu div span img {
+          width: 100%; }
+      #home .content .schoolMenu div .textInfo {
+        width: 100%;
+        font-size: 0.8rem; }
+    #home .content .schoolMenu .primary {
+      color: #a0df77; }
+#home img {
+  width: 100%; }
+#home ul {
+  width: 100%;
+  padding-bottom: 3rem; }
+  #home ul li {
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px solid #DDDDDD; }
+    #home ul li .courseName {
+      color: #000000;
+      font-size: 0.6rem;
+      padding: 0 0 0 0.8rem; }
+    #home ul li .showImg {
+      padding: 0.8rem;
+      position: relative; }
+      #home ul li .showImg img {
+        width: 100%; }
+    #home ul li .leftText {
+      display: inline-block;
+      width: 70%;
+      vertical-align: middle; }
+      #home ul li .leftText .botTitle {
+        width: 100%;
+        padding: 0.2rem 0 0.4rem 0; }
+        #home ul li .leftText .botTitle .tipLabel {
+          display: inline-block;
+          width: 6%;
+          vertical-align: middle;
+          padding-left: 0.8rem; }
+          #home ul li .leftText .botTitle .tipLabel img {
+            width: 100%; }
+        #home ul li .leftText .botTitle .marPad {
+          font-size: 0.8rem;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 0.3rem; }
+    #home ul li .test {
+      display: inline-block;
+      width: 25%;
+      vertical-align: middle; }
+      #home ul li .test span {
+        width: 100%;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        background: #1c98e7;
+        font-size: 0.6rem; }
+        #home ul li .test span a {
+          color: #ffffff; }
+#home .primaryCourse {
+  display: block; }
+#home .juniorCourse {
+  display: none; }
+#home .highCourse {
+  display: none; }
+#home .footer {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  background: #f6f2f1;
+  border-top: 1px solid #cdcdcd; }
+  #home .footer .menu {
+    width: 90%;
+    margin: 0 auto; }
+    #home .footer .menu div {
+      display: inline-block;
+      width: 31%;
+      text-align: center;
+      padding: 0.5rem 0; }
+      #home .footer .menu div span {
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem; }
+        #home .footer .menu div span img {
+          height: 100%; }
+      #home .footer .menu div .textInfo {
+        width: 100%;
+        font-size: 0.6rem; }
+
+.footer {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  background: #f6f2f1;
+  border-top: 1px solid #cdcdcd; }
+  .footer .menu {
+    width: 90%;
+    margin: 0 auto; }
+    .footer .menu div {
+      display: inline-block;
+      width: 31%;
+      text-align: center;
+      padding: 0.2rem 0; }
+      .footer .menu div span {
+        display: inline-block;
+        width: 1.4rem;
+        height: 1.4rem; }
+        .footer .menu div span img {
+          height: 100%; }
+      .footer .menu div .textInfo {
+        width: 100%;
+        font-size: 0.6rem;
+        color: #000; }
+      .footer .menu div .colorBottom {
+        color: #33cc93; }
+
+/*# sourceMappingURL=home.css.map */

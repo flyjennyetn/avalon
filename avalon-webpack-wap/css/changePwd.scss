@@ -1,0 +1,91 @@
+#changePwd{
+  width: 100%;
+  //height: 100%;
+  background: #f4f4f4;
+  .title {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #ccc;
+    z-index: 999;
+    .goBack {
+      display: inline-block;
+      width: 1rem;
+      position: absolute;
+      left: 0.5rem;
+      img {
+        width: 100%;
+      }
+    }
+    .textCon {
+      display: inline-block;
+      text-align: center;
+      color: #34a150;
+    }
+  }
+  .content{
+    margin-top: 2rem;
+    padding: 0 1rem 1.5rem 1rem;
+    background: #ffffff;
+    font-size: 0.8rem;
+    .item{
+      width: 100%;
+      position: relative;
+      span{
+        width: 33%;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        text-align: right;
+        color: #a9a9a9;
+        padding: 1rem 0 0.5rem 0;
+        font{
+          color: #ff0000;
+          vertical-align: sub;
+        }
+      }
+      input{
+        width: 62%;
+        outline: none;
+        margin-left: 0.5rem;
+        border: 1px solid #ddd;
+        height: 1.3rem;
+      }
+      .pwdBackLine{
+        width: 100%;
+        position: absolute;
+        bottom: -0.5rem;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .submit{
+    width: 100%;
+    padding: 1rem 0;
+    .button{
+      width: 80%;
+      height: 2rem;
+      line-height: 2rem;
+      border-radius: 1rem;
+      background: #66cc66;
+      text-align: center;
+      margin: 0 auto;
+      color: #ffffff;
+    }
+    .pwdBack{
+      width: 85%;
+      text-align: right;
+      padding: 0.5rem 0;
+      a{
+        text-decoration: underline;
+        font-size: 0.8rem;
+        color: #0000ff;
+      }
+    }
+  }
+}
