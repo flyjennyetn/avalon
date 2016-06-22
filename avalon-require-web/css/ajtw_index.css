@@ -1,0 +1,52 @@
+.all_bg{width: 100%; background: url("../images/bg.png") no-repeat scroll center; height: 658px; background-size: 100% 100%;}
+.education_detail{padding-top: 100px; height: 658px;width: 1024px;margin: 0 auto;}
+.education_detail .education_content{
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    margin: 0 20px 0 20px;
+    width: 300px;
+}
+.education_detail .education_content h2{ font-size: 26px; line-height: 36px; color:#fff; text-align: center; margin-bottom: 20px;}
+.education_detail .education_content p{ font-size: 16px; line-height: 36px; color:#fff; text-indent: 2em;}
+.education_detail .radio{
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    z-index: 1;
+    border: 10px solid #8e8a86;
+    border-radius: 10px;
+}
+
+.education_detail .radio .object{
+    position: relative;
+    z-index: -1;
+}
+
+.content_map{ padding: 110px 90px 80px; position: relative; top:0; left:0;width: 1024px;}
+.content_map h3{ position: absolute; top:120px; left: 340px; color:#245439; font-size: 30px;}
+.content_map a{ position: absolute; font-size: 26px; width: 300px; height: 70px; background: #245439; color:#fff; text-align: center; line-height: 70px; border-radius: 4px; margin-left: -100px;}
+.content_map .manage{top:380px; }
+.content_map .apply{top:465px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

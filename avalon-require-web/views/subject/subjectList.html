@@ -1,0 +1,29 @@
+<div class="special" ms-controller="subjectList">
+    <div class="row">
+        <img src="./dev/images/icon_special.png" class="pic">
+        <span class="title">专题课程</span>
+        <a href="#subjectList" class="more">更多课程 〉</a>
+    </div>
+
+    <div class="box" ms-repeat="getThematicPageList">
+        <div class="title">
+            <span class="rights">
+                已有<font>{{el.studyNum}}</font>人学习
+                <span ms-if="el.recordNum != 0">／已有<font>{{el.recordNum}}</font>人免费领取赠险</span>
+            </span>
+            <span class="lefts">{{el.thematicSname}}</span>
+        </div>
+        <div class="brief">
+            <div class="lefts">
+                <a ms-attr-href="el.extCode1+'/'+el.thematicNum" >
+                    <img ms-attr-src="imgAddress+el.photoUrl1">
+                </a>
+            </div><div class="rights">
+            <h4>课程教学内容</h4>
+            <p ms-repeat-fname="el.thematicFname">{{fname}}</p>
+            <a ms-attr-href="el.extCode1+'/'+el.thematicNum" >开始学习 〉</a>
+        </div>
+        </div>
+    </div>
+
+</div>

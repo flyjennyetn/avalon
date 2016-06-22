@@ -1,0 +1,91 @@
+<div class="safety" name="safety" ms-controller="courseLine">
+    <div class="row">
+        <img src="./dev/images/icon_play.png" class="pic">
+        <span class="title">安全课程 <font>●</font> 视频教学</span>
+        <ul class="tab" name="tab">
+            <li class="on">小学</li><li>初中</li><li>高中</li>
+        </ul>
+        <a href="#safetyList" class="more">更多课程 〉</a>
+    </div>
+
+    <ul class="plate" name="plate">
+        <li class="box" >
+            <a ms-repeat="pSchool" ms-if-loop="$first" ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId">
+                <div class="lefts" name="hint">
+                    <img ms-attr-src="imgAddress+el.videoImgUrl" >
+                    <div class="prompt">
+                        <div class="text">
+                            <h4>{{el.lessonSname}} {{el.extCode1}}</h4>
+                            <span>{{el.lessonFname}}</span>
+                        </div>
+                        <span ms-attr-href="'#safetyDetails/'+el.gradeId+'/'+el.lessonId" class="study">点击学习</span>
+                    </div>
+                </div>
+            </a>
+            <div class="rights" >
+                <a ms-repeat-part="pSchool" ms-if-loop="!$first" ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId">
+                    <div class="pic" name="hint">
+                        <img ms-attr-src="imgAddress+part.videoImgUrl" >
+                        <div class="prompt">
+                            <h4>{{part.lessonSname}} {{part.extCode1}}</h4>
+                            <span>{{part.lessonFname}}</span>
+                            <span ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId" class="study">点击学习</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="box" >
+            <a ms-repeat="jSchool" ms-if-loop="$first" ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId">
+                <div class="lefts" name="hint">
+                    <img ms-attr-src="imgAddress+el.videoImgUrl" >
+                    <div class="prompt">
+                        <div class="text">
+                            <h4>{{el.lessonSname}} {{el.extCode1}}</h4>
+                            <span>{{el.lessonFname}}</span>
+                        </div>
+                        <span ms-attr-href="'#safetyDetails/'+el.gradeId+'/'+el.lessonId" class="study">点击学习</span>
+                    </div>
+                </div>
+            </a>
+            <div class="rights" >
+                <a ms-repeat-part="jSchool" ms-if-loop="!$first" ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId">
+                    <div class="pic" name="hint">
+                        <img ms-attr-src="imgAddress+part.videoImgUrl" >
+                        <div class="prompt">
+                            <h4>{{part.lessonSname}} {{part.extCode1}}</h4>
+                            <span>{{part.lessonFname}}</span>
+                            <span ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId" class="study">点击学习</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="box" >
+            <a ms-repeat="sSchool" ms-if-loop="$first" ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId">
+                <div class="lefts" name="hint">
+                    <img ms-attr-src="imgAddress+el.videoImgUrl" >
+                    <div class="prompt">
+                        <div class="text">
+                            <h4>{{el.lessonSname}} {{el.extCode1}}</h4>
+                            <span>{{el.lessonFname}}</span>
+                        </div>
+                        <span ms-attr-href="'#safetyDetails/'+el.gradeId+'/'+el.lessonId" class="study">点击学习</span>
+                    </div>
+                </div>
+            </a>
+            <div class="rights" >
+                <a ms-repeat-part="sSchool" ms-if-loop="!$first" ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId">
+                    <div class="pic" name="hint">
+                        <img ms-attr-src="imgAddress+part.videoImgUrl" >
+                        <div class="prompt">
+                            <h4>{{part.lessonSname}} {{part.extCode1}}</h4>
+                            <span>{{part.lessonFname}}</span>
+                            <span ms-attr-href="'#safetyDetails/'+part.gradeId+'/'+part.lessonId" class="study">点击学习</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>

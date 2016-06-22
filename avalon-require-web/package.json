@@ -1,0 +1,43 @@
+{
+  "name": "教学平台",
+  "version": "1.0.0",
+  "description": "描述",
+  "keywords": "关键词",
+  "homepage": {
+    "url": "http://www.qsndyr.com/",
+    "email": "service@e-tianrong.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/xxxx"
+  },
+  "author": {
+    "name": "e-tianrong",
+    "email": "service@e-tianrong.com",
+    "url": "http://www.e-tianrong.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "tmodjs": "1.0.3"
+  },
+  "devDependencies": {
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-requirejs-optimize": "^0.3.1",
+    "gulp-rev": "^6.0.1",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-ruby-sass": "^2.0.5",
+    "gulp-uglify": "^1.5.1",
+    "run-sequence": "^1.1.5"
+  }
+}

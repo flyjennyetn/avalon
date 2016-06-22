@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+/* by snow */
+
+
+/*首页*/
+
+.committee_box{ width: 100%; min-width: 1200px; margin: 0 auto; height: 660px; color: #fff; background: url(../images/bg.png) no-repeat scroll center; background-size: 100% 100%;}
+.committee{ width: 860px; margin:0 auto;}
+.committee h3{ padding: 50px 0 10px; font-size: 26px; text-align: center;}
+.committee p{ font-size: 16px; line-height: 26px;}
+.video_box{ position: relative; z-index: 1000; width: 680px; margin: 10px auto; height: 420px; border-radius: 5px; border: 10px solid #8f8a86; background: url(../images/radio_media.png) no-repeat;}
+.video_box video{ width: 660px; height: 400px;  }
+
+.content_link{ padding: 40px 50px; overflow: hidden;}
+.content_link a{ float: left;}
+.go_study{ display: block; width: 374px; margin: 6px auto 50px; height: 46px; line-height: 46px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center; color: #fff; background-color: #245439;}
+
+
+
+/*专题课-小学*/
+.primary_banner{  background-color: #ffd489;}
+.primary_banner img{max-width:100%; height:420px;}
+.teaching_target{ padding: 34px 0 54px; background-color: #f8f8f8;}
+.teaching_target h3{ font-size: 30px; text-align: center; color: #245439;}
+.teaching_target p{ width: 800px; margin: 12px auto 0; font-size: 21px; line-height: 54px; color: #fff; text-align: center; background-color: #009040;}
+.teaching_target .qjcx{ display: block; margin: 30px auto 0;}
+
+
+
+.school_content{  text-align: center; margin: 0 auto; width: 80%;}
+.school_content h3{ font-size: 30px; text-align: center; color: #245439;}
+.school_content h5{ font-size: 18px; line-height: 56px; color: #245439;}
+.qjzx{  margin: 0 auto; overflow: hidden;}
+.qjzx dl{ float: left;
+    width: 32%;}
+.qjzx dl dt img{ }
+.qjzx dl dd{ font-size: 18px; color: #000;}
+
+.school_content h4{ padding-top: 40px; font-size: 24px; color: #245439;}
+.school_content p{ padding-top: 10px; font-size: 16px; line-height: 28px; color: #000;}
+.school_content strong{ display: block; padding-top: 30px; font-size: 16px; color: #000; font-weight: bold;}
+
+.school_videobg{width: 100%; margin: 0 auto; height: 630px; color: #fff; background: url(../images/media_bg.png) no-repeat; background-size: 100% 100%;}
+.school_videobg h3{ padding: 70px 0 20px; font-size: 30px; color: #fff; text-align: center;}
+.school_video{ position: relative; z-index: 1000; width: 680px; margin: 10px auto; height: 420px; border-radius: 5px; border: 10px solid #8f8a86; background: url(../images/radio_media.png) no-repeat;}
+.school_video video{ width: 660px; height: 400px;  }
+.go_get{ display: block; width: 650px; margin: 50px auto 60px; height: 80px; line-height: 80px; border-radius: 8px; font-size: 26px; font-weight: 400; text-align: center; color: #fff; background-color: #245439;}
+
+
+
+
+/*专题课-中学*/
+.middle_banner{ width: 100%; min-width: 1200px; height: 420px; background: url(../images/banner1.png) no-repeat scroll center; background-size: 100% 100%;}
+.middle_banner_bg{width: 60%;  height: 300px; color: #fff; background-color: rgba(0,0,0,0.4); padding-top: 35px;}
+.middle_banner_content{ float: right; width: 580px;}
+.middle_banner_content img{ max-width: 90%; margin: 16px 0 10px;}
+.middle_banner_content ul { margin-bottom: 10px;}
+.middle_banner_content ul li{ font-size: 14px; line-height: 22px;}
+.middle_banner_content ul li p{ text-indent: 5em; line-height: 22px;}
+
+
+
+
+
+
+
+
+
+

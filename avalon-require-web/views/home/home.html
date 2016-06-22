@@ -1,0 +1,38 @@
+<div id="index"  ms-controller="home" >
+
+    <div class="slider" style="z-index: 1">
+        <ul class="slider__wrapper">
+            <li class="slider__item" ms-repeat="getHeadLine" ms-attr-url="el.url" style="cursor:hand;cursor:pointer;">
+                <img ms-attr-src="imgAddress+el.picture" width="100%">
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="case">
+            <div class="hotspot" name="hotspot">
+                <div class="remind">
+
+                    【热点新闻动态】· NEW ·
+                </div><div class="bd" name="list">
+                    <ul class="list">
+                        <li class="row" ms-repeat="hotArticle">
+                            <a  href="#newList/0" class="more">更多</a>
+                            <span class="type">·  {{el.name}} </span>
+                            <span class="title">
+                                <a ms-attr-href="'#newDetails/'+el.articleId">
+                                    {{el.title}}
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div ms-view="courseLine@"></div>-->
+            <!--<div ms-view="subjectList@"></div>-->
+        </div>
+    </div>
+    <a href="#!/home">父</a>
+    <a ms-on-click="fun">子2</a>
+    <div ms-view=""></div>
+</div>

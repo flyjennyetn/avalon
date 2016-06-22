@@ -1,0 +1,45 @@
+/*��¼ҳ��*/
+.content_bg{ background: url("../images/banner2.png") no-repeat scroll center; height: 468px; margin-bottom: 36px; position: relative; top:0; left: 0;}
+.login_content{margin-right: 78px; width: 370px; padding: 0 20px; text-align: center; color:#fff; float: right;  height: 468px;}
+.login_opa{background:#000;  opacity: 0.4; filter:alpha(opacity=40); width: 370px;  height: 468px; position: absolute; top:0;right: 78px;}
+.login_box{position: absolute; top:0;right:98px;}
+.login_content h3{ font-size:36px; padding: 28px 0 14px;}
+.login_content p{ font-size:16px;}
+.login_content .safe_center{ position: relative; top:0; left: 0; padding-bottom: 14px; margin-bottom: 20px;}
+.login_content .safe_center span{ position: absolute; bottom:-10px; left: 50%; margin-left: -165px; background: url("../images/tobottom_icon.png") no-repeat; height: 10px; width: 330px;}
+.login_content .edit_line{ padding-top: 14px; text-align: left;}
+.login_content .edit_line label{ margin-bottom: 10px; display: block;}
+.login_content .edit_line input{
+    width: 330px;
+    height: 36px;
+    background: #fff;
+    line-height: normal;
+    line-height:36px\9;
+    text-indent: 5px;
+    font-size: 14px;
+    color: #444444;
+}
+.login_content .login_btn{ width: 330px; height: 36px; background: #ffbd4d; color:#245439; margin: 36px 0 12px; line-height: 36px; font-size: 16px;}
+.login_content a{ color:#fff; text-align: center; font-size:14px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
