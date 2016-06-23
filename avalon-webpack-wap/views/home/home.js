@@ -137,10 +137,17 @@ define(["layer_", "jquery", 'swiper'], function (layer_, $, Swiper) {
             //}
         };
         $ctrl.$onRendered = function () {
+<<<<<<< HEAD
             //var root = avalon.vmodels.root;
             //root.getJsonData('interface/queryLessonGradeStage.json', {}, function (data) {
             //    home.queryLessonGradeStage = avalon.mix(home.queryLessonGradeStage, data);
             //});
+=======
+            var root = avalon.vmodels.root;
+            root.getJsonData('interface/queryLessonGradeStage.json', {}, function (data) {
+                home.queryLessonGradeStage = avalon.mix(home.queryLessonGradeStage, data);
+            });
+>>>>>>> router
             //if(home.getHeadLine.length==0){
             //    root.getJsonData('getHeadLine.json', {}, function (data) {
             //        home.getHeadLine = data;
