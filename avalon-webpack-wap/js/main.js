@@ -4,10 +4,6 @@
 /*scss*/
 require("./../css/global.scss");
 require("./../css/home.scss");
-<<<<<<< HEAD
-=======
-require("./../css/list.scss");
->>>>>>> router
 /*插件scss*/
 require("./layer/need/layer.scss");
 require("./swiper/swiper.min.scss");
@@ -211,29 +207,6 @@ avalon.state("app", {
             }
         }
     }
-<<<<<<< HEAD
-=======
-}).state("app.list", {
-    url: "list",
-    views: {
-        "": {
-            templateProvider: function () {
-                return new Promise(function (rs) {
-                    require.ensure([], function (tt) {
-                        rs(require("text!./../views/list/list.html"))
-                    })
-                })
-            },
-            controllerProvider: function () {
-                return new Promise(function (rs) {
-                    require.ensure([], function () {
-                        rs(require("./../views/list/list.js"))
-                    })
-                })
-            }
-        }
-    }
->>>>>>> router
 })
 /**
  * 路由全局配置
