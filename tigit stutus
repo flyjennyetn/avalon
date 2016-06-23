@@ -1,0 +1,1014 @@
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mindex 1362602..96d121f 100644[m
+[1m--- a/.idea/workspace.xml[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -24,16 +24,39 @@[m
+   </component>[m
+   <component name="FileEditorManager">[m
+     <leaf>[m
+[32m+[m[32m<<<<<<< HEAD[m
+       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">[m
+         <entry file="file://$PROJECT_DIR$/README.md">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+             <state vertical-scroll-proportion="0.24242425" vertical-offset="0" max-vertical-offset="990">[m
+               <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />[m
+[32m+[m[32m=======[m
+[32m+[m[32m      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/webpack.config.js">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="0.4116638" vertical-offset="0" max-vertical-offset="2200">[m
+[32m+[m[32m              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />[m
+[32m+[m[32m>>>>>>> router[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[32m+[m[32m<<<<<<< HEAD[m
+[32m+[m[32m=======[m
+[32m+[m[32m      <file leaf-file-name="tpl.html" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/tpl.html">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="-13.103448" vertical-offset="0" max-vertical-offset="640">[m
+[32m+[m[32m              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />[m
+[32m+[m[32m              <folding>[m
+[32m+[m[32m                <element signature="e#546#617#0" expanded="false" />[m
+[32m+[m[32m              </folding>[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m>>>>>>> router[m
+     </leaf>[m
+   </component>[m
+   <component name="Git.Settings">[m
+[36m@@ -58,9 +81,12 @@[m
+         <option value="$PROJECT_DIR$/avalon-webpack-l20n/js/msl20n/avalon.l20n_1.js" />[m
+         <option value="$PROJECT_DIR$/avalon-webpack-l20n/gulpfile.js" />[m
+         <option value="$PROJECT_DIR$/avalon-webpack-wap/weixin.html" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+         <option value="$PROJECT_DIR$/avalon-webpack-wap/js/main.js" />[m
+         <option value="$PROJECT_DIR$/avalon-webpack-wap/views/home/home.html" />[m
+         <option value="$PROJECT_DIR$/avalon-webpack-wap/views/home/home.js" />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         <option value="$PROJECT_DIR$/avalon-require-web/js/router.js" />[m
+         <option value="$PROJECT_DIR$/avalon-require-web/views/home/home.js" />[m
+         <option value="$PROJECT_DIR$/avalon-require-web/index.html" />[m
+[36m@@ -69,6 +95,18 @@[m
+         <option value="$PROJECT_DIR$/avalon-require-web/views/course/courseLine.js" />[m
+         <option value="$PROJECT_DIR$/avalon-require-web/build.html" />[m
+         <option value="$PROJECT_DIR$/README.md" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+[32m+[m[32m=======[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/tpl.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/css/accountChange.scss" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/views/home/home.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/views/common/common.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/views/home/home.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/js/main.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/css/list.scss" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/views/list/list.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/avalon-webpack-wap/views/list/list.js" />[m
+[32m+[m[32m>>>>>>> router[m
+       </list>[m
+     </option>[m
+   </component>[m
+[36m@@ -76,10 +114,17 @@[m
+     <detection-done>true</detection-done>[m
+   </component>[m
+   <component name="ProjectFrameBounds">[m
+[32m+[m[32m<<<<<<< HEAD[m
+     <option name="x" value="1358" />[m
+     <option name="y" value="-8" />[m
+     <option name="width" value="1936" />[m
+     <option name="height" value="1176" />[m
+[32m+[m[32m=======[m
+[32m+[m[32m    <option name="x" value="-8" />[m
+[32m+[m[32m    <option name="y" value="-8" />[m
+[32m+[m[32m    <option name="width" value="1382" />[m
+[32m+[m[32m    <option name="height" value="744" />[m
+[32m+[m[32m>>>>>>> router[m
+   </component>[m
+   <component name="ProjectLevelVcsManager" settingsEditedManually="false">[m
+     <OptionsSetting value="true" id="添加" />[m
+[36m@@ -123,6 +168,81 @@[m
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+             </PATH_ELEMENT>[m
+           </PATH>[m
+[32m+[m[32m<<<<<<< HEAD[m
+[32m+[m[32m=======[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="avalon-webpack-wap" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="avalon-webpack-wap" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="views" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="list" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="avalon-webpack-wap" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="views" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="git" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="avalon-webpack-wap" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="js" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m>>>>>>> router[m
+         </subPane>[m
+       </pane>[m
+     </panes>[m
+[36m@@ -131,6 +251,10 @@[m
+     <property name="WebServerToolWindowFactoryState" value="false" />[m
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />[m
+     <property name="HbShouldOpenHtmlAsHb" value="" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+[32m+[m[32m=======[m
+[32m+[m[32m    <property name="DefaultHtmlFileTemplate" value="Html5" />[m
+[32m+[m[32m>>>>>>> router[m
+   </component>[m
+   <component name="RecentsManager">[m
+     <key name="CopyFile.RECENT_KEYS">[m
+[36m@@ -145,6 +269,7 @@[m
+     </key>[m
+   </component>[m
+   <component name="RunManager">[m
+[32m+[m[32m<<<<<<< HEAD[m
+     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">[m
+       <method />[m
+     </configuration>[m
+[36m@@ -153,6 +278,12 @@[m
+     </configuration>[m
+     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">[m
+       <envs />[m
+[32m+[m[32m=======[m
+[32m+[m[32m    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">[m
+[32m+[m[32m>>>>>>> router[m
+       <method />[m
+     </configuration>[m
+     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">[m
+[36m@@ -162,6 +293,13 @@[m
+       <setting name="preferredDebugBrowser" value="Chrome" />[m
+       <method />[m
+     </configuration>[m
+[32m+[m[32m<<<<<<< HEAD[m
+[32m+[m[32m=======[m
+[32m+[m[32m    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">[m
+[32m+[m[32m      <envs />[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m>>>>>>> router[m
+     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">[m
+       <method />[m
+     </configuration>[m
+[36m@@ -196,6 +334,7 @@[m
+     <servers />[m
+   </component>[m
+   <component name="ToolWindowManager">[m
+[32m+[m[32m<<<<<<< HEAD[m
+     <frame x="1358" y="-8" width="1936" height="1176" extended-state="6" />[m
+     <editor active="true" />[m
+     <layout>[m
+[36m@@ -208,10 +347,23 @@[m
+       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.170706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m=======[m
+[32m+[m[32m    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />[m
+[32m+[m[32m    <editor active="true" />[m
+[32m+[m[32m    <layout>[m
+[32m+[m[32m      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13697319" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1748512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m>>>>>>> router[m
+       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />[m
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />[m
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+[36m@@ -219,6 +371,17 @@[m
+       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />[m
+       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m=======[m
+[32m+[m[32m      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m>>>>>>> router[m
+     </layout>[m
+   </component>[m
+   <component name="Vcs.Log.UiProperties">[m
+[36m@@ -242,6 +405,7 @@[m
+     <watches-manager />[m
+   </component>[m
+   <component name="editorHistoryManager">[m
+[32m+[m[32m<<<<<<< HEAD[m
+     <entry file="file://$PROJECT_DIR$/avalon-webpack-l20n/locales/en-US.l20n">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+[36m@@ -320,6 +484,8 @@[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+     <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/images/answerScore_err.png">[m
+       <provider selected="true" editor-type-id="images">[m
+         <state />[m
+[36m@@ -385,6 +551,7 @@[m
+         <state />[m
+       </provider>[m
+     </entry>[m
+[32m+[m[32m<<<<<<< HEAD[m
+     <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/views/common/common.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+[36m@@ -451,11 +618,16 @@[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+     <entry file="file://$PROJECT_DIR$/avalon-require-web/js/directive.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.33766234" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -463,7 +635,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -471,7 +646,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="620">[m
+           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -479,7 +657,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -487,10 +668,13 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.46753246" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="17" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding>[m
+             <marker date="1466567158903" expanded="true" signature="-1:-1" placeholder="{...}" />[m
+             <marker date="1466567158903" expanded="true" signature="-1:-1" placeholder="{...}" />[m
+           </folding>[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -498,7 +682,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.5937922" vertical-offset="720" max-vertical-offset="1480">[m
+           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -506,7 +693,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -514,7 +704,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.78407556" vertical-offset="139" max-vertical-offset="880">[m
+           <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -522,7 +715,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="-1.7012987" vertical-offset="1310" max-vertical-offset="2080">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -530,7 +726,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -538,7 +737,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -546,7 +748,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -554,7 +759,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -562,7 +770,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -570,7 +781,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="-17.275862" vertical-offset="19" max-vertical-offset="760">[m
+           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -578,7 +792,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -586,7 +803,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1140">[m
+           <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -594,7 +814,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1920">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -602,7 +825,10 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.0" vertical-offset="610" max-vertical-offset="1380">[m
+           <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -610,14 +836,144 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="0.12987013" vertical-offset="0" max-vertical-offset="4200">[m
+           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />[m
+[32m+[m[32m<<<<<<< HEAD[m
+           <folding />[m
+[32m+[m[32m=======[m
+[32m+[m[32m>>>>>>> router[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+     <entry file="file://$PROJECT_DIR$/README.md">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m<<<<<<< HEAD[m
+         <state vertical-scroll-proportion="0.24242425" vertical-offset="0" max-vertical-offset="990">[m
+           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />[m
+[32m+[m[32m=======[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.44036698" vertical-offset="0" max-vertical-offset="545">[m
+[32m+[m[32m          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/gulpfile.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.32786885" vertical-offset="540" max-vertical-offset="1260">[m
+[32m+[m[32m          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="41" selection-end-column="15" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/weixin.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.46984926" vertical-offset="173" max-vertical-offset="600">[m
+[32m+[m[32m          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/js/openId.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-0.7025761" vertical-offset="300" max-vertical-offset="3760">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/server.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">[m
+[32m+[m[32m          <caret line="5" column="38" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="38" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/css/accountChange.scss">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.051813472" vertical-offset="240" max-vertical-offset="3440">[m
+[32m+[m[32m          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/views/home/home.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1600">[m
+[32m+[m[32m          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/views/home/home.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3280">[m
+[32m+[m[32m          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/package.json">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="1240">[m
+[32m+[m[32m          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/views/common/common.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">[m
+[32m+[m[32m          <caret line="3" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/views/common/common.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.048661802" vertical-offset="0" max-vertical-offset="411">[m
+[32m+[m[32m          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/js/main.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5560">[m
+[32m+[m[32m          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/css/global.scss">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.16085792" vertical-offset="7280" max-vertical-offset="11360">[m
+[32m+[m[32m          <caret line="367" column="22" selection-start-line="367" selection-start-column="22" selection-end-line="367" selection-end-column="22" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/css/list.scss">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="380">[m
+[32m+[m[32m          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/views/list/list.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="380">[m
+[32m+[m[32m          <caret line="10" column="97" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/views/list/list.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.72041166" vertical-offset="0" max-vertical-offset="640">[m
+[32m+[m[32m          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/tpl.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-13.103448" vertical-offset="0" max-vertical-offset="640">[m
+[32m+[m[32m          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />[m
+[32m+[m[32m          <folding>[m
+[32m+[m[32m            <element signature="e#546#617#0" expanded="false" />[m
+[32m+[m[32m          </folding>[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/avalon-webpack-wap/webpack.config.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.4116638" vertical-offset="0" max-vertical-offset="2200">[m
+[32m+[m[32m          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />[m
+[32m+[m[32m>>>>>>> router[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+[1mdiff --git a/avalon-router/css/blog.css b/avalon-router/css/blog.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7ae722f[m
+[1m--- /dev/null[m
+[1m+++ b/avalon-router/css/blog.css[m
+[36m@@ -0,0 +1,94 @@[m
+[32m+[m
+[32m+[m[32m.layout {[m
+[32m+[m[32m    width: 320px;[m
+[32m+[m[32m    min-height: 480px;[m
+[32m+[m[32m    font-size: 13px;[m
+[32m+[m[32m    overflow: hidden;[m
+[32m+[m[32m    border: 10px solid #000;[m[41m [m
+[32m+[m[32m    border-radius: 10px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.blog{[m
+[32m+[m[32m    width: 700px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.oni-mmRouter-slide {[m
+[32m+[m[32m    width: 300px;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    float: left;[m
+[32m+[m[32m}[m
+[32m+[m[32m.list li {[m
+[32m+[m[32m    line-height: 20px;[m
+[32m+[m[32m    list-style: none;[m
+[32m+[m[32m    margin: 2px 0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.list li a {[m
+[32m+[m[32m    color: #000;[m
+[32m+[m[32m    text-decoration: none;[m
+[32m+[m[32m}[m
+[32m+[m[32m.rank {[m
+[32m+[m[32m    float: left;[m
+[32m+[m[32m    width: 20px;[m
+[32m+[m[32m    height: 20px;[m
+[32m+[m[32m    background: #ccc;[m
+[32m+[m[32m    margin-right: 10px;[m
+[32m+[m[32m    line-height: 20px;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    color: #fff;[m
+[32m+[m[32m}[m
+[32m+[m[32m.top {[m
+[32m+[m[32m    background: lightblue;[m
+[32m+[m[32m}[m
+[32m+[m[32m.detail h5 {[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    line-height: 40px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.content {[m
+[32m+[m[32m    text-indent: 26px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.content p {[m
+[32m+[m[32m    line-height: 18px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.nav a{[m
+[32m+[m[32m    text-decoration: none;[m
+[32m+[m[32m}[m
+[32m+[m[32m.comment {[m
+[32m+[m[32m    float: right;[m
+[32m+[m[32m}[m
+[32m+[m[32m.comment-box {[m
+[32m+[m[32m    margin: 4px 0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.comments {[m
+[32m+[m[32m    padding-top: 10px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.page {[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    padding: 5px 0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.header {[m
+[32m+[m[32m    background: #EA413C;[m
+[32m+[m[32m    color: #fff;[m
+[32m+[m[32m    height: 30px;[m
+[32m+[m[32m    line-height: 30px;[m
+[32m+[m[32m    padding-left: 14px;[m
+[32m+[m[32m    font-size: 15px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.nav {[m
+[32m+[m[32m    height: 32px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.nav li {[m
+[32m+[m[32m    float: left;[m
+[32m+[m[32m    width: 40px;[m
+[32m+[m[32m    height: 30px;[m
+[32m+[m[32m    line-height: 30px;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    list-style: none;[m
+[32m+[m[32m    font-size: 15px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.nav a {[m
+[32m+[m[32m    color: #b3b3b3;[m
+[32m+[m[32m}[m
+[32m+[m[32m.nav li.select a {[m
+[32m+[m[32m    color: #EC5751;[m
+[32m+[m[32m}[m
+[32m+[m[32m.nav li.select {[m
+[32m+[m[32m    border-bottom: 2px solid #EC5751;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/avalon-router/css/reset.css b/avalon-router/css/reset.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..27ff9ab[m
+[1m--- /dev/null[m
+[1m+++ b/avalon-router/css/reset.css[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32m* {[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m}[m
+[32m+[m[32ma {[m
+[32m+[m[32m    text-decoration: none;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/avalon-router/css/style.css b/avalon-router/css/style.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..580a4df[m
+[1m--- /dev/null[m
+[1m+++ b/avalon-router/css/style.css[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m@import "reset.css";[m
+[32m+[m[32m@import "blog.css";[m
+\ No newline at end of file[m
+[1mdiff --git a/avalon-router/index.html b/avalon-router/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ff7e453[m
+[1m--- /dev/null[m
+[1m+++ b/avalon-router/index.html[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html>[m
+[32m+[m[32m    <head>[m
+[32m+[m[32m        <title>文章单页应用</title>[m
+[32m+[m[32m        <meta charset="UTF-8">[m
+[32m+[m[32m        <meta name="viewport" content="width=device-width">[m
+[32m+[m[32m        <link rel="stylesheet" href="css/style.css?@verison@">[m
+[32m+[m[32m    </head>[m
+[32m+[m[32m    <body ms-controller="root">[m
+[32m+[m[32m        <div ms-view="" class="layout"></div>[m
+[32m+[m[32m        <div ms-view="footer"></div>[m
+[32m+[m[32m    </body>[m
+[32m+[m[32m    <script src="script/lib/require.js" data-main="./script/route-blog"></script>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/avalon-router/script/common.js b/avalon-router/script/common.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..75539f3[m
+[1m--- /dev/null[m
+[1m+++ b/avalon-router/script/common.js[m
+[36m@@ -0,0 +1,29 @@[m
+[32m+[m[32mrequirejs.config({[m
+[32m+[m[32m    baseUrl: "script/",[m
+[32m+[m[32m    urlArgs: "@ver=ver@",[m
+[32m+[m[32m    map: {[m
+[32m+[m[32m        "*": {[m
+[32m+[m[32m            // "avalon": "avalon.shim" // 意为所有avalon都指向avalon.shim[m
+[32m+[m[32m            "css": "require-css/css",[m
+[32m+[m[32m            "text": "lib/text"[m
+[32m+[m[32m        }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    shim: {[m
+[32m+[m[32m        "avalon": {[m
+[32m+[m[32m            exports: "avalon"[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "avalon.shim": {[m
+[32m+[m[32m            exports: "avalon"[m
+[32m+[m[32m        }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    paths: {[m
+[32m+[m[32m        "avalon": "lib/avalon.shim" // 跟map上的配置实现同样的效果[m
+[32m+[m[32m    },[m
+[32m+[m[32m    pragmasOnSave: {[m
+[32m+[m[32m        excludeRequireCss: true[m
+[32m+[m[32m    }[m
+[32m+[m[32m});[m
+[32m+[m[32m// 为了可以预览，直接在这里requirejs，而不是通过include[m
+[32m+[m[32mrequirejs(["avalon", "lib/oniui/avalon.getModel", "lib/oniui/mmRouter/mmState", "lib/oniui/mmRequest/mmRequest", "lib/oniui/animation/avalon.animation", "text"], function () {[m
+[32m+[m[32m    avalon.require = requirejs[m
+[32m+[m[32m});[m
+[1mdiff --git a/avalon-router/script/lib/_css.js b/avalon-router/script/lib/_css.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b91a8ca[m
+[1m--- /dev/null[m
+[1m+++ b/avalon-router/script/lib/_css.js[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32mdefine(["module"], function (module) {[m
+[32m+[m[32m    return {[m
+[32m+[m[32m        load: function (name, req, onLoad, config) {[m
+[32m+[m[32m            onLoad()[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m})[m
+\ No newline at end of file[m
+[1mdiff --git a/avalon-router/script/lib/avalon.shim.js b/avalon-router/script/lib/avalon.shim.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2fb9c1c[m
+[1m--- /dev/null[m
+[1m+++ b/avalon-router/script/lib/avalon.shim.js[m
+[36m@@ -0,0 +1,5917 @@[m
+[32m+[m[32m/*==================================================[m
+[32m+[m[32m Copyright (c) 2013-2016 司徒正美 and other contributors[m
+[32m+[m[32m http://www.cnblogs.com/rubylouvre/[m
+[32m+[m[32m https://github.com/RubyLouvre[m
+[32m+[m[32m http://weibo.com/jslouvre/[m
+[32m+[m[41m [m
+[32m+[m[32m Released under the MIT license[m
+[32m+[m[32m avalon.shim.js 1.5.6 built in 2016.3.18[m
+[32m+[m[32m support IE6+ and other browsers[m
+[32m+[m[32m ==================================================*/[m
+[32m+[m[32m(function(global, factory) {[m
+[32m+[m
+[32m+[m[32m    if (typeof module === "object" && typeof module.exports === "object") {[m
+[32m+[m[32m        // For CommonJS and CommonJS-like environments where a proper `window`[m
+[32m+[m[32m        // is present, execute the factory and get avalon.[m
+[32m+[m[32m        // For environments that do not have a `window` with a `document`[m
+[32m+[m[32m        // (such as Node.js), expose a factory as module.exports.[m
+[32m+[m[32m        // This accentuates the need for the creation of a real `window`.[m
+[32m+[m[32m        // e.g. var avalon = require("avalon")(window);[m
+[32m+[m[32m        module.exports = global.document ? factory(global, true) : function(w) {[m
+[32m+[m[32m            if (!w.document) {[m
+[32m+[m[32m                throw new Error("Avalon requires a window with a document")[m
+[32m+[m[32m            }[m
+[32m+[m[32m            return factory(w)[m
+[32m+[m[32m        }[m
+[32m+[m[32m    } else {[m
+[32m+[m[32m        factory(global)[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m// Pass this if window is not defined yet[m
+[32m+[m[32m}(typeof window !== "undefined" ? window : this, function(window, noGlobal){[m
+[32m+[m
+[32m+[m[32m/*********************************************************************[m
+[32m+[m[32m *                    全局变量及方法                                   *[m
+[32m+[m[32m **********************************************************************/[m
+[32m+[m
+[32m+[m[32mvar expose = new Date() - 0[m
+[32m+[m[32m//http://stackoverflow.com/questions/7290086/javascript-use-strict-and-nicks-find-global-function[m
+[32m+[m[32mvar DOC = window.document[m
+[32m+[m[32mvar head = DOC.getElementsByTagName("head")[0] //HEAD元素[m
+[32m+[m[32mvar ifGroup = head.insertBefore(document.createElement("avalon"), head.firstChild) //避免IE6 base标签BUG[m
+[32m+[m[32mifGroup.innerHTML = "X<style id='avalonStyle'>.avalonHide{ display: none!important }</style>"[m
+[32m+[m[32mifGroup.setAttribute("ms-skip", "1")[m
+[32m+[m[32mifGroup.className = "avalonHide"[m
+[32m+[m[32mvar rnative = /\[native code\]/ //判定是否原生函数[m
+[32m+[m
+[32m+[m[32mfunction log() {[m
+[32m+[m[32m    if (window.console && kernel.debug) {[m
+[32m+[m[32m        // http://stackoverflow.com/questions/8785624/how-to-safely-wrap-console-log[m
+[32m+[m[32m        Function.apply.call(console.log, console, arguments)[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mvar subscribers = "$" + expose[m
+[32m+[m
+[32m+[m[32mvar nullObject = {} //作用类似于noop，只用于代码防御，千万不要在它上面添加属性[m
+[32m+[m[32mvar rword = /[^, ]+/g //切割字符串为一个个小块，以空格或豆号分开它们，结合replace实现字符串的forEach[m
+[32m+[m[32mvar rw20g = /\w+/g[m
+[32m+[m[32mvar rsvg = /^\[object SVG\w*Element\]$/[m
+[32m+[m[32mvar rwindow = /^\[object (?:Window|DOMWindow|global)\]$/[m
+[32m+[m[32mvar oproto = Object.prototype[m
+[32m+[m[32mvar ohasOwn = oproto.hasOwnProperty[m
+[32m+[m[32mvar serialize = oproto.toString[m
+[32m+[m[32mvar ap = Array.prototype[m
+[32m+[m[32mvar aslice = ap.slice[m
+[32m+[m[32mvar W3C = window.dispatchEvent[m
+[32m+[m[32mvar root = DOC.documentElement[m
+[32m+[m[32mvar avalonFragment = DOC.createDocumentFragment()[m
+[32m+[m[32mvar cinerator = DOC.createElement("div")[m
+[32m+[m[32mvar class2type = {}[m
+[32m+[m[32m"Boolean Number String Function Array Date RegExp Object Error".replace(rword, function (name) {[m
+[32m+[m[32m    class2type["[object " + name + "]"] = name.toLowerCase()[m
+[32m+[m[32m})[m
+[32m+[m[32mvar bindingID = 1024[m
+[32m+[m[32mvar IEVersion = NaN[m
+[32m+[m[32mif (window.VBArray) {[m
+[32m+[m[32m    IEVersion = document.documentMode || (window.XMLHttpRequest ? 7 : 6)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction noop(){}[m
+[32m+[m[32mfunction scpCompile(array){[m
+[32m+[m[32m    return Function.apply(noop, array)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction oneObject(array, val) {[m
+[32m+[m[32m    if (typeof array === "string") {[m
+[32m+[m[32m        array = array.match(rword) || [][m
+[32m+[m[32m    }[m
+[32m+[m[32m    var result = {},[m
+[32m+[m[32m            value = val !== void 0 ? val : 1[m
+[32m+[m[32m    for (var i = 0, n = array.length; i < n; i++) {[m
+[32m+[m[32m        result[array[i]] = value[m
+[32m+[m[32m    }[m
+[32m+[m[32m    return result[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m//生成UUID http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript[m
+[32m+[m[32mvar generateID = function (prefix) {[m
+[32m+[m[32m    prefix = prefix || "avalon"[m
+[32m+[m[32m    return String(Math.random() + Math.random()).replace(/\d\.\d{4}/, prefix)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mavalon = function (el) { //创建jQuery式的无new 实例化结构[m
+[32m+[m[32m    return new avalon.init(el)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/*视浏览器情况采用最快的异步回调*/[m
+[32m+[m[32mavalon.nextTick = new function () {// jshint ignore:line[m
+[32m+[m[32m    var tickImmediate = window.setImmediate[m
+[32m+[m[32m    var tickObserver = window.MutationObserver[m
+[32m+[m[32m    if (tickImmediate) {[m
+[32m+[m[32m        return tickImmediate.bind(window)[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    var queue = [][m
+[32m+[m[32m    function callback() {[m
+[32m+[m[32m        var n = queue.length[m
+[32m+[m[32m        for (var i = 0; i < n; i++) {[m
+[32m+[m[32m            queue[i]()[m
+[32m+[m[32m        }[m
+[32m+[m[32m        queue = queue.slice(n)[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    if (tickObserver) {[m
+[32m+[m[32m        var node = document.createTextNode("avalon")[m
+[32m+[m[32m        new tickObserver(callback).observe(node, {characterData: true})// jshint ignore:line[m
+[32m+[m[32m        var bool = false[m
+[32m+[m[32m        return function (fn) {[m
+[32m+[m[32m            queue.push(fn)[m
+[32m+[m[32m            bool = !bool[m
+[32m+[m[32m            node.data = bool[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    return function (fn) {[m
+[32m+[m[32m        setTimeout(fn, 4)[m
+[32m+[m[32m    }[m
+[32m+[m[32m}// jshint ignore:line[m
+[32m+[m
+[32m+[m[32m/*********************************************************************[m
+[32m+[m[32m *                 avalon的静态方法定义区                              *[m
+[32m+[m[32m **********************************************************************/[m
+[32m+[m
+[32m+[m[32mavalon.init = function (el) {[m
+[32m+[m[32m    this[0] = this.element = el[m
+[32m+[m[32m}[m
+[32m+[m[32mavalon.fn = avalon.prototype = avalon.init.prototype[m
+[32m+[m
+[32m+[m[32mavalon.type = function (obj) { //取得目标的类型[m
+[32m+[m[32m    if (obj == null) {[m
+[32m+[m[32m        return String(obj)[m
+[32m+[m[32m    }[m
+[32m+[m[32m    // 早期的webkit内核浏览器实现了已废弃的ecma262v4标准，可以将正
