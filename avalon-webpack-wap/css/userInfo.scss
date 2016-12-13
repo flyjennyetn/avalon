@@ -1,0 +1,125 @@
+#userInfo{
+  .title{
+    background: #ffffff;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        border-bottom: 1px solid #cccccc;
+        font-size:.28rem;
+        overflow: hidden;
+        padding-left: 8.8%;
+        label{
+          width: 25%;
+          float: left;
+        }
+        span{
+          width: 75%;
+          display: inline-block;
+          float: right;
+          color: #000;
+          padding-right: 4%;
+          text-align: right;
+        }
+      }
+  }
+  .productInfo{
+    width: 100%;
+    .productTitle{
+      height:1.06rem;
+      background-color:#f2f2f2;
+      color:#f05f46;
+      font-size:.28rem;
+      line-height:1.06rem;
+      padding-left:7.3%;
+      background-image: url("../images/orange.png");
+      background-repeat: no-repeat;
+      background-position:4% center;
+      .beneficiary{
+        padding-left:20% ;
+        color:#666666;
+      }
+    }
+    .Info{
+      background: #ffffff;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        border-bottom: 1px solid #cccccc;
+        font-size:.28rem;
+        overflow: hidden;
+        padding-left: 8.8%;
+        label{
+          width: 25%;
+          float: left;
+        }
+        span{
+          width: 75%;
+          display: inline-block;
+          float: right;
+          color: #000;
+          padding-right: 4%;
+          text-align: right;
+        }
+        .adderss{
+          line-height:.5rem;
+          font-size: .24rem;
+        }
+        &:last-child{
+          border: none;
+        }
+      }
+      .last_li{
+        text-align: center;
+        padding: 0;
+        position: relative;
+        font-size: .22rem;
+        i{
+          display: block;
+          position: absolute;
+          left:10.5%;
+          top: .36rem;
+          width: .28rem;
+          height:.28rem;
+          background: url("../images/gou1.png") no-repeat;
+          background-size:.28rem .28rem;
+        }
+        .active{
+          background: url("../images/gou.png") no-repeat;
+          background-size:.28rem .28rem;
+        }
+        a{
+          color: #ce1032;
+        }
+      }
+      .last_li{
+        color: #000;
+        font-size: .28rem;
+        .price{
+          color: #eb0218;
+          font-style: normal;
+        }
+      }
+    }
+  }
+  .lastBox{
+    text-align: center;
+    padding-top:.16rem;
+    padding-bottom: .58rem;
+    p{
+      font-size:.22rem;
+      color:#b0b0b0;
+      padding-bottom:.63rem;
+    }
+    button{
+      border: none;
+      background:#f85452 ;
+      border-radius:.5rem;
+      width:6rem;
+      height:.9rem;
+      color: #ffffff;
+      font-size:.34rem ;
+      text-align: center;
+      line-height:.9rem ;
+    }
+  }
+}

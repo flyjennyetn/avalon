@@ -1,0 +1,125 @@
+@import "public";
+#footer{
+  @include width();
+  height: 268px;
+  //margin-top: 50px;
+  .top{
+    width: 100%;
+    height: 229px;
+    //@include widthCen();
+    margin: 0 auto;
+    background: url("../images/footer1.jpg") no-repeat;
+    background-size: cover;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/footer1.jpg',sizingMethod='scale');
+    div{
+      @include inline-block();
+      color: white;
+    }
+    .cen{
+      @include widthCen();
+      margin: 0 auto;
+      display: block;
+      .top1{
+        @include inline-block();
+        text-align: left;
+        width: 50%;
+        p{
+          @include inline-block();
+          padding-top: 38px;
+          width: 168px;
+          span{
+            display: block;
+            font-size: 12px;
+            margin-bottom: 17px;
+            //line-height: 32px;
+            cursor: pointer;
+          }
+          .tit{
+            font-size: 16px;
+            padding-bottom: 5px;
+
+          }
+        }
+        .bxzs{
+          vertical-align: top;
+        }
+      }
+      .top2{
+        @include inline-block();
+        text-align: right;
+        width: 49%;
+        p{
+          @include inline-block();
+          width: 140px;
+          span{
+            display: block;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .bottom{
+    height: 39px;
+    line-height: 39px;
+    background-color: #eb6749;
+    .bot{
+      @include widthCen();
+      margin: 0 auto;
+      color: white;
+      p{
+        @include inline-block();
+      }
+      .p1{
+        width: 50%;
+        text-align: left;
+      }
+      .p2{
+        width: 49%;
+        text-align: right;
+      }
+    }
+  }
+}
+.LPIns_bn{
+  @include width();
+  height: auto;
+}
+#inquire{
+  @include widthCen();
+  margin: 0 auto;
+  .place{
+    margin: 47px 0 0 0;
+    font-size: 16px;
+    color: #a5a6a6;
+    a{
+      color: #a5a6a6;
+    }
+  }
+
+  .contentsList{
+    h3{
+      text-align: center;
+      font-size: 18px;
+      @include color();
+      background: url(../images/compNotice_title.png) no-repeat;
+      width: 100%;
+      background-size: cover;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 40px;
+      color: #efefef;
+    }
+    .line{
+      height: 2px;
+      margin: 5px 0;
+      background:#eb5a3e;
+    }
+    span{
+      display: block;
+      padding: 10px 20px 30px 20px;
+      background: url('../images/LPInstr_con_back.png');
+      min-height: 40px;
+    }
+  }
+}

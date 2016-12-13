@@ -1,38 +1,159 @@
-<div id="index"  ms-controller="home" >
-
-    <div class="slider" style="z-index: 1">
-        <ul class="slider__wrapper">
-            <li class="slider__item" ms-repeat="getHeadLine" ms-attr-url="el.url" style="cursor:hand;cursor:pointer;">
-                <img ms-attr-src="imgAddress+el.picture" width="100%">
+<div id="home"  ms-controller="home" >
+   <div class="home_bn slideBox" id="slideBox">
+      <div class="bd">
+         <ul>
+            <li ms-repeat="getHeadLine" class="bn_line">
+               <a ms-attr-href="el.url" target="_blank" style="width:100%;">
+                  <img ms-attr-src="imgAddress+el.picture" width="100%" alt=""/>
+               </a>
             </li>
-        </ul>
-    </div>
-
-    <div class="content">
-        <div class="case">
-            <div class="hotspot" name="hotspot">
-                <div class="remind">
-
-                    【热点新闻动态】· NEW ·
-                </div><div class="bd" name="list">
-                    <ul class="list">
-                        <li class="row" ms-repeat="hotArticle">
-                            <a  href="#newList/0" class="more">更多</a>
-                            <span class="type">·  {{el.name}} </span>
-                            <span class="title">
-                                <a ms-attr-href="'#newDetails/'+el.articleId">
-                                    {{el.title}}
-                                </a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+         </ul>
+      </div>
+      <div class="hd">
+         <ul>
+            <li class="on" ms-repeat="getHeadLine"></li>
+         </ul>
+      </div>
+   </div>
+   <div class="home_lc">
+         <a class="l_span" href="#!/myPolicy">
+            <img src="images/home_bdcx.png" alt=""/>
+            <span class="cx bdcx">保单查询</span>
+            <span class="cxms">线上线下，所有保单一键查询</span>
+         </a>
+         <a class="l_span" href="http://vonline.bjca.org.cn/tdmm/v-online/bjca" target="_blank">
+            <img src="images/home_bdjy.png" alt=""/>
+            <span class="cx bdjy">保单验真</span>
+            <span class="cxms">验证电子保单，更安全、更便捷</span>
+         </a>
+         <a class="l_span" href="http://kdjh.jklife.com/kadanjihuo/product/newcardpolicy/activateCard/index.jsp" target="_blank">
+            <img src="images/home_zzfw.png" alt=""/>
+            <span class="cx zzfw">卡单激活</span>
+            <span class="cxms">掌握投保主权，自主激活</span>
+         </a>
+         <a class="l_span" href="#!/funHall">
+            <img src="images/home_gdfw.png" style="width: 125px;"/>
+            <span class="cx lpxz">更多服务</span>
+            <span class="cxms">服务大厅，让你尽享专属个性化服务</span>
+         </a>
+   </div>
+   <div class="home_gg">
+      <p class="gglv"><img src="images/home_llgg.png" alt=""/></p>
+      <div class="gg">
+         <div class="gg_min" ms-repeat="rateListForHome">
+            <p class="gg_p1">
+               <a ms-attr-title="el.productName">{{el.productName |truncate(23,'...')}}</a>
+               <a ms-attr-title="el.summary"><span class="span1">{{el.summary |truncate(23,'...')}}</span></a>
+            </p>
+            <p class="p_year">{{el.rateMonth}}</p>
+            <p class="interest">{{el.rateYear}}</p>
+         </div>
+         <p class="home_line" ms-if="rateListForHome.length>1"><img src="images/home_line.png" alt=""/></p>
+      </div>
+      <div class="gg_center">
+         <!--<p class="gg_btn">-->
+            <!--<a href="#!/interest">查看更多</a>-->
+            <a href="#!/interest"><img src="images/more.png" alt=""/></a>
+         <!--</p>-->
+      </div>
+   </div>
+   <div class="home_rx" id="home_rx">
+      <p class="rx"><img src="images/home_rxcp.png" alt=""/></p>
+         <div class="rx_center">
+            <div class="rxcp" ms-repeat="productList" ms-if-loop="$index<3">
+               <!--<a ms-href="el.hrefUrl" target="_blank">-->
+                  <img ms-attr-src="imgAddress+el.pic" alt=""/>
+                  <p class="rx_font">
+                     <span class="span1"><a ms-attr-title="el.name">{{el.name |truncate(13,'...')}}</a></span>
+                     <span class="span2"><a ms-attr-title="el.des">{{el.des |truncate(50,'...')}}</a></span>
+                  </p>
+               <!--</a>-->
             </div>
-            <!--<div ms-view="courseLine@"></div>-->
-            <!--<div ms-view="subjectList@"></div>-->
-        </div>
-    </div>
-    <a href="#!/home">父</a>
-    <a ms-on-click="fun">子2</a>
-    <div ms-view=""></div>
+         </div>
+      <!--<p class="gg_btn">-->
+         <!--<img src="images/more.png" alt=""/>-->
+      <!--</p>-->
+   </div>
+
+   <div class="home_xw">
+      <div style="width: 1200px;position: relative">
+         <div class="xw xw_left">
+            <p class="xw_p1" ms-repeat="articleList" ms-if-loop="$index%2!=0">
+               <span>{{el.createTime}}</span>
+               <span ms-click="xxxw(el.articleId,el.folderId)" class="xwnr">
+                  <a ms-attr-title="el.title">{{el.title |html}}</a>
+               </span>
+            </p>
+         </div>
+         <div class="gg_center">
+            <p><img src="images/home_xwzx.png" alt=""/></p>
+            <p><img src="images/home_line2.png" alt=""/></p>
+            <!--<p class="gg_btn">-->
+               <!--<a href="#!/newsC">查看更多</a>-->
+               <a href="#!/newsC"><img src="images/more.png" alt="" style="margin-top: 10px;"/></a>
+            <!--</p>-->
+         </div>
+         <div class="xw xw_right">
+            <p class="xw_p3" ms-repeat="articleList" ms-if-loop="$index%2==0">
+               <span>{{el.createTime}}</span>
+               <span ms-click="xxxw(el.articleId)" class="xwnr">
+                  <a ms-attr-title="el.title">{{el.title |html}}</a>
+               </span>
+            </p>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="home_hb">
+      <p class="hb"><img src="images/home_hzhb.png" alt=""/></p>
+      <div class="hzhb slideBox slide_Box">
+         <div class="bd">
+            <ul>
+               <li>
+                  <span class="l_span" ms-repeat="getUnitList" ms-if-loop="$index<8" >
+                     <a ms-attr-href="el.hrefUrl" target="_blank">
+                        <img ms-attr-src="imgAddress+el.unitPic" alt=""/>
+                     </a>
+                  </span>
+               </li>
+               <li ms-if="getUnitList.length>7">
+                  <span class="l_span" ms-repeat="getUnitList" ms-if-loop="$index>7 && $index<16">
+                     <a ms-attr-href="el.hrefUrl" target="_blank">
+                        <img ms-attr-src="imgAddress+el.unitPic" alt=""/>
+                     </a>
+                  </span>
+               </li>
+            </ul>
+         </div>
+         <div class="hd hz_hb" style="bottom:-40px;">
+            <ul>
+               <li class="on"></li>
+               <li></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="home_lx">
+      <p class="lx"><img src="images/home_lxwm.png" alt=""/></p>
+      <div class="lx_center">
+         <a>
+            <span class="lx_img"><img src="images/home_lx1.png" alt=""/></span>
+            <span class="lx_font">公司地址</span>
+            <span class="span2"> 上海浦东新区锦康路258号世纪金融广场11层</span>
+         </a>
+         <a>
+            <span class="lx_img"><img src="images/home_lx2.png" alt=""/></span>
+            <span class="lx_font">联系方式</span>
+            <span class="span2">400-889-3311</span>
+         </a>
+         <a>
+            <span class="lx_img" style="width: 25px;"><img src="images/home_lx3.png" alt=""/></span>
+            <span class="lx_font">电子邮箱</span>
+            <span class="span2"> hr@zdlife.com</span>
+         </a>
+      </div>
+   </div>
 </div>
+
+

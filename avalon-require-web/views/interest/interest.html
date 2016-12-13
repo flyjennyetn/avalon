@@ -1,0 +1,48 @@
+<div id="interest" ms-controller="interest">
+    <p><img src="images/interest_bn.jpg" alt=""/></p>
+    <div class="nc">
+        <p class="place">当前位置：<a href="#!/home">首页</a> > 服务大厅 > 利率公告</p>
+        <div class="cont">
+            <p class="llgg">利率公告</p>
+            <p class="line_ll"></p>
+            <div class="llgg_bg">
+                <p class="describe">
+                    结算利率仅为结算日期前一个结算周期内的收益水平，并不代表未来的投资收益。
+                    每月第六个工作日发布上月的结算利率公告。
+                </p>
+                <div>
+                    <select name="" ms-duplex="typeName" ms-change="typeN(1,typeName)">
+                        <option value="按月公布利率的产品">按月公布利率的产品</option>
+                        <option value="按年公布利率的产品">按年公布利率的产品</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="" ms-duplex="rateMonth" ms-change="typeN(2,rateMonth)">
+                        <option ms-repeat="getBetweenTimeList" ms-attr-value="el">{{el}}</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="" ms-duplex="productName" ms-change="typeN(3,productName)">
+                        <option value="全部产品">全部产品</option>
+                        <option ms-repeat="getProductNameList" ms-attr-value="el">{{el}}</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 50px;">
+                    <div class="llzs" ms-repeat="getRateList">
+                        <p class="line">
+                            <span class="gold"><img src="images/gold.png" alt=""/></span>
+                            <span>{{el.productName}}</span>
+                        </p>
+                        <p class="llsm">
+                            <span>{{el.rateMonth}} </span>
+                            <span>当月年化结算利率:{{el.rateYear}} </span>
+                            <span>当月的日结算利率:{{el.rateDate}}</span>
+                        </p>
+                    </div>
+                    <div class="zwcp" ms-if="getRateList.length==0">暂无相关产品</div>
+                </div>
+            </div>
+            <div id="pager" style="text-align:center;margin-bottom: 40px;"></div>
+        </div>
+    </div>
+</div>

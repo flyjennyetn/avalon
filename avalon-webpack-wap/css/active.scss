@@ -1,0 +1,304 @@
+#active{
+  background: url("../images/activeBg.png");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  .hd{
+    width: 97%;
+    margin: .3rem auto 0;
+    position: relative;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    p{
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      a{
+        color: #fff;
+        text-decoration: underline;
+        font-size: .28rem;
+      }
+    }
+  }
+  .gift{
+    color: #fff;
+    font-size: .24rem;
+    text-align: center;
+  }
+  .hdg{
+    width: 97%;
+    margin: 0 auto;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .myCandy{
+    width: 92%;
+    margin: .1rem auto 0;
+    position: relative;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    .num{
+      font-size: .28rem;
+      position: absolute;
+      top: 26%;
+      width: 100%;
+      text-align: center;
+      span{
+        font-size: 1rem;
+        color: #ef2e2f;
+      }
+    }
+    .friNum{
+      position: absolute;
+      bottom: 17%;
+      right: 2%;
+      font-size: .22rem;
+      text-align: right;
+      margin-right: 5%;
+      padding-right: .2rem;
+      background: url("../images/activeArrow.png") right 40% no-repeat;
+      background-size: .18rem .18rem;
+      span{
+        color: #ffa20f;
+      }
+      i{
+        font-style: normal;
+        font-size: .4rem;
+      }
+    }
+  }
+  .getCandy{
+    margin: .2rem auto 0;
+    width: 38.7%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .chance{
+    text-align: center;
+    margin-top: .2rem;
+    color: #fff;
+    font-size: .24rem;
+    span{
+      color: #f0ff00;
+    }
+  }
+  .headerBg{
+    text-align: center;
+    position: relative;
+    height: 1.1rem;
+    width: 92%;
+    margin: 0 auto;
+    img{
+      width: 100%;
+    }
+  }
+  .listAll{
+    width: 92%;
+    margin: .1rem auto 0;
+    position: relative;
+    overflow: hidden;
+    .bg{
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .swiper-container {
+      position: absolute;
+      margin-top: -8rem;
+      z-index: 1;
+    }
+    .list{
+      top: 0;
+      left: 0;
+      padding: 0 .2rem 17% .2rem;
+      width: 97%;
+      height: 100%;
+      overflow: hidden;
+      .subList{
+        height: 22%!important;
+        //height: 1.1rem;
+        border-bottom: 1px dashed #e29c41;
+        span{
+          display: inline-block;
+          font-size: .24rem;
+          vertical-align: middle;
+          &.listNum{
+            width: 14%;
+            color: #ffa20f;
+            text-align: center;
+          }
+          &.name{
+            width: 29%;
+            text-align: center;
+          }
+          &.numCandy{
+            width: 34%;
+            text-align: right;
+            i{
+              color: #ffa20f;
+              font-style: normal;
+            }
+          }
+        }
+        .hdImg{
+          width: 13%;
+          display: inline-block;
+          padding: 3% 0;
+          vertical-align: middle;
+        }
+
+      }
+    }
+  }
+  .service{
+    color: #fff;
+    font-size: .24rem;
+    text-align: center;
+    margin-bottom: .2rem;
+    padding: .1rem 0;
+  }
+  .shade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: 10;
+
+  }
+  .bounced{
+    position: fixed;
+    width: 92%;
+    top: 18%;
+    left: 4%;
+    z-index: 20;
+    .congra{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 58%;
+      font-size: .36rem;
+    }
+    .noQuick{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 45%;
+      font-size: .36rem;
+    }
+    .noGreed{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 38%;
+      font-size: .36rem;
+    }
+    .congraNew{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 53%;
+      font-size: .36rem;
+    }
+    .forNew{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 63%;
+      .line1{
+        font-size: .28rem;
+        color: #666666;
+      }
+      .line2{
+        margin-top: 8%;
+        color: #ffa20f;
+        font-size: .28rem;
+        a{
+          text-decoration: underline;
+          vertical-align: middle;
+          width: 30%;
+          display: inline-block;
+        }
+        img{
+          vertical-align: middle;
+          width: 40%;
+          display: inline-block;
+          margin-left: 6%;
+        }
+      }
+    }
+    .cancel{
+      width: 90%;
+      margin: 0 auto .15rem;
+      text-align: right;
+    }
+    .bg{
+      width: 100%;
+      height: auto;
+    }
+    .noQuick{
+
+    }
+    .bouncedList{
+      position: absolute;
+      top: 10%;
+      left: 0;
+      margin-top: 21%;
+      padding: 0 .5rem 0 .5rem;
+      overflow: scroll;
+      width: 97%;
+      height: 64%;
+      .subList{
+        height: 18.3%;
+        border-bottom: 1px dashed #e29c41;
+        span{
+          display: inline-block;
+          font-size: .24rem;
+          vertical-align: middle;
+          &.listNum{
+            width: 14%;
+            color: #ffa20f;
+            text-align: center;
+          }
+          &.name{
+            width: 45%;
+            text-align: center;
+          }
+          &.numCandy{
+            width: 25%;
+            text-align: right;
+            i{
+              color: #ffa20f;
+              font-style: normal;
+            }
+          }
+        }
+        .hdImg{
+          width: 13%;
+          margin-left: 12%;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+      }
+    }
+  }
+}

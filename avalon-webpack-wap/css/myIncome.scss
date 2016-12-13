@@ -1,0 +1,158 @@
+#myIncome{
+  .hd{
+    height: 3.24rem;
+    background: url("../images/myIncHBg.png");
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    .ti{
+      font-size: .9rem;
+      padding-top: .5rem;
+    }
+    .tim{
+      display: inline-block;
+      font-size: .26rem;
+      margin-top: 0.45rem;
+      padding-left: .55rem;
+      background: url("../images/myIncIcon01.png") no-repeat;
+      background-size: .32rem .34rem;
+    }
+  }
+  .info{
+    color: #fff;
+    overflow: hidden;
+    background-color: #d22b35;
+    padding: .2rem 0;
+    .infoSub{
+      &:first-child{
+        margin-left: 18%;
+      }
+      float: left;
+      width: 41%;
+      .infoSubL{
+        font-size: .26rem;
+      }
+      .infoSubM{
+        font-size: .3rem;
+      }
+    }
+  }
+  .noDetail{
+    margin-top: 1.3rem;
+    .prompt{
+      width: 70%;
+      margin: 0 auto;
+      padding-left: .4rem;
+      background: url("../images/myincIcon03.png") no-repeat;
+      font-size: .2rem;
+      span{
+        color: #eb0218;
+      }
+    }
+
+  }
+  .detail{
+
+    .comp{
+      font-size: .24rem;
+      color: #b3b4b4;
+      text-align: center;
+      padding: .3rem 0 .23rem;
+      background: url("../images/myIncDBg.png") no-repeat;
+      .compN{
+        padding-left: .4rem;
+        background: url("../images/myIncIcon02.png") no-repeat;
+        background-size: .26rem .28rem;
+      }
+    }
+
+    .list {
+      ul {
+        li {
+          &:last-child {
+            margin-bottom: 0;
+          }
+          background-color: #fff;
+          padding: .45rem .85rem;
+          margin-bottom: .2rem;
+          .pro_title {
+            background: url("../images/arrow_white.png") right 20% no-repeat;
+            border-bottom: 1px solid #eee;
+            margin-bottom: .4rem;
+            .title {
+              font-size: .3rem;
+              margin-bottom: .23rem;
+            }
+            .intro {
+              font-size: .22rem;
+              margin-bottom: .27rem;
+              color: #6d665d;
+            }
+          }
+          .income_area, .price_area {
+            float: left;
+            width: 49%;
+            color: #acacac;
+            font-size: .2rem;
+          }
+          .line {
+            float: left;
+            height: .6rem;
+            margin-top: .3rem;
+            border-left: 1px solid #eee;
+          }
+          .income_area {
+            .income {
+              margin-bottom: .15rem;
+              color: #eb0218;
+              span {
+                font-size: .45rem;
+
+              }
+            }
+          }
+          .price_area {
+            margin-top: .1rem;
+            padding-left: .8rem;
+            p {
+              span {
+                font-size: .24rem;
+                i {
+                  font-style: normal;
+                }
+              }
+              &.price {
+                margin-bottom: .32rem;
+                span {
+                  color: #eb0218;
+                }
+              }
+            }
+          }
+          .clear {
+            clear: both;
+          }
+        }
+        .getMore {
+          text-align: center;
+          padding: .2rem 0;
+          background: #f05f46;
+          color: #fff;
+          font-size: .3rem;
+        }
+      }
+      .bottomLine{
+        padding: .5rem 0;
+        text-align: center;
+        color: #f05f46;
+        font-size: .36rem;
+        .line{
+          vertical-align: middle;
+          display: inline-block;
+          width: 25%;
+          border-bottom: 2px solid #f05f46;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div id="hotProductList" ms-controller="hotProductList">
+
+    <ul class="ul_con">
+        <li class="li_con" ms-repeat="hotProductArr" ms-on-click="getDetail(el.categoryParentCode,el.productId)">
+            <img class="productImg" ms-src="el.productImgPath" alt=""/>
+            <div class="productInfo">
+                <span class="title">{{el.productName}}</span>
+                <span class="price">{{(el.price/100).toFixed(2)}}元&nbsp;<span class="min">起</span></span>
+            </div>
+            <p class="describe">{{el.productRemark}}</p>
+            <span class="label">旅行意外险</span>
+        </li>
+    </ul>
+</div>

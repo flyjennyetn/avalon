@@ -1,0 +1,48 @@
+<div ms-controller="proDetailDL" id="proDetailDL">
+    <div class="summary">
+        <img src="images/banner01DL.png" alt=""/>
+        <p ms-if="productId=='100003'"><span>君康多利1号</span><br/>两全保险（万能型）</p>
+        <p ms-if="productId=='100004'"><span>君康多利2号</span><br/>两全保险（万能型）</p>
+    </div>
+    <ul class="element">
+        <li class="el_li">
+            <span class="el_li_left">产品期限</span>
+            <span class="el_li_right">10年</span>
+        </li>
+        <li class="el_li">
+            <span class="el_li_left">投资金额（份）</span>
+            <span class="el_li_right text_color">1000元</span>
+        </li>
+        <li class="el_li">
+            <span class="el_li_left">购买数量（份）</span>
+            <span class="el_li_right add_subtract">
+                <span class="subtract" ms-on-click="subtract"></span>
+                <input type="number" placeholder="1份" ms-duplex="volume"/>
+                <span class="add" ms-on-click="add"></span>
+            </span>
+        </li>
+        <li class="el_li">
+            <span class="el_li_left">快速选择购买分数</span>
+            <span class="el_li_right buy_quick">
+                <a ms-class="{{share == '50' ? 'active':''}}" ms-on-click="selectShare(50)">50份</a>
+                <a ms-class="{{share == '100' ? 'active':''}}" ms-on-click="selectShare(100)">100份</a>
+                <a ms-class="{{share == '150' ? 'active':''}}" ms-on-click="selectShare(150)">150份</a>
+                <a ms-class="{{share == '200' ? 'active':''}}" ms-on-click="selectShare(200)">200份</a>
+            </span>
+        </li>
+    </ul>
+    <div class="detail">
+        <div class="text">
+            <span class="hint_border" ms-on-click="goDetailImg">产品详情</span>
+        </div>
+    </div>
+    <!--<div class="read_info">-->
+        <!--<i ms-click="agreeFun" ms-class="{{checkBoxStatus?'':'active'}}"></i><span class="content">本人已经充分了解本保险产品，同意并接受<a href="javascript:">《投保须知》</a>以及<a href="javascript:">《保险条款》</a></span>-->
+    <!--</div>-->
+    <div class="bottom space-between">
+        <div class="price_btn space-between">
+            <span class="price"><span style="font-size: .30rem">￥</span>{{premiums}}</span>
+            <span class="btn" ms-on-click="payFor">立即购买</span>
+        </div>
+    </div>
+</div>

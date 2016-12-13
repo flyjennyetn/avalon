@@ -1,78 +1,80 @@
-#login {
-  width: 100%;
+#login{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
   height: 100%;
-  background: #f4f4f4;
-  .loginText{
-    padding: 4rem 0 2.5rem 0;
-    text-align: center;
-    position: relative;
-    font-size: 1.2rem;
-    .goBack {
-      display: inline-block;
-      width: 1rem;
-      position: absolute;
-      left: 0.5rem;
-      top: 0.5rem;
-      img {
-        width: 100%;
-      }
+  .banner{
+    min-height: 1.8rem;
+    background: url("../images/login_banner.png") no-repeat;
+    background-size: 100% 100%;
+    border:1px solid transparent;
+    .p1,.p2{
+      text-align: center;
+      color: #fff;
+    }
+    .p1{
+      font-size: .32rem;
+      margin-top: 6%;
+    }
+    .p2{
+      font-size: .26rem;
     }
   }
   .content{
-    padding: 0 1rem 2.5rem 1rem;
-    background: #ffffff;
-    .item{
-      width: 100%;
-      position: relative;
-      span{
-        width: 25%;
-        height: 1.5rem;
-        line-height: 1.5rem;
-        text-align: left;
-        color: #a9a9a9;
-        padding: 1rem 0 0.5rem 0;
-        font{
-          color: #ff0000;
-          vertical-align: sub;
-        }
+    padding: .55rem .6rem;
+    color: #969696;
+    .sub_content{
+      border-bottom: 1px solid #e88491;
+      margin-bottom: .35rem;
+      &:last-child{
+        margin-bottom: 0;
       }
+
       input{
-        width: 70%;
+        border: none;
         outline: none;
-        /* padding-left: 0.5rem; */
-      }
-      .pwdBackLine{
-        width: 100%;
-        position: absolute;
-        bottom: -0.5rem;
-        img{
-          width: 100%;
+        padding: .35rem 0 .35rem 1rem;
+        font-size: .35rem;
+        &.account{
+          background: url('../images/account.png') left center no-repeat;
+          background-size: .35rem .5rem;
         }
+        &.password{
+          background: url('../images/password.png') left center no-repeat;
+          background-size: .34rem .4rem;
+        }
+      }
+    }
+    .forget_pwd{
+      text-align: right;
+      margin-bottom: 1rem;
+      a{
+        font-size: .25rem;
       }
     }
   }
-  .submit{
-    width: 100%;
-    padding-top: 2rem;
-    .button{
-      width: 75%;
-      height: 2.4rem;
-      line-height: 2.4rem;
-      border-radius: 1.2rem;
-      background: #66cc66;
-      text-align: center;
-      margin: 0 auto;
-      color: #ffffff;
+  .login{
+    text-align: center;
+    margin-bottom: .5rem;
+    a{
+      font-size: .35rem;
+      color: #fff;
+      background-color: #f05e45;
+      border-radius: 1rem;
+      padding: .3rem 2.45rem;
     }
-    .pwdBack{
-      width: 85%;
-      text-align: right;
-      padding: 0.5rem 0;
-      a{
-        text-decoration: underline;
-        font-size: 0.8rem;
-        color: #0000ff;
-      }
+  }
+  .prompt{
+    text-align: center;
+    color: #969696;
+    font-size: .25rem;
+    a{
+      padding-bottom: .005rem;
+      border-bottom: 1px solid #f05e45;
+      color: #f05e45;
     }
   }
 }

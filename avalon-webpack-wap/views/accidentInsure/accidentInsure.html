@@ -1,0 +1,17 @@
+<div id="accidentInsure" ms-controller="accidentInsure">
+    <ul class="ul_con">
+        <li class="li_con" ms-repeat="accidentInsureArr" ms-on-click="getDetail(el.productId)">
+            <img class="productImg" ms-src="el.productImgPath" alt=""/>
+            <div class="productInfo">
+                <span class="title">{{el.productName}}</span>
+                <span class="price">{{(el.price/100).toFixed(2)}}元&nbsp;<span class="min">起</span></span>
+            </div>
+            <p class="describe">{{el.comments}}</p>
+            <span class="label">旅行意外险</span>
+        </li>
+        <li ms-if="loadStatus"  ms-on-click="getMore" class="getMore">加载更多</li>
+        <li ms-if="!loadStatus" class="bottomLine">
+            <span class="line"></span>我是有底线的！<span class="line"></span>
+        </li>
+    </ul>
+</div>

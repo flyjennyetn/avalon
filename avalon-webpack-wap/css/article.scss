@@ -1,0 +1,54 @@
+#article{
+  .articleList{
+    padding:.3rem 4%;
+    .banner{
+      width: 100%;
+      height:2.86rem;
+      border-bottom: 1px solid #d9d9d9;
+      img{
+        width: 100%;
+        height:2.66rem;
+      }
+    }
+    .articleBox{
+      padding:.32rem 0;
+      overflow: hidden;
+      border-bottom: 1px solid #d9d9d9;
+      .contentBox{
+        width: 61%;
+        float: left;
+        .articleTitle{
+          font-size: .3rem;
+          color: #666666;
+          line-height: .52rem;
+        }
+        p{
+          padding-top:.3rem;
+          overflow: hidden;
+          .articleTime{
+            display: inline-block;
+            float: left;
+            color:#b3b3b3;
+          }
+          .articleNum{
+            display: inline-block;
+            float: right;
+            color:#b3b3b3;
+          }
+        }
+      }
+      .imgBox{
+        width: 39%;
+        float:right;
+        padding-top: .1rem;
+        height: 1.6rem;
+        img{
+          float: right;
+          width: 2.25rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+}

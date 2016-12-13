@@ -25,7 +25,7 @@ define([], function() {
         }
         // 进入视图
         $ctrl.$onEnter = function(params, rs) {
-            lists.currentPage = params.pageId !== "" ? params.pageId : 0
+            lists.currentPage = 0
             setTimeout(function() {
                 var arr = []
                 while(arr.length < 10) {
@@ -34,7 +34,7 @@ define([], function() {
                         title: "从前有座山的故事"
                     })
                 }
-                lists.blogs = arr
+                lists.blogs = arr;
                 rs()
             }, 200)
             return false

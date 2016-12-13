@@ -1,0 +1,42 @@
+<div id="docDownload" ms-controller="docDownload">
+    <div class="Download_banner">
+        <img src="images/funHall_banner.png" alt=""/>
+    </div>
+    <div class="Download_content">
+        <div class="nav_content">
+            当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > 单证下载
+        </div>
+        <div class="info_content">
+            <div class="title_content">
+                单证下载
+            </div>
+            <div class="line"></div>
+            <ul class="ul_content">
+                <li class="li_content clearFix">
+                    保险合同:
+                </li>
+                <li class="clearFix" ms-repeat="contractList">
+                    <a ms-href="imgAddress + el.downUrl" target="_blank">{{el.title}}.pdf</a>
+                    <span>&nbsp;&nbsp;>>&nbsp;&nbsp;</span>
+                    <a ms-href="imgAddress + el.downUrl" download>下载</a>
+                </li>
+                <li class="li_content clearFix">
+                    理赔:
+                </li>
+                <li class="clearFix" ms-repeat="claimsList">
+                    <a ms-href="imgAddress + el.downUrl" target="_blank">{{el.title}}.pdf</a>
+                    <span>&nbsp;&nbsp;>>&nbsp;&nbsp;</span>
+                    <a ms-href="imgAddress + el.downUrl" download>下载</a>
+                </li>
+                <li class="li_content clearFix">
+                    人身投保提示书:
+                </li>
+                <li class="clearFix" ms-repeat="promptList">
+                    <a ms-href="imgAddress + el.downUrl" target="_blank">{{el.title}}.pdf</a>
+                    <span>&nbsp;&nbsp;>>&nbsp;&nbsp;</span>
+                    <a ms-href="imgAddress + el.downUrl" download>下载</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

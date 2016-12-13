@@ -1,0 +1,206 @@
+#proDetailDL {
+  background: #f5f5f5;
+  min-height: 100%;
+  padding: 0 0 1.48rem 0;
+  position: relative;
+  .summary {
+    position: relative;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    p{
+      position: absolute;
+      width: 100%;
+      top: 33%;
+      text-align: center;
+      color: #fff;
+      font-size: .3rem;
+      span{
+        font-size: .5rem;
+      }
+    }
+  }
+  .element {
+    background: #ffffff;
+    width: 100%;
+    font-size: .28rem;
+    color: #707070;
+    .el_li {
+      padding: .36rem .4rem;
+      border-bottom: 1px solid #e5e5e5;
+      &:first-child {
+        border-top: 1px solid #e5e5e5;
+      }
+      .el_li_left {
+        display: inline-block;
+        width: 40%;
+        position: relative;
+        .text_hint {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          font-size: .18rem;
+          color: #b6b6b6;
+        }
+      }
+      .el_li_right {
+        float: right;
+        width: 50%;
+        text-align: right;
+
+      }
+      .text_color {
+        color: #ed8a46;
+      }
+      .add_subtract {
+        width: 2.87rem;
+        height: .62rem;
+        position: relative;
+        .subtract {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          width: .62rem;
+          height: .62rem;
+          background: url('../images/subtract_ico.png') no-repeat;
+          background-size: cover;
+        }
+        input {
+          position: absolute;
+          top: 0;
+          left: .62rem;
+          width: 1.6rem;
+          height: .62rem;
+          border: 0;
+          text-align: center;
+          font-size: .3rem;
+          outline: none;
+        }
+        .add {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-block;
+          width: .62rem;
+          height: .62rem;
+          background: url('../images/add_ico.png') no-repeat;
+          background-size: cover;
+        }
+      }
+      .buy_quick{
+        display: block;
+        margin-top: .3rem;
+        float: none;
+        width: 100%;
+        text-align: left;
+        a{
+          width: 17%;
+          height: .55rem;
+          display: inline-block;
+          font-size: .28rem;
+          border-radius: 1rem;
+          border: 1px solid #cccccc;
+          text-align: center;
+          line-height: .55rem;
+          margin-left: 9%;
+          &:first-child{
+            margin-left: 0;
+          }
+          &.active{
+            color: #ff6817;
+            border-color: #ff6817;
+          }
+        }
+
+      }
+    }
+  }
+  .detail {
+    margin: .3rem 0 0 0;
+    padding: .35rem;
+    background-color: #ffffff;
+    font-size: .28rem;
+    color: #f05f46;
+    .text {
+      background: url('../images/right_jtIco.png') no-repeat 100% 100%;
+      background-size: .2rem;
+      .hint_border {
+        display: inline-block;
+        padding: 0 0 0 .25rem;
+        width: 100%;
+        height: .5rem;
+        line-height: .5rem;
+        background: url('../images/red_ico.png') no-repeat 0 100%;
+        background-size: .1rem .5rem;
+      }
+    }
+
+  }
+  .read_info {
+    margin: .3rem 0 0 0;
+    padding: .25rem .6rem .2rem .25rem;
+    background-color: #ffffff;
+    i {
+      display: inline-block;
+      width: .3rem;
+      height: .3rem;
+      background: url('../images/blue_ico.png') no-repeat;
+      background-size: .3rem .3rem;
+      vertical-align: top;
+      &.active {
+        display: inline-block;
+        width: .3rem;
+        height: .3rem;
+        background: url('../images/duigou_1.png') no-repeat;
+        background-size: .3rem .3rem;
+        vertical-align: top;
+      }
+    }
+    .content {
+      display: inline-block;
+      padding: 0 0 0 .1rem;
+      font-size: .24rem;
+      width: 95%;
+      a{
+        color: #268ec2;
+      }
+    }
+  }
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    background: #ffffff;
+    width: 100%;
+    height: 1.18rem;
+    padding: .18rem 0 0.2rem;
+    .price_btn {
+      display: inline-block;
+      width: 100%;
+      height: .8rem;
+      vertical-align: bottom;
+      padding: 0 .2rem 0 .2rem;
+      .price {
+        display: inline-block;
+        width: 44%;
+        text-align: left;
+        color: #ed8a46;
+        font-size: .48rem;
+        line-height: .8rem;
+      }
+      .btn {
+        display: inline-block;
+        width: 55%;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+        font-size: .36rem;
+        vertical-align: top;
+        color: #fff;
+        background-color: #f05f46;
+        border-radius: .1rem;
+      }
+    }
+  }
+}

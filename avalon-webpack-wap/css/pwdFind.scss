@@ -1,0 +1,68 @@
+#pwdFind{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  height: 100%;
+  .content{
+    padding: .55rem .6rem;
+    color: #969696;
+    .sub_content{
+      border-bottom: 1px solid #e88491;
+      margin-bottom: .35rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      input{
+        border: none;
+        outline: none;
+        padding: .35rem 0 .35rem 1rem;
+        font-size: .35rem;
+        &.account{
+          background: url('../images/account.png') left center no-repeat;
+          background-size: .35rem .5rem;
+        }
+        &.phoneVCode{
+          width: 50%;
+          background: url('../images/phoneVCode.png') left center no-repeat;
+          background-size: .32rem .38rem;
+        }
+        &.getMessage{
+          width: 48%;
+          color: #969696;
+          font-size: .25rem;
+          padding: .15rem .5rem;
+          text-align: center;
+          border: 1px solid #969696;
+          border-radius: 1rem;
+          background-color: inherit;
+        }
+        &.password{
+          background: url('../images/password.png') left center no-repeat;
+          background-size: .35rem .4rem;
+        }
+      }
+    }
+    .forget_pwd{
+      text-align: right;
+      margin-bottom: 1rem;
+      a{
+        font-size: .25rem;
+      }
+    }
+  }
+  .register{
+    text-align: center;
+    margin-bottom: .9rem;
+    a{
+      font-size: .35rem;
+      color: #fff;
+      background-color: #f05e45;
+      border-radius: 1rem;
+      padding: .3rem 2.45rem;
+    }
+  }
+}

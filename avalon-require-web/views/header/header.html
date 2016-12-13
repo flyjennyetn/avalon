@@ -1,86 +1,52 @@
-<div ms-controller="header">
-    <div class="container teaching_top clearFix" >
-        <a class="logo" href="javascript:" name="loginLayer" ms-click="loginFun($event)"><img src="images/logo.png" alt="保险进校园"></a>
-        <div class="title">
-            <h2>青少年 第一人</h2>
-            <h3>· 学生身边的安全伙伴 ·</h3>
-        </div>
-        <div class="top_right clearFix" >
-            <div class="l">
-                <span>关注我们</span>
-                <a class="sina" href="http://weibo.com/qsndyr" target="_blank"><img src="images/sina.png" alt="新浪微博">&nbsp;</a>
-                <a class="weixin" href="javascript:">&nbsp;<img src="images/weixin.png" alt="微信"></a>
-                <img class="ewm" src="images/ewm.png">
-            </div>
-            <div class="r">
-                <a class="login nos loginMun" ms-if="userInfo != null">
-                    &nbsp&nbsp  {{userInfo.name}}
-                    <ul class="login_ul loginMun">
-                        <li class="loginMun" onclick="window.location='#result'">我的课程</li>
-                        <li class="loginMun" name="logOut">退出</li>
-                    </ul>
-                </a>
-
-                <div ms-if="userInfo == null">
-                    <a class="login on" href="#!/login">学生登录</a>
-                    <font>|</font>
-                    <a class="login on" target="_blank" href="{{teacherSendURL}}">老师登录</a>
-                </div>
-
-            </div>
+<div id="header" ms-controller="header">
+    <div class="top">
+        <!--<img src="images/header.jpg" alt=""/>-->
+        <div class="topConcent">
+            <span>全国统一客服：400-889-3311</span>
+            <span class="rt" ms-if="!loginState">
+                <a>欢迎来到君康人寿&nbsp&nbsp</a>
+                <a href="http://180.168.96.36:8888/user/#!/login">登录&nbsp&nbsp|&nbsp&nbsp</a>
+                <a href="http://180.168.96.36:8888/user/#!/register">注册</a>
+            </span>
+            <span class="rt" ms-if="loginState">
+                <a>欢迎来到君康人寿&nbsp&nbsp</a>
+                <a><i>您好，</i>{{nickName}}&nbsp&nbsp|&nbsp&nbsp</a>
+                <a ms-on-click="exitSystem">退出</a>
+            </span>
         </div>
     </div>
-    <div class="navbox">
-        <ul class="container wrap">
-            <li><a ms-attr-href="'#!/home'"  ms-class="active:(menuState=='home'? 'active': '')">首页</a></li>
-            <li id="courseNavboxLi" >
-                <a href="#course" class="courseNavboxLi" ms-class="active:(menuState=='course'? 'active': '')">课程
-                    <!--[if IE 7]><!--></a><!--<![endif]-->
-                <!--[if lte IE 6]>
-                <table><tr><td>
-                <![endif]-->
-                <ul class="navbox_ul courseNavboxLi" class="courseNavboxLi">
-                    <li class="courseNavboxLi"><a href="#safetyList">安全课程</a></li>
-                    <li class="courseNavboxLi"><a href="#subjectList">专题课程</a></li>
-                </ul>
-                <!--[if lte IE 6]>
-                </td></tr></table>
-                </a>
-                <![endif]-->
-                <!--<ul class="navbox_ul courseNavboxLi" class="courseNavboxLi">-->
-                <!--<li class="courseNavboxLi" onclick="window.location='#safetyList'">安全课程</li>-->
-                <!--<li class="courseNavboxLi" onclick="window.location='#subjectList'">专题课程</li>-->
-                <!--</ul>-->
-                </a>
-            </li>
-            <li><a target="_blank" href="http://bz.qsndyr.com" >学安通</a></li>
-            <li><a ms-attr-href="'#!/newList'" ms-class="active:(menuState=='news'? 'active': '')" >新闻动态</a></li>
-            <li><a href="#natural" ms-class="active:(menuState=='natural'? 'active': '')">我们</a></li>
-        </ul>
-    </div>
-
-    <div id="loginLayer">
-        <img src="images/logins_bj.png" width="100%">
-        <div class="cladding">
-            <div class="header">
-                <div class="but">
-                    <a href="#login" name="close">学生登录</a>
-                    <span class="bar"> | </span>
-                    <a target="_blank" id="teacherSendURL" href="http://zh.qsndyr.com" name="close">老师登录</a>
-                </div>
-                <!--<a  class="close" name="close"><img src="images/close_login.png"></a>-->
-            </div>
-            <div class="quick">
-                <h3 class="title">快速进入我的课程</h3>
-                <a href="#result" class="course" name="close">我的课程</a>
-                <a href="#subjectList" class="subject" name="close">专题课</a>
-            </div>
+    <div class="bottom">
+        <div class="floatBox"><a href="#!/home"><img src="images/jkLogo.png" alt=""/></a></div>
+        <div class="bottomBox">
+            <a href="#!/home">
+                <span class="a_font" ms-class="{{headState=='home'?'font0':'font1'}}">首页</span>
+                <img ms-class="{{headState=='home'?'font1':'font0'}}" src="images/header_i1.png" alt=""/>
+            </a>
+            <a href="#!/funHall">
+                <span class="a_font" ms-class="{{headState=='funHall'?'font0':'font1'}}">服务大厅</span>
+                <img ms-class="{{headState=='funHall'?'font1':'font0'}}" src="images/fuwudating.png" alt=""/>
+            </a>
+            <a href="#!/newsC">
+                <span class="a_font" ms-class="{{headState=='newsC'?'font0':'font1'}}">新闻中心</span>
+                <img ms-class="{{headState=='newsC'?'font1':'font0'}}" src="images/header_i2.png" alt=""/>
+            </a>
+            <a href="#!/inforDisc">
+                <span class="a_font" ms-class="{{headState=='inforDisc'?'font0':'font1'}}">信息披露</span>
+                <img  ms-class="{{headState=='inforDisc'?'font1':'font0'}}" src="images/header_i3.png" alt=""/>
+            </a>
+            <a href="#!/joinUs">
+                <span class="a_font" ms-class="{{headState=='joinUs'?'font0':'font1'}}">人才招聘</span>
+               <img ms-class="{{headState=='joinUs'?'font1':'font0'}}" src="images/header_i4.png" alt=""/>
+            </a>
+            <a href="#!/aboutUs/2">
+                <span class="a_font" ms-class="{{headState=='aboutUs'?'font0':'font1'}}">关于我们</span>
+                <img ms-class="{{headState=='aboutUs'?'font1':'font0'}}" src="images/header_i5.png" alt=""/>
+            </a>
+            <a ms-click="tabIcon">
+                <span class="a_font font1" >会员中心</span>
+                <img ms-class="{{headState=='vipCenter'?'font1':'font0'}}" src="images/crown.png" alt=""/>
+            </a>
         </div>
     </div>
 </div>
-
 <div ms-view=""></div>
-
-
-
-

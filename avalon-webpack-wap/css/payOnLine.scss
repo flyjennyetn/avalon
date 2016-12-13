@@ -1,0 +1,106 @@
+#payOnLine {
+  .productInfo {
+    width: 100%;
+    background: #ffffff;
+    .productTitle {
+      height: 1.06rem;
+      background-color: #f2f2f2;
+      color: #f05f46;
+      font-size: .28rem;
+      line-height: 1.06rem;
+      padding-left: 7.3%;
+      background-image: url("../images/orange.png");
+      background-repeat: no-repeat;
+      background-position: 4% center;
+      a {
+        display: inline-block;
+        float: left;
+        width: 30%;
+      }
+    }
+    .element {
+      background: #fff;
+      width: 100%;
+      font-size: .28rem;
+      color: #707070;
+      .el_li {
+        padding: .36rem 8%;
+        border-bottom: 1px solid #e5e5e5;
+        &:first-child {
+          border-top: 1px solid #e5e5e5;
+        }
+        .el_li_left {
+          display: inline-block;
+          width: 35%;
+          position: relative;
+        }
+        .el_li_right {
+          float: right;
+          width: 65%;
+          text-align: left;
+          input {
+            width: 50%;
+          }
+          .code{
+            display: inline-block;
+            background: #268ec2;
+            color: #fff;
+            padding: .1rem 0;
+            border-radius: 5px;
+            width: 45%;
+            text-align: center;
+          }
+        }
+        .bg{
+          background: url('../images/right_jtIco.png') no-repeat 100% 0;
+          background-size: .2rem;
+        }
+        input {
+          border: none;
+          outline: none;
+        }
+        .text_color {
+          color: #ed8a46;
+        }
+
+      }
+      .read_info {
+        width: 70%;
+        margin: 0.45rem auto;
+        background-color: #ffffff;
+        font-size: .25rem;
+        i {
+          display: inline-block;
+          width: .3rem;
+          height: .3rem;
+          background: url('../images/blue_ico.png') no-repeat;
+          background-size: .3rem .3rem;
+          margin: 0 3% 0 0;
+          vertical-align: sub;
+          &.active {
+            display: inline-block;
+            width: .3rem;
+            height: .3rem;
+            background: url('../images/duigou_1.png') no-repeat;
+            background-size: .3rem .3rem;
+          }
+        }
+        .content {
+          display: inline-block;
+          padding: 0 0 0 1%;
+          color: #268ec2;
+        }
+      }
+      .button{
+        margin: 1rem auto 0;
+        line-height: .88rem;
+        width: 70%;
+        background: #f05e45;
+        color: #fff;
+        border-radius: 15px;
+        text-align: center;
+      }
+    }
+  }
+
+}

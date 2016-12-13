@@ -1,0 +1,72 @@
+#payStatus{
+  text-align: center;
+  padding: 2rem 0 0 0;
+  .suc{
+    .gx{
+      display: inline-block;
+      margin-top: .7rem;
+      color: #f05f46;
+      font-size: .36rem;
+      padding-left: .4rem;
+      background: url("../images/paySucStar.png") no-repeat;
+      background-size: .4rem .4rem;
+    }
+    p{
+      color: #f05f46;
+      font-size: .46rem;
+      text-align: center;
+    }
+    .btn{
+      margin-top: .5rem;
+      span{
+        font-size: .3rem;
+        color: #fff;
+        padding: .3rem .95rem;
+        background-color: #f05f46;
+        border-radius: .1rem;
+      }
+    }
+  }
+  .fail{
+    .failT{
+      font-size: .26rem;
+      display: inline-block;
+      margin-top: .7rem;
+      text-align: center;
+      padding: 1.4rem .2rem 0 .2rem;
+      background: url("../images/payFailStatus.png") center top no-repeat;
+      background-size: 1.1rem 1.1rem;
+    }
+    .btn{
+      margin-top: .2rem;
+      span{
+        font-size: .2rem;
+        color: #fff;
+        padding: .09rem .22rem;
+        background-color: #268ec2;
+        border-radius: .5rem;
+      }
+    }
+  }
+  .wait{
+    .waitT{
+      font-size: .26rem;
+      display: inline-block;
+      margin-top: .7rem;
+      text-align: center;
+      padding-top: 1.4rem;
+      background: url("../images/payWaitStatus.png") center top no-repeat;
+      background-size: 1.1rem 1.1rem;
+    }
+    .btn{
+      margin-top: .2rem;
+      span{
+        font-size: .2rem;
+        color: #fff;
+        padding: .09rem .22rem;
+        background-color: #268ec2;
+        border-radius: .5rem;
+      }
+    }
+  }
+}

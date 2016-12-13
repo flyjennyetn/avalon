@@ -1,0 +1,286 @@
+#healthInsure {
+  width: 100%;
+  .ul_con {
+    width: 100%;
+    .li_con {
+      margin: .15rem .2rem;
+      background: #ffffff;
+      position: relative;
+      .productImg {
+        display: inline-block;
+        height: 2.76rem;
+        overflow: hidden;
+        width: 100%;
+      }
+      .productInfo {
+        padding: .5rem .35rem 0;
+        .title {
+          font-size: .28rem;
+          color: #000000;
+        }
+        .price {
+          float: right;
+          font-size: .26rem;
+          color: #ff6817;
+          .min {
+            font-size: .2rem;
+            display: inline-block;
+            width: .28rem;
+            height: .28rem;
+            border-radius: 50%;
+            background: #ff6817;
+            color: #ffffff;
+            text-align: center;
+            line-height: .28rem;
+          }
+        }
+      }
+      .describe {
+        color: #6d665d;
+        font-size: .2rem;
+        padding: .15rem .35rem .6rem;
+      }
+      .label {
+        position: absolute;
+        padding: .1rem;
+        background: #ed8a46;
+        color: #ffffff;
+        top: .4rem;
+        left: 0;
+      }
+    }
+    .getMore {
+      text-align: center;
+      padding: .2rem 0;
+      background: #f05f46;
+      color: #fff;
+      font-size: .3rem;
+    }
+    .bottomLine{
+      padding: .5rem 0;
+      text-align: center;
+      color: #f05f46;
+      font-size: .36rem;
+      .line{
+        vertical-align: middle;
+        display: inline-block;
+        width: 25%;
+        border-bottom: 2px solid #f05f46;
+      }
+    }
+  }
+}
+
+#insuredDetail {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 0 0 1.48rem 0;
+  position: relative;
+  .banner {
+    width: 100%;
+    position: relative;
+    .banner_img {
+      width: 100%;
+    }
+    .name {
+      position: absolute;
+      bottom: 0.1rem;
+      padding: .3rem;
+      width: 100%;
+      color: #fff;
+      background: #000;
+      opacity: .3;
+    }
+  }
+  .ul_el {
+    margin: .3rem 0 0 0;
+    background: #ffffff;
+    font-size: .28rem;
+    padding: 0 0 .4rem 0;
+    .color_red {
+      color: #f05f46;
+      padding: .3rem .3rem .3rem .6rem;
+      background: url('../images/red_ico.png') no-repeat 0.3rem center;
+    }
+    .li_el {
+      padding: 0 0 0 .7rem;
+      width: 100%;
+      overflow: hidden;
+      .insured_el {
+        float: left;
+        width: 20%;
+        padding: .2rem 0;
+      }
+      .li_ul_el {
+        float: left;
+        width: 80%;
+        .li_ul_li {
+          font-size: .24rem;
+          width: 25%;
+          float: left;
+          height: .52rem;
+          border: 1px solid #cccccc;
+          border-radius: .03rem;
+          text-align: center;
+          line-height: .52rem;
+          margin: .15rem .17rem;
+        }
+        .active {
+          border: 1px solid #ed8a46;
+        }
+      }
+      .input_el {
+        float: left;
+        width: 56%;
+        height: .52rem;
+        text-align: center;
+        margin: .15rem .17rem;
+        border: 1px solid #ed8a46;
+        font-size: .24rem;
+        outline: none;
+        background: url('../images/date_ico.png') no-repeat 90% center;
+        background-size: .3rem;
+      }
+    }
+    .li_con {
+      margin: 0 0 0 .7rem;
+      overflow: hidden;
+      border-bottom: 1px solid #cccccc;
+      padding: .2rem 0;
+      &:last-child {
+        border-bottom: 0;
+      }
+      span {
+        float: left;
+        width: 50%;
+      }
+      .li_left {
+        color: #999999;
+      }
+      .li_right {
+        width: 50%;
+        color: #666666;
+        text-align: right;
+        padding: 0 .2rem 0 0;
+      }
+    }
+  }
+  .ul_el_red {
+    margin: .3rem 0 0 0;
+    background-color: #ffffff;
+    font-size: .28rem;
+    .color_red {
+      color: #f05f46;
+      padding: .3rem .3rem .3rem .6rem;
+      background: url('../images/red_ico.png') no-repeat 0.3rem center;
+      .jt_ico{
+        display: inline-block;
+        width: 100%;
+        background: url('../images/right_jtIco.png') no-repeat 100% 100%;
+        background-size: .2rem;
+      }
+    }
+  }
+  .read_info {
+    margin: .3rem 0 0 0;
+    padding: .25rem .6rem .2rem .25rem;
+    background-color: #ffffff;
+    i{
+      display: inline-block;
+      width: .3rem;
+      height: .3rem;
+      background: url('../images/blue_ico.png') no-repeat;
+      background-size: .3rem .3rem;
+      vertical-align: top;
+      &.active{
+        display: inline-block;
+        width: .3rem;
+        height: .3rem;
+        background: url('../images/duigou_1.png') no-repeat;
+        background-size: .3rem .3rem;
+        vertical-align: top;
+      }
+    }
+    .content {
+      display: inline-block;
+      padding: 0 0 0 .1rem;
+      font-size: .24rem;
+      width: 93%;
+    }
+  }
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    background: #ffffff;
+    width: 100%;
+    height: 1.18rem;
+    padding: .18rem 0 0.2rem;
+    .price_btn1{
+      display: inline-block;
+      width: 100%;
+      height: .8rem;
+      vertical-align: bottom;
+      padding: 0 .2rem 0 .4rem;
+      .price {
+        display: inline-block;
+        width: 28%;
+        text-align: center;
+        color: #ed8a46;
+        font-size: .48rem;
+        line-height: .8rem;
+      }
+      .priceNo{
+        display: inline-block;
+        width: 20%;
+        text-align: left;
+        color: #ed8a46;
+        font-size: .48rem;
+        line-height: .8rem;
+        text-decoration: line-through;
+        span{
+
+        }
+
+      }
+      .btn {
+        display: inline-block;
+        width: 49%;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+        font-size: .36rem;
+        vertical-align: top;
+        color: #fff;
+        background-color: #f05f46;
+        border-radius: .1rem;
+      }
+    }
+    .price_btn2{
+      display: inline-block;
+      width: 100%;
+      height: .8rem;
+      vertical-align: bottom;
+      padding: 0 .2rem 0 .4rem;
+      .price {
+        display: inline-block;
+        width: 44%;
+        text-align: left;
+        color: #ed8a46;
+        font-size: .48rem;
+        line-height: .8rem;
+      }
+      .btn {
+        display: inline-block;
+        width: 53%;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+        font-size: .36rem;
+        vertical-align: top;
+        color: #fff;
+        background-color: #f05f46;
+        border-radius: .1rem;
+      }
+    }
+  }
+}

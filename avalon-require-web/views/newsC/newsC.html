@@ -1,0 +1,23 @@
+<div id="newsC" ms-controller="newsC">
+    <p><img src="images/newsC_bn.jpg" alt=""/></p>
+    <div class="nc">
+        <p class="place">当前位置：<a href="#!/home">首页</a> > 新闻中心</p>
+        <div class="nc_tit">
+            <span ms-repeat="articleTpye" ms-click="list(1,el.folderId,'init')" ms-class="{{el.folderId==initId ? 'nc_click':''}}">
+                {{el.name |truncate(18,'...')}}
+            </span>
+        </div>
+        <p class="nc_line"><img src="images/nc_line.jpg" alt=""/></p>
+        <ul class="nc_ul">
+            <li ms-repeat="articleList">
+                <span><img src="images/nc_icon.png" alt=""/></span>
+                <span class="cont" ms-click="title(el.articleId,el.folderId)">{{el.title |html}}</span>
+                <span class="time">{{el.createTime |truncate(10,'')}}</span>
+            </li>
+            <li ms-if="articleList.length==0" style="text-align: center;">
+                <span>暂无内容</span>
+            </li>
+        </ul>
+        <div id="pager" style="text-align: center;"></div>
+    </div>
+</div>

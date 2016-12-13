@@ -1,0 +1,37 @@
+<div id="compNotice" ms-controller="compNotice">
+    <div class="compNotice_se">
+        <div class="compNotice_se_banner">
+            <img src="images/funHall_banner.png" alt=""/>
+        </div>
+        <div class="compNotice_se_content">
+            <div class="nav_content">
+                当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > 理赔查询
+            </div>
+            <div class="info_content">
+                <div class="title_content">
+                    君康人寿理赔查询
+                </div>
+                <div class="line"></div>
+                <ul class="ul_content">
+                    <li class="li_content clearFix">
+                        <span class="spanLeft"><i>*</i>&nbsp;证件类型:</span>
+                        <select class="elRight">
+                            <option value="">身份证</option>
+                        </select>
+                    </li>
+                    <li class="li_content clearFix">
+                        <span class="spanLeft"><i>*</i>&nbsp;证件号:</span>
+                        <input class="elRight" type="text" ms-duplex="codeId" placeholder="请输入证件号" maxlength="20"/>
+                    </li>
+                    <li class="li_content clearFix">
+                        <span class="spanLeft"><i>*</i>&nbsp;保单号:</span>
+                        <input class="elRight" type="text" ms-duplex="policyId" placeholder="请输入保单号" maxlength="25"/>
+                    </li>
+                    <li class="button">
+                        <button class="btn" ms-on-click="goSearch">查询</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 module.exports = {
     debug: true,
     cache: true,
-    devtool: "source-map",  //生成sourcemap,便于开发调试
+    // devtool: "source-map",  //生成sourcemap,便于开发调试
     entry: ['./js/main'],   //获取项目入口js文件
     output: {
         path:__dirname + "/dist/",
@@ -24,13 +24,13 @@ module.exports = {
                 test: /\.scss$/,
                 loaders: ["style", "css", "sass"]
             },
-            //{
-            //    test: /\.css$/,
-            //    loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            //},
+            {
+               test: /\.css$/,
+               loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+            },
             {
                 test: /\.(jpg|png|gif)$/,
-                loader: "url-loader?limit=8192&name=images/[name].[hash].[ext]"
+                loader: "url-loader?limit=18192&name=images/[name].[hash].[ext]"
             },
             {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -62,6 +62,8 @@ module.exports = {
             md5: path.join(__dirname, './js/jquery/jquery.md5'),
             cookie: path.join(__dirname, './js/jquery/jquery.cookie'),
             layer_: path.join(__dirname, './js/layer/layer'),
+            dropload: path.join(__dirname, './js/dropload/dropload.min'),
+            droploadCss: path.join(__dirname, './js/dropload/dropload.css'),
             lrz: path.join(__dirname, './js/lrz/lrz.bundle'),
             swiper: path.join(__dirname, './js/swiper/swiper.min'),
             avalon: path.join(__dirname, './js/avalon/avalon.mobile.shim'),
@@ -79,27 +81,27 @@ module.exports = {
         new CommonsChunkPlugin('js/common.js'),
 
         new HtmlWebpackPlugin({
-            title: "安全教育平台",
+            title: "君康商城微信版",
             template: "tpl.html",
             filename: "index.html",
             hash: true
         }),
         //将样式统一发布到style.css中
-        //new ExtractTextPlugin("css/style.css", {
-        //    allChunks: true,
-        //    disable: false
-        //}),
+        new ExtractTextPlugin("css/style.css", {
+           allChunks: true,
+           disable: false
+        }),
         // 使用 ProvidePlugin 加载使用率高的依赖库
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery:'jquery'
         }),
-        //js文件的压缩
-        //new uglifyJsPlugin({
-        //    compress: {
-        //        warnings: false
-        //    }
-        //})
+        // js文件的压缩
+        new uglifyJsPlugin({
+           compress: {
+               warnings: false
+           }
+        })
     ]
   //devtool: '#source-map'
 };

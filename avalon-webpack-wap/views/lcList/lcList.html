@@ -1,0 +1,30 @@
+<div ms-controller="lcList" id="lcList">
+    <div class="banner">
+        <!--<img src="images/licai_list_banner.png" alt=""/>-->
+    </div>
+    <div class="list">
+        <ul>
+            <li ms-repeat="listArr" ms-on-click="goProDetail(el.productId)">
+                <div class="pro_title">
+                    <p class="title">{{el.productName}}</p>
+                    <p class="intro">{{el.productRemark}}</p>
+                </div>
+                <div class="income_area">
+                    <p class="income"><span>{{el.yearIncome}}</span>%</p>
+                    <p>历史年化投资回报率</p>
+                </div>
+                <div class="line"></div>
+                <div class="price_area">
+                    <p class="price">投资金额 <span> {{el.price/100}} <i>元</i></span></p>
+                    <p>投资期限 <span> {{el.guaranteePeriod|getPeriodName}} </span></p>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li ms-if="loadStatus"  ms-on-click="getMore" class="getMore">加载更多</li>
+
+        </ul>
+        <div ms-if="!loadStatus" class="bottomLine">
+            <span class="line"></span>我是有底线的！<span class="line"></span>
+        </div>
+    </div>
+</div>

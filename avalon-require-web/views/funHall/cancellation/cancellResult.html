@@ -1,0 +1,31 @@
+<div id="canceResult" ms-controller="canceResult">
+    <div class="Download_banner">
+        <img src="images/Result_banner.png" alt=""/>
+    </div>
+    <div class="Download_content">
+        <div class="nav_content">
+            当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > 退保结果
+        </div>
+        <div class="info_content">
+            <div class="title_content">
+                君康人寿退保结果
+            </div>
+            <div class="line"></div>
+            <ul class="ul_content">
+                <!--<li class="li_success" ms-if="status=='3'">-->
+                    <!--<p class="p1">退保申请中。。。</p>-->
+                    <!--<p class="p2">退保金额，预计0-3个工作日到帐，请专注账户变动</p>-->
+                <!--</li>-->
+                <li class="li_success" ms-if="status=='0'&&status!=''">
+                    <p class="p1">退保申请成功</p>
+                    <p class="p2">退保金额，预计0-3个工作日到帐，请专注账户变动</p>
+                </li>
+                <li class="li_defeated" ms-if="status!='0'&&status!=''">
+                    <p class="p1">退保申请失败</p>
+                    <p class="p2">失败原因：{{message}}</p>
+                    <p class="p3">如有疑问请咨询客服电话：400-889-3311</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

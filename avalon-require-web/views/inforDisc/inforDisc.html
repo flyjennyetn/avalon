@@ -1,0 +1,117 @@
+<div id="inforDisc" ms-controller="inforDisc">
+    <p><img src="images/inforDisc_bn.jpg" alt=""/></p>
+    <div class="nc">
+        <p class="place">当前位置：<a href="#!/home">首页</a> > 信息披露</p>
+        <div class="cont">
+            <p class="c_tit">
+                <span class="left">公开信息</span>
+                <span class="right" ms-if="exist==false">{{right_name}}</span>
+                <span class="sx" ms-if="exist==true">
+                    <span class="serchP">
+                        <input type="text" placeholder="请输入搜索关键词" ms-duplex="content" ms-on-keyup="keyUp()" ms-change="clean"/>
+                        <label  ms-click="search(type,1,'init',content)">搜索</label>
+                    </span>
+                </span>
+            </p>
+            <div>
+                <ul class="left_tit">
+                    <li ms-click="cont('基本信息披露')">
+                        <span class="ck_tit" ms-class="{{name=='基本信息披露' ? 'ck_tit':''}}">基本信息披露</span>
+                    </li>
+                    <li ms-click="cont('经营产品条款')">
+                        <span ms-class="{{name=='经营产品条款' ? 'ck_tit':''}}">经营产品条款</span>
+                    </li>
+                    <li ms-click="cont('临时信息披露')">
+                        <span ms-class="{{name=='临时信息披露' ? 'ck_tit':''}}">临时信息披露</span>
+                    </li>
+                    <li ms-click="cont('年度信息披露')">
+                        <span ms-class="{{name=='年度信息披露' ? 'ck_tit':''}}">年度信息披露</span>
+                    </li>
+                    <li ms-click="cont('保险资金运用信息披露')">
+                        <span ms-class="{{name=='保险资金运用信息披露' ? 'ck_tit':''}}">保险资金运用信息披露</span>
+                    </li>
+                    <li ms-click="cont('互联网信息披露')">
+                        <span ms-class="{{name=='互联网信息披露' ? 'ck_tit':''}}">互联网信息披露</span>
+                    </li>
+                    <li ms-click="cont('偿付能力信息披露')">
+                        <span ms-class="{{name=='偿付能力信息披露' ? 'ck_tit':''}}">偿付能力信息披露</span>
+                    </li>
+                    <li ms-click="cont('主要决议')">
+                        <span ms-class="{{name=='主要决议' ? 'ck_tit':''}}">股东大会主要决议</span>
+                    </li>
+                    <li ms-click="cont1('履职情况披露')">
+                        <span ms-class="{{name=='履职情况披露' ? 'ck_tit':''}}">履职情况披露</span>
+                    </li>
+                    <!--<li ms-click="cont('关联交易合并披露')">-->
+                        <!--<span ms-class="{{name=='关联交易合并披露' ? 'ck_tit':''}}">关联交易合并披露</span>-->
+                    <!--</li>-->
+                    <!--<li ms-repeat="contentNameList" ms-click="cont(el)">-->
+                        <!--<span ms-class="{{el==name ? 'ck_tit':''}}">{{el}}</span>-->
+                    <!--</li>-->
+                </ul>
+                <ul class="right_tit" ms-if="contentNameList==''">
+                    <!--<li class="sx" ms-if="name!='基本信息披露' &&  name!='互联网信息披露' && name!='主要决议' && name!='履职情况披露'">-->
+                    <li ms-if="name=='基本信息披露'" ms-repeat="contentsjbxx" class="jibenqk">
+                        <span class="cen" style="overflow: inherit;">{{el.content |html}}</span>
+                    </li>
+                    <li ms-if="name=='互联网信息披露'" ms-repeat="contentshlw">
+                        <span class="cen cenHlw" style="width: 100%">{{el.content |html}}</span>
+                    </li>
+                    <li ms-if="name=='主要决议'" ms-repeat="hybt" class="line2">
+                        <span class="cen cen2" ms-click="jynr(el.name)">
+                            <span style="width: 90%;">{{el.name}} {{el.createTime |date("yyyy-MM-dd")}}</span>
+                            <span style="float: right;">
+                                <a ms-class="{{huiyibt==el.name && sta?'up':''}}"></a>
+                            </span>
+                        </span>
+                        <span class="cen cen2" ms-if="huiyibt==el.name && sta">{{el.content |html}}</span>
+                        <span style="margin-left: 0;"><img src="images/xxpl_line.png" alt=""/></span>
+                    </li>
+                    <li ms-if="name!='基本信息披露' && name!='互联网信息披露'" ms-repeat="getFileTitle" class="line">
+                        <span><img src="images/xxpl_i1.png" alt=""/></span>
+                        <span class="cen"><a ms-attr-href="imgAddress+el.downUrl" target="_blank" ms-attr-title="el.title">{{el.title}}</a></span>
+                        <span class="rig"><a ms-attr-href="imgAddress+el.downUrl" target="_blank"><img src="images/xxpl_i2.png" alt="" class="i2"/></a></span>
+                        <span style="margin-left: 0;"><img src="images/xxpl_line.png" alt=""/></span>
+                    </li>
+                    <li ms-if="zwnr==true">
+                        <span style="text-align: center;display: block;">暂无内容</span>
+                    </li>
+                    <li ms-if="name=='履职情况披露'" ms-repeat="titleList" class="line2">
+                        <span class="cen cen2" ms-click="lzqk(el)">
+                            <span style="width: 90%;">{{el}}</span>
+                            <span style="float: right;">
+                                <a ms-class="{{lvzhiqk==el && jl?'up':''}}"></a>
+                            </span>
+                        </span>
+                        <div class="table" ms-if="lvzhiqk==el && jl" style="line-height:0px;">
+                            <table border="1">
+                                <tbody>
+                                <tr class="tr1">
+                                    <th class="th1">姓名</th>
+                                    <th class="th2">职务</th>
+                                    <th class="th3">简历</th>
+                                    <th class="th4">履职情况</th>
+                                </tr>
+                                <tr  ms-repeat="situation" >
+                                    <th class="th1">{{el.name}}</th>
+                                    <th class="th2">{{el.position}}</th>
+                                    <th class="th3 ckjl" ms-click="ckjl(el.name,el.resume)">查看简历</th>
+                                    <th class="th4">{{el.status}}</th>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <ul ms-if="state" class="duty">
+                                <li style="line-height:0px;">
+                                    <span style="display: block;margin-bottom: 25px;"><img src="images/rczp_i1.png" style="padding-right: 10px;"/>个人简历</span>
+                                    <span>{{resume |html}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <span style="margin-left: 0;"><img src="images/xxpl_line.png" alt=""/></span>
+                    </li>
+                </ul>
+                <div id="pager" style="text-align: right;margin-top:20px;margin-right: 10px;"></div>
+            </div>
+        </div>
+    </div>
+</div>

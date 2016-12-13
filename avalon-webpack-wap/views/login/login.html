@@ -1,0 +1,17 @@
+<div ms-controller="login" id="login">
+    <div class="banner">
+        <p class="p1">注册领赠险</p>
+        <p class="p2">360度全方位保障</p>
+    </div>
+    <div class="content">
+        <div class="sub_content">
+            <input ms-duplex="LoginInfo.LoginName" class="account" type="text" placeholder="请输入账号"/>
+        </div>
+        <div class="sub_content">
+            <input ms-duplex="LoginInfo.LoginPwd" class="password" type="password" placeholder="请输入密码"/>
+        </div>
+        <div class="forget_pwd"><a href="#!/pwdFind">忘记密码?</a></div>
+    </div>
+    <div class="login"><a href="javascript:" ms-on-click="goLogin">登录</a></div>
+    <div class="prompt">没有账号?<a href="#!/register">立即创建</a></div>
+</div>

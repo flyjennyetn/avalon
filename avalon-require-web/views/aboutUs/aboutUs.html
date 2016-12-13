@@ -1,0 +1,88 @@
+<div id="aboutUs" ms-controller="aboutUs">
+    <p><img src="images/aUs_bn.jpg" alt=""/></p>
+    <div class="nc">
+        <p class="place">当前位置：<a href="#!/home">首页</a> > 关于我们</p>
+        <div class="cont">
+            <p class="tit">
+                <span ms-click="gsjs" ms-class="{{state==false ? 'left':''}}">公司介绍</span>
+                <span class="right" ms-click="fzjg('1',1)" ms-class="{{state==true ? 'left':''}}">分支机构</span>
+            </p>
+            <div class="gsjs" ms-if="state==false" ms-repeat="getContentsList">
+                <p>
+                    {{el.content |html}}
+                </p>
+                <!--<p>-->
+                    <!--<a href="http://api.map.baidu.com/staticimage?width=800&height=400&center=116.359835,-->
+                    <!--39.947164&zoom=18&markers=116.359566,39.946611&markerStyles=l,0" style="display: inline-block;">-->
+                        <!--<img src="images/map.png" alt=""/>-->
+                    <!--</a>-->
+                <!--</p>-->
+            </div>
+            <div class="fzjg" ms-if="state==true">
+                <div class="sx">
+                    <select ms-duplex="id" ms-on-change="fzjg('3',3)">
+                        <option value="">请选择分公司名称</option>
+                        <option value="" ms-repeat="getOrgList2" ms-attr-value="el.id">{{el.name}}</option>
+                    </select>
+                    <p>
+                        <input type="text" placeholder="请输入搜索关键词" ms-duplex="name" ms-on-keyup="keyUp()" ms-change="clean"/>
+                        <label ms-click="search('','',name,1)">搜索</label>
+                    </p>
+                </div>
+                <div class="fzjs" ms-repeat="getOrgList1">
+                    <p class="gs_tit">
+                        <span class="gsjj_icon"><img src="images/gsjj_icon.png" alt=""/></span>
+                        <span>{{el.name}}</span>
+                    </p>
+                    <p class="gs_xx">
+                        <span>地址：{{el.address}}</span>
+                        <span>邮编：{{el.postcode}} </span>
+                        <span>电话：{{el.tel}} </span>
+                        <span>传真：{{el.fax}}</span>
+                    </p>
+                </div>
+                <div class="fzjs" ms-repeat="getOrgList2" ms-if-loop="el.id==id">
+                    <p class="gs_tit">
+                        <span class="gsjj_icon"><img src="images/gsjj_icon.png" alt=""/></span>
+                        <span>{{el.name}}</span>
+                    </p>
+                    <p class="gs_xx">
+                        <span>地址：{{el.address}}</span>
+                        <span>邮编：{{el.postcode}} </span>
+                        <span>电话：{{el.tel}} </span>
+                        <span>传真：{{el.fax}}</span>
+                    </p>
+                </div>
+                <div class="fzjs" ms-repeat="getOrgList3">
+                    <p class="gs_tit">
+                        <span class="gsjj_icon"><img src="images/gsjj_icon.png" alt=""/></span>
+                        <span>{{el.name}}</span>
+                    </p>
+                    <p class="gs_xx">
+                        <span>地址：{{el.address}}</span>
+                        <span>邮编：{{el.postcode}} </span>
+                        <span>电话：{{el.tel}} </span>
+                        <span>传真：{{el.fax}}</span>
+                    </p>
+                </div>
+                <div class="fzjs" ms-repeat="getOrgListName">
+                    <p class="gs_tit">
+                        <span class="gsjj_icon"><img src="images/gsjj_icon.png" alt=""/></span>
+                        <span>{{el.name}}</span>
+                    </p>
+                    <p class="gs_xx">
+                        <span>地址：{{el.address}}</span>
+                        <span>邮编：{{el.postcode}} </span>
+                        <span>电话：{{el.tel}} </span>
+                        <span>传真：{{el.fax}}</span>
+                    </p>
+                </div>
+                <div ms-if="zwxx==true && getOrgList2=='' && getOrgList3==''">
+                    <p class="gs_tit" style="text-align: center;margin-bottom: 30px;">
+                        暂无“{{name}}”相关消息
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

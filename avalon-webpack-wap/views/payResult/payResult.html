@@ -1,0 +1,28 @@
+<div id="payResult" ms-controller="payResult">
+    <div class="success">
+        <p class="result">恭喜您！</p>
+
+        <p class="hint">购买已成功</p>
+
+        <div class="content">
+            <p class="share">好东西要分享</p>
+
+            <div class="share_con">
+                <span class="share_el" ms-on-click="shareFun">分享给朋友</span>
+                <span class="share_el el"  ms-on-click="shareFun">分享到朋友圈</span>
+            </div>
+        </div>
+        <p class="btn">查看订单详情</p>
+    </div>
+    <div ms-if="shareStatus" class="floating " ms-on-click="unShareFun">
+        <img src="images/shareImg.png" alt=""/>
+    </div>
+    <div class="failure">
+        <p class="result">支付失败，请重新支付</p>
+        <p class="hint">请在当天完成支付，如果还未付款，系统将会自动取消订单</p>
+        <div class="share_con">
+            <span class="share_el el1">重新支付</span>
+            <span class="share_el el2">查看订单</span>
+        </div>
+    </div>
+</div>

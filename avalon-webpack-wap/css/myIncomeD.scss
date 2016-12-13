@@ -1,0 +1,110 @@
+#myIncomeD{
+  .list {
+    ul {
+      li {
+        background-color: #fff;
+        padding: .45rem 8% .25rem;
+        margin-bottom: .2rem;
+        .pro_title {
+          background: url("../images/arrow_white.png") right 55% no-repeat;
+          background-size: .15rem .26rem;
+          margin-bottom: .2rem;
+          .title {
+            font-size: .3rem;
+            margin-bottom: .23rem;
+          }
+          .intro {
+            font-size: .22rem;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+  .info{
+    color: #fff;
+    overflow: hidden;
+    background-color: #fff;
+    padding: .2rem 0 .1rem;
+    border-bottom: 1px solid #e6e6e6;
+    .infoSub{
+      width: 50%;
+      &:first-child{
+        //margin-left: 18%;
+        padding-left: 8%;
+      }
+      float: left;
+      .infoSubL{
+        font-size: .26rem;
+        color: #4c5260;
+      }
+      .infoSubM{
+        font-size: .46rem;
+        color: #eb0218;
+      }
+    }
+  }
+  .infoD{
+    background-color: #fff;
+    ul{
+      width: 91%;
+      padding: .5rem 9% .5rem;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        padding-left: 7%;
+        border-left: 1px solid #ccc;
+        position: relative;
+        z-index: 1;
+        &:first-child{
+          height: .65rem;
+          line-height: .25rem;
+          span{
+            height: .65rem;
+          }
+        }
+        .time{
+          width: 53%;
+        }
+        .income{
+          width: 47%;
+        }
+        span{
+          display: inline-block;
+          font-size: .26rem;
+          color: #4c5260;
+          border-bottom: 1px solid #e6e6e6;
+          i{
+            font-style: normal;
+          }
+        }
+        .arrowOne{
+          width: .15rem;
+          height: .14rem;
+          background: url('../images/myIncomeDArrow01.png') no-repeat;
+          background-size: .15rem .14rem;
+          position: absolute;
+          top: 41%;
+          left: -.08rem;
+          z-index: 99;
+        }
+        .arrowTwo{
+          width: .28rem;
+          height: .29rem;
+          background: url('../images/myIncomeDArrow02.png') no-repeat;
+          background-size: .28rem .29rem;
+          position: absolute;
+          top: -6%;
+          left:-.15rem;
+          z-index: 99;
+        }
+      }
+    }
+  }
+  .loadMore{
+    text-align: center;
+    font-size: .2rem;
+    color: #acacac;
+    margin-top: .3rem;
+  }
+}

@@ -586,6 +586,26 @@ avalon.state("login", {
             }
         }
     }
+}).state("app.jqGrid", {
+    url: "jqGrid",
+    views: {
+        "": {
+            templateProvider: function () {
+                return new Promise(function (rs) {
+                    require.ensure([], function (tt) {
+                        rs(require("text!./../views/example/jqGrid.html"))
+                    })
+                })
+            },
+            controllerProvider: function () {
+                return new Promise(function (rs) {
+                    require.ensure([], function () {
+                        rs(require("./../views/example/jqGrid.js"))
+                    })
+                })
+            }
+        }
+    }
 })
 
 

@@ -1,0 +1,122 @@
+#payResult {
+  width: 100%;
+  background: #f5f5f5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  .success {
+    width: 100%;
+    .result {
+      padding: .8rem 0 .2rem;
+      text-align: center;
+      color: #f05f46;
+      font-size: .36rem;
+      background: url(../images/pay_start.png) no-repeat 37% 65%;
+      background-size: .4rem;
+    }
+    .hint {
+      padding: 0 0 .4rem;
+      text-align: center;
+      color: #f05f46;
+      font-size: .46rem;
+    }
+    .content {
+      width: 6.5rem;
+      height: 5.5rem;
+      margin: auto;
+      background: url(../images/pay_successBg.png) no-repeat 100% 100%;
+      background-size: cover;
+      .share {
+        padding: 1.1rem 0 .9rem;
+        text-align: center;
+        color: #303133;
+        font-size: .32rem;
+      }
+      .share_con {
+        .share_el {
+          float: left;
+          padding: 1.25rem 0 0 0;
+          width: 50%;
+          text-align: center;
+          color: #585a66;
+          font-size: .3rem;
+          background: url(../images/pay_wxpy.png) no-repeat center 0;
+          background-size: 1.06rem;
+        }
+        .el {
+          background: url(../images/pay_wxpyq.png) no-repeat center 0;
+          background-size: 1.06rem;
+        }
+      }
+    }
+    .btn {
+      font-size: .3rem;
+      color: #ffffff;
+      width: 3.67rem;
+      height: .89rem;
+      background: #f05f46;
+      margin: 1rem auto;
+      border-radius: 5px;
+      text-align: center;
+      line-height: .89rem;
+    }
+  }
+  .floating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    opacity: .7;
+    text-align: center;
+    img {
+      width: 95%;
+    }
+  }
+  .failure {
+    width: 100%;
+    .result {
+      padding: 2.58rem 0 .65rem;
+      text-align: center;
+      font-size: .26rem;
+      color: #1b1b1b;
+      border-bottom: 2px solid #eaeaea;
+      background: url(../images/pay_failure.png) no-repeat center 1.33rem;
+      background-size: 1rem;
+    }
+    .hint {
+      color: #8c8c8c;
+      font-size: .22rem;
+      text-align: center;
+      padding: .55rem 0 .35rem;
+    }
+    .share_con {
+      width: 77%;
+      margin: auto;
+      height: .59rem;
+      .share_el {
+        width: 2.73rem;
+        height: .59rem;
+        text-align: center;
+        line-height: .59rem;
+        font-size: .24rem;
+        border-radius: 5px;
+      }
+      .el1 {
+        float: left;
+        color: #fc2852;
+        border: 1px solid #fc2852;
+      }
+      .el2 {
+        float: right;
+        color: #a29c9d;
+        border: 1px solid #a29c9d;
+      }
+    }
+
+  }
+}

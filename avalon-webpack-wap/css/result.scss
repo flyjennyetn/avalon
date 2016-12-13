@@ -1,0 +1,19 @@
+#result{
+  .concontBox{
+    font-size: .3rem;
+    text-align: center;
+    padding: 2.7rem 1rem 0;
+    background: url("../images/success_icon.png") no-repeat;
+    background-position: center 1.16rem;
+    background-size:1.16rem 1.16rem;
+    p{
+      text-align: left;
+      line-height: .46rem;
+      padding-top: .6rem;
+      i{
+        color: #f85452;
+        font-style: normal;
+      }
+    }
+  }
+}

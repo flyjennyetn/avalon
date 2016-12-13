@@ -1,0 +1,51 @@
+<div id="activeForFri" ms-controller="activeForFri">
+    <div class="hd">
+        <img src="images/activeTitle.png" alt=""/>
+
+        <p><a ms-on-click="showRule" href="javascript:">活动规则</a></p>
+    </div>
+    <p class="gift">集糖果赢取iPhone7、ipad mini4、京东E卡</p>
+
+    <div class="myCandy">
+        <img src="images/activeBg04.png" alt=""/>
+
+        <p class="num"><span>{{nickName}}</span>已经拥有<span>{{amount}}</span> 颗糖果</p>
+    </div>
+    <div class="getCandy">
+        <img ms-if="isOkDate" ms-on-click="helpGet" src="images/activeBg05.png" alt=""/>
+        <img ms-if="!isOkDate" src="images/activeBg14.png" alt=""/>
+    </div>
+    <div class="erweima">
+        <img class="erweimaBg" src="images/activeBg12.png" alt=""/>
+        <img class="erweimaImg" ms-src={{imgErQR}} alt=""/>
+    </div>
+    <p class="service">如有任何问题请联系君康人寿客服电话400-889-3311</p>
+
+    <div ms-if="bouncedStatus" class="shade"></div>
+    <!--规则弹框-->
+    <div class="bounced" ms-if="bouncedStatus && bouncedIndex==1">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg09.png" alt=""/>
+    </div>
+    <!--提示弹框-->
+    <div class="bounced" ms-if="bouncedStatus && bouncedIndex==2">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg11.png" alt=""/>
+        <p class="noQuick">成功帮好友领取{{amountFri}}颗糖果</p>
+    </div>
+    <div class="bounced" ms-if="bouncedStatus && bouncedIndex==5">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg11.png" alt=""/>
+        <p class="noQuick">您已帮忙领取过，<br/>明天再来吧！</p>
+    </div>
+    <div class="bounced" ms-if="bouncedStatus && bouncedIndex==3">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg11.png" alt=""/>
+        <p class="noQuick">请您扫码关注后，<br/>再来帮朋友领取吧！</p>
+    </div>
+    <div class="bounced" ms-if="bouncedStatus && bouncedIndex==4">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg11.png" alt=""/>
+        <p class="noQuick">您的朋友未关注，<br/>不能领取！</p>
+    </div>
+</div>

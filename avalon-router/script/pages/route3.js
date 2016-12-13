@@ -3,8 +3,8 @@
  */
 define(["avalon", "lib/oniui/mmRouter/mmState"], function() {
 
-    avalon.state("test2", {
-        url: "/test2",
+    avalon.state("blog.test2", {
+        url: "test2",
         views: {
             "": {
                 templateUrl: "./script/pages/routeMore/test2.html",

@@ -1,0 +1,17 @@
+<div id="policyList" ms-controller="policyList">
+    <ul class="list" ms-if="count!=0">
+        <li ms-repeat="policyListArr" ms-class="{{el.policyState!=10?'active':''}}" ms-on-click="goPolicyDetail(el.policyNo)">
+            <p class="p_name">{{el.productName}}</p>
+            <p class="p_guarantee">保障期间 : <span> {{el.insuranceBeginDate.substring(0,10)}} </span> 至 <span> {{el.insuranceEndDate.substring(0,10)}}</span></p>
+            <span ms-if="el.policyState!=10" class="status">{{el.policyState|poliyState}}</span>
+        </li>
+        <li ms-if="loadStatus"  ms-on-click="getMore" class="getMore">加载更多</li>
+        <li ms-if="!loadStatus" class="bottomLine">
+            <span class="line"></span>我是有底线的！<span class="line"></span>
+        </li>
+    </ul>
+    <div class="none" ms-if="count==0">
+        <p class="prompt">开启您的人生第一份保单！</p>
+        <a class="open" href="#!/hotProductList">现在开启</a>
+    </div>
+</div>

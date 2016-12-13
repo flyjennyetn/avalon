@@ -1,0 +1,9 @@
+<div id="healthTold" ms-controller="healthTold">
+    <div class="content">
+        <p ms-repeat="healthList">{{el.propertyValue | html}}</p>
+    </div>
+    <div class="button">
+        <span class="btn1" ms-on-click="unGet">部分情况有</span>
+        <span class="btn2" ms-on-click="buy">以上情况全无</span>
+    </div>
+</div>

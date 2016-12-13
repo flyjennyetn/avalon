@@ -1,0 +1,91 @@
+<div id="finInputInfo" ms-controller="finInputInfo">
+    <div class="productInfo">
+        <h3 class="productTitle">产品信息</h3>
+        <ul class="Info">
+            <li><label>名称</label><span>{{productName}}</span></li>
+            <li><label>购买金额</label><span><em>{{order.premiums/100|number(2)}}</em>元</span></li>
+            <li class="time">
+                <label>起保时间</label>
+                <span>
+                    <input type="date" class="dateTime" ms-if="effectiveDateFlag == 1" ms-duplex="item.insuranceBeginDate">
+                    <a ms-if="effectiveDateFlag == 0">{{item.insuranceBeginDate}}至{{item.insuranceEndDate}}</a>
+                </span>
+            </li>
+            <li><label>保障期间</label><span>{{item.insurancePeriod | getPeriodName}}</span></li>
+            <li><label>年华收益</label><span>历史年化结算利率<em>4.8%</em></span></li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">购买人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>常用投保人</label>
+                <span>
+                    <select ms-duplex="holderRelationId" ms-on-change="changePerson(holderRelationId,'holder')">
+                        <option value="-1">请选择</option>
+                        <option ms-attr-value="el.id" ms-repeat="getRelationArr" ms-if-loop="el.relationCustomerType == 0">{{el.partyName}}</option>
+                    </select>
+                </span>
+            </li>
+            <li class="inputInfo">
+                <label>姓名</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入名字" ms-duplex="holderInfo.holderName"></span>
+            </li>
+            <li class="inputInfo">
+                <label>身份证号</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入身份证号" ms-duplex="holderInfo.holderCardNo" ms-on-blur="cardNoBlur(holderInfo.holderCardNo,'1')"></span>
+            </li>
+            <li class="inputInfo">
+                <label>所属地区</label>
+                <span>
+                    <select class="provinceSel" name="province"
+                            ms-on-change="areaChange(2,holderInfo.residentProvince)"
+                            ms-duplex="holderInfo.residentProvince">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="holderProvinceList" ms-attr-value="el.code">{{el.name}}</option>
+                    </select>
+                    <select class="citySel" name="city" ms-on-change="areaChange(3,holderInfo.residentCity)"
+                            ms-duplex="holderInfo.residentCity">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option 　ms-repeat="holderCityList" ms-attr-value="el.code">{{el.name}}</option>
+                    </select>
+                    <select class="areaSel" name="area" ms-duplex="holderInfo.residentAddress">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="holderAreaList" ms-attr-value="el.code">{{el.name}}</option>
+                    </select>
+                </span>
+                <</li>
+            <li class="inputInfo">
+                <label>详细地址</label>
+                <span><input type="text" class="dateTime" placeholder="请选择地区" ms-duplex="holderInfo.holderAddress"></span>
+            </li>
+            <li class="inputInfo">
+                <label>邮编</label>
+                <span><input type="text" class="dateTime" placeholder="请输入邮编" ms-duplex="holderInfo.holderZip"></span>
+            </li>
+            <li class="inputInfo">
+                <label>手机号</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入手机号" ms-duplex="holderInfo.holderPhone"></span>
+            </li>
+            <li class="inputInfo">
+                <label>邮箱</label>
+                <span><input type="text" class="dateTime" placeholder="请输入邮箱" ms-duplex="holderInfo.holderEmail"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">受益人</h3>
+        <ul class="Info">
+            <li>法定</li>
+        </ul>
+    </div>
+    <!--<div class="terms ">-->
+        <!--<i></i>-->
+        <!--<p>本人充分已阅读并同意<a>《投保须知》</a>和<a>《产品条款》</a></p>-->
+    <!--</div>-->
+    <div class="boxLine"></div>
+    <div class="buyBtn">
+        <span class="price">￥{{order.premiums/100|number(2)}}</span>
+        <button class="Buy" ms-click="submitInfo">下一步</button>
+    </div>
+</div>

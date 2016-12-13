@@ -1,0 +1,57 @@
+#certification{
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  .InputBox{
+    width: 100%;
+    padding:0 8.4%;
+    li{
+      border-bottom: 1px solid #e88491;
+      margin-top: .52rem;
+      padding: .33rem 0 .33rem 14%;
+      input{
+        border: none;
+        width: 60%;
+        height: .5rem;
+      }
+      .per-getMessage{
+          border-radius: .5rem;
+          background-color:#fff;
+          width:40%;
+          height:.56rem;
+          border: 1px solid #e4393c;
+          font-size:.24rem;
+          color:#e4393c;
+          text-align: center;
+          line-height:.56rem;
+      }
+    }
+    .phone{
+      background: url("../images/redphone.png") no-repeat center left;
+      background-size: .35rem .5rem;
+      .mobile{
+        font-size: .26rem;
+      }
+    }
+    .icon_c{
+      background: url("../images/icon_c.png") no-repeat center left;
+      background-size: .35rem .38rem;
+    }
+  }
+  .btnBox{
+    text-align: center;
+    .nextStep{
+      width:5.6rem ;
+      height:.82rem ;
+      border-radius: .5rem;
+      background:#f05e45 ;
+      border: none;
+      color:#ffffff;
+      font-size:.32rem ;
+      margin-top: .97rem;
+    }
+  }
+}

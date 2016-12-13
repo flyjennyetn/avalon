@@ -1,0 +1,46 @@
+<div id="insuredDetail" ms-controller="insuredDetail">
+    <div class="banner">
+        <img class="banner_img" ms-src="{{productInfo.productImgPath}}" alt=""/>
+        <div class="name">{{productInfo.productName}}</div>
+    </div>
+    <ul class="ul_el" style="margin: .2rem 0 0 0">
+        <li class="color_red">保障方案</li>
+        <li class="li_el" ms-repeat="productInfo.productMetas">
+            <span class="insured_el">{{el.metaName}}</span>
+            <ul class="li_ul_el" ms-if="productId != 200001">
+                <li class="li_ul_li" ms-class="{{$index == 0 && productInfo.premiumCalcMethod == 1? 'active':''}}" ms-if-loop="el.metaType=='1'" ms-repeat-x="el.mateOptions" ms-click="choose_1($outer.$index,x.metaOptionCode)">{{x.metaOptionName}}</li>
+                <input class="input_el" type="date" ms-if="el.metaType=='2'" ms-duplex="birthday"/>
+            </ul>
+            <ul class="li_ul_el"  ms-if="productId == 200001">
+                <li style="border: none;text-align: left" class="li_ul_li" ms-if-loop="el.metaType=='1'" ms-repeat-x="el.mateOptions" ms-click="choose_1($outer.$index,x.metaOptionCode)">{{x.metaOptionName}}</li>
+                <input class="input_el" type="date" ms-if="el.metaType=='2'" ms-duplex="birthday"/>
+            </ul>
+        </li>
+    </ul>
+    <ul class="ul_el" ms-if="dutyProduct.length != 0">
+        <li class="color_red">保障说明</li>
+        <li class="li_con" ms-repeat="dutyProduct">
+            <span class="li_left">{{el.dutyName}}</span>
+            <span class="li_right">{{el.amntAlias}}</span>
+        </li>
+    </ul>
+    <ul class="ul_el_red" ms-repeat="productComments" ms-if-loop="el.productCommentType == 1">
+        <li class="color_red" ms-on-click="turnTo(el.productCommentId)">
+            <span class="jt_ico">{{el.productCommentName}}</span>
+        </li>
+    </ul>
+    <div class="read_info">
+        <i ms-click="agreeFun" ms-class="{{checkBoxStatus?'':'active'}}"></i><span class="content">本人已经充分了解本保险产品，同意并接受<a ms-repeat="productInfo.productComments" ms-if-loop="el.productCommentPosition == '2'" ms-href="{{el.proCommDetailList[0].productCommentFilePath}}" target="_blank">《{{el.productCommentName}}》、</a></span>
+    </div>
+    <div class="bottom space-between">
+        <div class="price_btn2  space-between" ms-if="productId != 200001">
+            <span class="price"><span style="font-size: .28rem">￥</span>{{premiums}}</span>
+            <span class="btn" ms-on-click="payFor">立即购买</span>
+        </div>
+        <div class="price_btn1  space-between" ms-if="productId == 200001">
+            <span class="priceNo"><span style="font-size: .28rem">￥</span>{{premiums}}</span>
+            <span class="price"><span style="font-size: .28rem">￥</span>0</span>
+            <span class="btn" ms-on-click="payFor">立即购买</span>
+        </div>
+    </div>
+</div>

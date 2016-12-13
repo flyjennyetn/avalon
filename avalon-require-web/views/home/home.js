@@ -1,63 +1,97 @@
 /**
  * Created by hejing on 15/12/9.
  */
-define(['jquery','layer_','glide','slide'], function ($,layer_,glide,slide) {
-    // 定义所有相关的vmodel
-  var home = avalon.define({
-    $id: "home",
-    $loadVmodel:null,
-    getHeadLine:[],
-    hotArticle:[],
-      fun:function(){
-          avalon.router.go('app.home.zi2');
-      }
-  });
+define(['jquery','layer_','slide','style!../../css/home'], function ($,layer_,slide) {
+    var roots = avalon.vmodels.root;
+    // 和视图交互的变量和方法
+    var home = avalon.define({
+        $id: "home",
+        getHeadLine:[],  //首页轮播
+        rateListForHome:[], //产品利率
+        productList:[], //热销产品
+        articleList:[],  //新闻中心
+        getUnitList:[],  //合作伙伴
+        num:1,
+        xxxw:function(articleId,folderId){
 
-  home.$watch("getHeadLine", function(value, oldValue) {
-      setTimeout(function(){
-          if(home.getHeadLine.length > 1){
-              $('.slider').glide({
-                  arrows:false
-              });
-              var num = home.getHeadLine.length * 25;
-              $('.slider').css('height','auto');
-              $('.slider__nav').css('width',num+'px');
-          }
-      },500)
-  })
-  home.$watch("hotArticle", function(value, oldValue) {
-      setTimeout(function(){
-          $('[name="hotspot"]').slide({
-              mainCell:'.bd ul',
-              autoPage:true,
-              effect:"top",
-              autoPlay:true
-          });
-      },500)
-  })
+            location.href="#!/newsD/"+articleId+'/'+folderId
+        }
+    });
 
 
-  return avalon.controller(function ($ctrl) {
-    // 视图渲染后，意思是avalon.scan完成
-    $ctrl.$onRendered = function () {
-        avalon.router.go('app.home.zi');
-    };
-    // 进入视图
-    $ctrl.$onEnter = function (param, rs, rj) {
-        var root = avalon.vmodels.root;
-        root.menuState = 'home';
-        //root.getJsonData('getHeadLine.json',{},function(data){
-        //    home.getHeadLine = data;
-        //});
-        //root.getJsonData('interface/hotArticle.json',{},function(data){
-        //    home.hotArticle = data;
-        //});
+    home.$watch('getHeadLine', function (a,b) {
+        var t=setInterval (function(){
+            //if($("div").hasClass("tempWrap")){
+                setTimeout(function () {
+                    $("#slideBox").slide({
+                        mainCell: ".bd ul",
+                        autoPlay: true,
+                        effect:"leftLoop",
+                        trigger: "click",
+                        delayTime: 1000
+                    });
+                },100);
+            if(home.getHeadLine.length>1){
+                clearTimeout(t)
+            }
+            //}
+        },1);
+    });
+    home.$watch('getUnitList', function (a,b) {
+        setTimeout(function () {
+            $(".slide_Box").slide({
+                mainCell: ".bd ul",
+                autoPlay: false,
+                effect:"leftLoop",
+                trigger: "click",
+                delayTime: 1000
+            });
+        },100);
+        setTimeout(function () {
+            $("#home_rx").slide({
+                mainCell:".bd ul",
+                effect:"left",
+                autoPlay:false,
+                vis:3,
+                scroll:1,
+                delayTime: 500
+            });
+        },1000)
+    });
 
-    };
-    // 对应的视图销毁前
-    $ctrl.$onBeforeUnload = function () {};
-    $ctrl.$vmodels = [home];
-  })
+    return avalon.controller(function ($ctrl) {
+        // 视图渲染后，意思是avalon.scan完成
+        $ctrl.$onRendered = function () {
+        };
+        // 进入视图
+        $ctrl.$onEnter = function (param, rs, rj) {
+            $('body,html').animate({scrollTop: 0}, 200);
+            //首页轮播
+            roots.getJsonData('gwInterface/getHeadLine.json', {}, function (data) {
+                home.getHeadLine=data;
+            });
+            //利率展示
+            roots.getJsonData('gwInterface/getRateListForHome.json', {}, function (data) {
+                home.rateListForHome=data;
+            });
+            //热销产品
+            roots.getJsonData('gwInterface/getProductList.json', {}, function (data) {
+                home.productList=data;
+            });
+            //新闻中心
+            roots.getJsonData('gwInterface/getArticleListForHome.json', {}, function (data) {
+                home.articleList=data.articleList
+            });
+            //合作伙伴
+            roots.getJsonData('gwInterface/getUnitList.json', {}, function (data) {
+                home.getUnitList=data;
+            });
+            roots.headState = "home";
+        };
+        // 对应的视图销毁前
+        $ctrl.$onBeforeUnload = function () {
+        };
+        $ctrl.$vmodels = [home];
+    })
 
 });
-

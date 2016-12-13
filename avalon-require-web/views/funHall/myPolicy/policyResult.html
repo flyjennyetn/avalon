@@ -1,0 +1,120 @@
+<div id="myPolicy" ms-controller="policyResult">
+    <div class="policy_banner">
+        <img src="images/funHall_banner.png" alt=""/>
+    </div>
+    <div class="policy_content">
+        <div class="nav_content">
+            当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > 保单查询
+            <a href="javascript:history.go(-1);">（返回列表）</a>
+        </div>
+        <div class="detail_content">
+            <div class="det_title_content">
+                保障方案
+            </div>
+            <div class="line"></div>
+            <div class="det_ul_content">
+                <div class="clearFix" ms-repeat="policyData">
+                    <p class="det_li_content" style="border-bottom: 1px solid #bcbcbc;">
+                        <span class="span_el span_el_left">保单号: <i>{{policyId}}</i></span>
+                        <span class="span_el span_el_right">产品名称: <i>{{el.productName}}</i></span>
+                    </p>
+                    <p class="det_li_content" style="border-bottom: 1px solid #bcbcbc;">
+                        <span class="span_el span_el_left" ms-if="el.coverPeriodType=='D'">保障期限：<i>{{el.coveragePeriod}}天</i></span>
+                        <span class="span_el span_el_left" ms-if="el.coverPeriodType=='M'">保障期限：<i>{{el.coveragePeriod}}月</i></span>
+                        <span class="span_el span_el_left" ms-if="el.coverPeriodType=='Y'">保障期限：<i>{{el.coveragePeriod}}年</i></span>
+                        <span class="span_el span_el_left" ms-if="el.coverPeriodType=='A'">保障期限：<i>保至{{el.coveragePeriod}}岁</i></span>
+                        <span class="span_el span_el_left" ms-if="el.coverPeriodType=='W'">保障期限：<i>保终身</i></span>
+                        <span class="span_el span_el_right">保障金额: <i>{{el.sumAssured}}</i></span>
+                    </p>
+                    <p class="det_li_content">
+                        <span class="span_el span_el_left">保障期间: <i>{{el.effectiveDate | date("yyyy-MM-dd")}}&nbsp;&nbsp;至&nbsp;&nbsp;{{el.expiryDate | date("yyyy-MM-dd")}}</i></span>
+                    </p>
+                </div>
+                <!--<li class="det_li_content clearFix" style="border-bottom: 1px dashed #bcbcbc">-->
+                    <!--<span class="span_el span_el_left">保障责任</span>-->
+                <!--</li>-->
+                <!--<li class="det_li_content clearFix">-->
+                    <!--<span class="span_el span_el_left">人身意外伤害-身故、残疾: <i>50万</i></span>-->
+                    <!--<span class="span_el span_el_right" style="border: 0;">意外医疗费用: <i>（免赔额100元，90%赔付）50万</i></span>-->
+                <!--</li>-->
+                <p class="det_li_content det_li_bg clearFix">
+                    投保人信息
+                </p>
+                <p class="det_li_content clearFix">
+                    <span class="span_el span_el_left">姓名: <i style="padding-left: 13%;">{{policyHolder.name}}</i></span>
+                    <span class="span_el span_el_right">身份证号：<i>{{policyHolder.certiCode}}</i></span>
+                </p>
+                <p class="det_li_content clearFix">
+                    <span class="span_el span_el_left">手机号: <i style="padding-left: 9%;">{{policyHolder.mobile}}</i></span>
+                    <span class="span_el span_el_right">详细地址：<i style="display: inline-block;width: 70%;line-height: 24px;vertical-align: text-top;">{{address |html}}</i></span>
+                </p>
+                <p class="det_li_content clearFix">
+                    <span class="span_el span_el_left">邮编: <i style="padding-left: 13%;">{{postCode}}</i></span>
+                </p>
+                <div>
+                    <p class="det_li_content det_li_bg clearFix">
+                        被保人信息
+                    </p>
+                    <p class="det_li_content clearFix">
+                        <span class="span_el span_el_left">与投保人关系: <i>{{relationship|flitership}}</i></span>
+                    </p>
+                    <p class="det_li_content clearFix">
+                        <span class="span_el span_el_left">姓名: <i style="padding-left: 13%;">{{insureds.name}}</i></span>
+                        <span class="span_el span_el_right">身份证号：<i>{{insureds.certiCode}}</i></span>
+                    </p>
+                    <p class="det_li_content clearFix">
+                        <span class="span_el span_el_left">手机号: <i style="padding-left: 9%;">{{insureds.mobile}}</i></span>
+                    </p>
+                </div>
+                <div ms-if="display">
+                    <p class="det_li_content det_li_bg clearFix">
+                        受益人
+                    </p>
+                    <p class="det_li_content clearFix" style="border: 0">
+                        <span class="span_el span_el_left">法定</span>
+                    </p>
+                </div>
+                <div ms-repeat="benfits" ms-if="display1">
+                    <p class="det_li_content det_li_bg clearFix">
+                        受益人
+                    </p>
+                    <p class="det_li_content clearFix">
+                        <span class="span_el span_el_left">与被保人关系: <i>{{el.biRelationship|flitership}}</i></span>
+                    </p>
+                    <p class="det_li_content clearFix">
+                        <span class="span_el span_el_left">姓名: <i style="padding-left: 13%;">{{el.beneCustInfo.name}}</i></span>
+                        <span class="span_el span_el_right">身份证号：<i>{{el.beneCustInfo.certiCode}}</i></span>
+                    </p>
+                    <p class="det_li_content clearFix">
+                        <span class="span_el span_el_left">手机号: <i style="padding-left: 9%;">{{el.beneCustInfo.mobile}}</i></span>
+                    </p>
+                </div>
+                <!--<li class="det_li_content det_li_bg_red clearFix">-->
+                    <!--分红信息-->
+                <!--</li>-->
+                <!--<li class="det_li_content clearFix">-->
+                    <!--<span class="span_el span_cell" style="border: 0;width: 22%">保单周年</span>-->
+                    <!--<span class="span_el span_cell" style="width: 18%">变化项目</span>-->
+                    <!--<span class="span_el span_cell" style="width: 17%">变化时间</span>-->
+                    <!--<span class="span_el span_cell" style="width: 15%">金额</span>-->
+                    <!--<span class="span_el span_cell" style="width: 28%">红利应该分配日期</span>-->
+                <!--</li>-->
+                <!--<li class="det_li_content clearFix" ms-repeat="dividendData">-->
+                    <!--<span class="span_el span_cell" style="border: 0;width: 22%">{{el.policyYear}}</span>-->
+                    <!--<span class="span_el span_cell" style="width: 18%">{{el.changeType}}</span>-->
+                    <!--<span class="span_el span_cell" style="width: 17%">{{ el.changeTime | date("yyyy-MM-dd")}}</span>-->
+                    <!--<span class="span_el span_cell" style="width: 15%">{{el.mount}}</span>-->
+                    <!--<span class="span_el span_cell" style="width: 28%">{{ el.dividendDate | date("yyyy-MM-dd")}}</span>-->
+                <!--</li>-->
+            </div>
+            <div class="bottomBtn">
+                <!--<a ms-href="ElectronicPolicy" target="_blank">电子保单.pdf</a>-->
+                <!--<span>&nbsp;&nbsp;>>&nbsp;&nbsp;</span>-->
+                <!--<a ms-href="ElectronicPolicy" download>{{policyId}}</a>-->
+                <a class="cease" ms-click="goPolicy" ms-if="display2&&display3&&policyInfo.policyStatus!='03'">退保</a>
+                <a style="font-size: 20px;color:#3C3C3C" ms-if="!display2||!display3||policyInfo.policyStatus=='03'">账号信息不完整，不支持线上退保</a>
+                <a class="downPdf" ms-href="{{Pdf}}" download>保单下载</a>
+            </div>
+        </div>
+    </div>
+</div>

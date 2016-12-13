@@ -1,0 +1,42 @@
+<div id="lcProDetail" ms-controller="lcProDetail">
+    <div class="summary">
+        <p class="pro_name">{{productInfo.productName}}</p>
+        <p class="pro_rate">{{productInfo.yearIncome}}<span class="percent">%</span></p>
+        <p class="pro_history">历史年化投资回报率</p>
+    </div>
+    <ul class="element">
+        <li class="el_li">
+            <span class="el_li_left">产品期限</span>
+            <span class="el_li_right">{{productInfo.guaranteePeriod|getPeriodName}}</span>
+        </li>
+        <li class="el_li">
+            <span class="el_li_left">投资金额（份）</span>
+            <span class="el_li_right text_color">{{(productInfo.price/100).toFixed(2)}}元</span>
+        </li>
+        <li class="el_li">
+            <span class="el_li_left" style="height: .62rem;">购买数量<span class="text_hint">单笔最多购买{{productInfo.personLimitNum}}份</span></span>
+            <span class="el_li_right add_subtract">
+                <span class="subtract" ms-on-click="subtract"></span>
+                <input type="number" placeholder="1份" ms-duplex="volume"/>
+                <span class="add" ms-on-click="add"></span>
+            </span>
+        </li>
+    </ul>
+    <div class="detail"  ms-repeat="productComments" ms-if-loop="el.productCommentType == 1">
+        <div class="text" ms-on-click="turnTo(el.productCommentId)">
+            <span class="hint_border">{{el.productCommentName}}</span>
+        </div>
+    </div>
+    <div class="read_info">
+        <i ms-click="agreeFun" ms-class="{{checkBoxStatus?'':'active'}}"></i><span class="content">本人已经充分了解本保险产品，同意并接受<a ms-repeat="productInfo.productComments" ms-if-loop="el.productCommentPosition == '2'" ms-href="{{el.proCommDetailList[0].productCommentFilePath}}" target="_blank">《{{el.productCommentName}}》、</a></span>
+    </div>
+    <div class="bottom space-between">
+        <!--<div class="server">-->
+            <!--客服-->
+        <!--</div>-->
+        <div class="price_btn space-between">
+            <span class="price"><span style="font-size: .28rem">￥</span>{{premiums}}</span>
+            <span class="btn"  ms-on-click="payFor">立即购买</span>
+        </div>
+    </div>
+</div>

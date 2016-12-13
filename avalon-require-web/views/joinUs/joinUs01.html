@@ -1,0 +1,37 @@
+<div id="joinUs01" ms-controller="joinUs01">
+    <p><img src="images/joinUs_bn.jpg" alt=""/></p>
+    <div class="nc">
+        <p class="place">当前位置：<a href="#!/home">首页</a> > 人才招聘</p>
+        <div class="cont">
+            <p class="tit">
+                <span class="left"><span class="lxzp">礼贤招募</span></span>
+                <span class="right">{{name}}</span>
+            </p>
+            <div>
+                <ul class="left_tit">
+                    <!--<li class="sx">-->
+                        <!--<div class="serchP">-->
+                            <!--<input type="text" placeholder="请输入搜索关键词" readonly="readonly"/>-->
+                            <!--<label>搜索</label>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <li class="concentBox">
+                        <!--<span><img src="images/joinUs_yx.png" alt=""/></span>-->
+                        <span>请在投递简历时邮件主题务必标明应聘的部门和职位，简历请投递：</span>
+                        <span class="mailBox">HR@ZDLIFE.CN</span>
+                    </li>
+                </ul>
+                <div class="right_tit">
+                    <div class="li1" ms-repeat="contentsList">
+                        <!--<span><img src="images/gw_icon.png" alt=""/></span>-->
+                        <!--<span class="cen">岗位职责</span>-->
+                        <p>
+                            {{el.content |html}}
+                        </p>
+                    </div>
+                </div>
+                <p class="back"><a href="#!/joinUs">返回</a></p>
+            </div>
+        </div>
+    </div>
+</div>

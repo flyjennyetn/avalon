@@ -2,34 +2,36 @@
  * Created by flyjennyetn on 2016/2/1.
  */
 requirejs.config({
+    waitSeconds: 0,
+    map:{
+        '*':{
+            'style':'js/require/css'
+        }
+    },
     baseUrl: "./",
     paths: {
-        "text": 'js/libs/text',             //用于requirejs导入html类型的依赖
-        "jquery": "js/libs/jquery/jquery",
-        "jqm":"js/libs/jquery/jquery.mobile-1.4.5",
-        "md5": "js/libs/jquery/jquery.md5",
-        "cookie": "js/libs/jquery/jquery.cookie",
-        "layer_": "js/libs/layer/layer",
-        "laypage": "js/libs/laypage/laypage",
-        "glide": "js/libs/jquery.glide.min",
-        "slide": "js/libs/jquery.SuperSlide.2.1.1",
-        "unslider":'js/libs/unslider.min',
-        "avalon": "js/libs/avalon/avalon.mobile.shim",
-        "animation": "js/libs/avalon/avalon.animation",
-        "avalonGetModel": "js/libs/avalon/avalon.getModel",
-        "mmRequest": "js/libs/avalon/mmRequest",
-        "mmPromise": "js/libs/avalon/mmPromise",
-        "mmHistory": "js/libs/avalon/mmHistory",
-        "mmRouter": "js/libs/avalon/mmRouter",
-        "mmState": "js/libs/avalon/mmState"
+        'requireLib':'js/require/require',
+        "text": 'js/require/text',
+        "jquery": "js/jquery/jquery",
+        "jquery_form":'js/jquery/jquery.form',
+        "md5": "js/jquery/jquery.md5",
+        "cookie": "js/jquery/jquery.cookie",
+        "layer_": "js/layer/layer",
+        "laydate": "js/laydate/laydate",
+        "laypage": "js/laypage/laypage",
+        "slide": "js/jquery/jquery.SuperSlide.2.1.1",
+        "avalon": "js/avalon/avalon.shim",
+        "avalonGetModel": "js/avalon/avalon.getModel",
+        "mmRequest": "js/avalon/mmRequest",
+        "mmPromise": "js/avalon/mmPromise",
+        "mmHistory": "js/avalon/mmHistory",
+        "mmRouter": "js/avalon/mmRouter",
+        "mmState": "js/avalon/mmState",
+        "myfilter":"js/filter/myfilter"
     },
     shim: {
         avalon: {
             exports: "avalon"
-        },
-        jqm:{
-            deps: ['jquery'],
-            exports: 'jqm'
         },
         md5:{
             deps: ['jquery'],
@@ -39,29 +41,21 @@ requirejs.config({
             deps: ['jquery'],
             exports: 'cookie'
         },
+        laydate:{
+            deps: ['jquery','style!js/laydate/need/laydate.css'],
+            exports: 'laydate'
+        },
         layer_:{
-            deps: ['jquery'],
+            deps: ['jquery','style!js/layer/skin/layer'],
             exports: 'layer_'
         },
-        glide:{
-            deps: ['jquery'],
-            exports: 'glide'
+        laypage:{
+            deps: ['jquery','style!js/laypage/skin/laypage'],
+            exports: 'laypage'
         },
         slide:{
             deps: ['jquery'],
             exports: 'slide'
-        },
-        unslider:{
-            deps: ['jquery'],
-            exports: 'unslider'
-        },
-        animation:{
-            deps: ['avalon'],
-            exports: 'animation'
-        },
-        mmRequest:{
-            deps: ['avalon','mmPromise'],
-            exports: 'mmRequest'
         },
         mmPromise:{
             deps: ['avalon'],
@@ -75,18 +69,14 @@ requirejs.config({
             deps: ['mmHistory'],
             exports: 'mmRouter'
         },
-        mmState:{
-            deps: ['mmPromise','mmRouter'],
-            exports: 'mmState'
-        },
         avalonGetModel:{
             deps: ['avalon'],
             exports: 'avalonGetModel'
         }
     }
 });
-// 为了可以预览，直接在这里requirejs，而不是通过include
-requirejs(["avalon", "avalonGetModel", "mmState", "mmRequest","animation"], function (avalon,avalonGetModel,mmState,mmRequest,animation) {
+//为了可以预览，直接在这里requirejs，而不是通过include
+requirejs(["avalon", "avalonGetModel", "mmState"], function (avalon) {
     avalon.require = requirejs;
     // 重写模板加载器，改为用text插件加载
     avalon.state.templateLoader = function(url, resolve, reject, reason) {

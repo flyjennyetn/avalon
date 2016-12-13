@@ -1,0 +1,340 @@
+<div id="inputInfoDL" ms-controller="inputInfoDL">
+    <div class="productInfo">
+        <h3 class="productTitle">投保计划</h3>
+        <ul class="element">
+            <li class="el_li">
+                <span class="el_li_left">产品期限</span>
+                <span class="el_li_right">{{productName}}</span>
+            </li>
+            <li class="el_li">
+                <span class="el_li_left">投资金额（份）</span>
+                <span class="el_li_right text_color">{{premiums}}元</span>
+            </li>
+            <li class="el_li">
+                <span class="el_li_left" style="height: .62rem;line-height: .62rem;">购买数量（份）</span>
+            <span class="el_li_right add_subtract">
+                <span class="subtract" ms-on-click="subtract"></span>
+                <input type="number" placeholder="1" ms-duplex="volume"/>
+                <span class="add" ms-on-click="add"></span>
+            </span>
+            </li>
+            <li class="el_li">
+                <span class="el_li_left">快速选择购买分数</span>
+            <span class="el_li_right buy_quick">
+                <a ms-class="{{share == '50' ? 'active':''}}" ms-on-click="selectShare(50)">50份</a>
+                <a ms-class="{{share == '100' ? 'active':''}}" ms-on-click="selectShare(100)">100份</a>
+                <a ms-class="{{share == '150' ? 'active':''}}" ms-on-click="selectShare(150)">150份</a>
+                <a ms-class="{{share == '200' ? 'active':''}}" ms-on-click="selectShare(200)">200份</a>
+            </span>
+            </li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">投保人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>姓名</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入名字"
+                             ms-duplex="holderInfo.holderName"></span>
+            </li>
+            <li class="inputInfo">
+                <label>身份证号</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入身份证号" ms-duplex="holderInfo.holderCardNo" ms-on-blur="cardNoBlur(holderInfo.holderCardNo,'1')"></span>
+            </li>
+            <li class="inputInfo">
+                <label>证件有效期</label>
+                 <span>
+                     <select ms-duplex='CardNoTime' ms-change="validity(CardNoTime,'1')">
+                         <option value="0">长期</option>
+                         <option value="1">指定有效期</option>
+                     </select>
+                </span>
+            </li>
+            <li class="inputInfo" ms-if="flag">
+                <label>证件有效期</label>
+                <span>
+                    <input type="date"id="Hdate" class="dateTime" ms-duplex="holderInfo.cardEndDate"  ms-blur="getDate(holderInfo.cardEndDate,'1')">
+                </span>
+            </li>
+            <li class="inputInfo">
+                <label>国籍</label>
+                 <span>
+                    <select>
+                        <option>中国</option>
+                    </select>
+                </span>
+            </li>
+            <li class="inputInfo">
+                <label>移动电话</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入手机号" ms-duplex="holderInfo.holderPhone"></span>
+            </li>
+            <li class="inputInfo">
+                <label>邮箱</label>
+                <span><input type="text" class="dateTime" placeholder="填写邮箱用于接收电子保单" ms-duplex="holderInfo.holderEmail"></span>
+            </li>
+            <li class="inputInfo">
+                <label>所属地区</label>
+                <span>
+                    <!--<select class="select provinceSel" name="province"-->
+                            <!--ms-on-change="areaChange(2,holderInfo.residentProvince)"-->
+                            <!--ms-duplex="holderInfo.residentProvince">-->
+                        <!--<option ms-attr-value="-1">请选择</option>-->
+                        <!--<option ms-repeat="holderProvinceList" ms-attr-value="el.code">{{el.name}}</option>-->
+                    <!--</select>-->
+                    <select class="select provinceSel" ms-duplex="holderInfo.residentProvince">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="arr1" ms-attr-value="el.code">{{el.name}}</option>
+                    </select>
+                    <!--<select class="select citySel" name="city" ms-on-change="areaChange(3,holderInfo.residentCity)"-->
+                            <!--ms-duplex="holderInfo.residentCity">-->
+                        <!--<option ms-attr-value="-1">请选择</option>-->
+                        <!--<option 　ms-repeat="holderCityList" ms-attr-value="el.code">{{el.name}}</option>-->
+                    <!--</select>-->
+                    <select class="select citySel" ms-duplex="holderInfo.residentCity">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="arr2" ms-attr-value="el.code">{{el.name}}</option>
+                    </select>
+                    <!--<select class="select areaSel" name="area" ms-duplex="holderInfo.residentAddress">-->
+                        <!--<option ms-attr-value="-1">请选择</option>-->
+                        <!--<option ms-repeat="holderAreaList" ms-attr-value="el.code">{{el.name}}</option>-->
+                    <!--</select>-->
+                    <select class="select areaSel" ms-duplex="holderInfo.residentAddress">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="arr3" ms-attr-value="el.code" ms-if-loop="el.parentCode == holderInfo.residentCity">{{el.name}}</option>
+                    </select>
+                </span>
+                <
+            </li>
+            <li class="inputInfo">
+                <label>详细地址</label>
+                <span><input type="text" class="dateTime" placeholder="请选择地区"
+                             ms-duplex="holderInfo.holderAddress" ms-blur="fullInfo(holderInfo.residentAddress,'h')"></span>
+            </li>
+            <li class="inputInfo">
+                <label>职业类别</label>
+                <span>
+                    <select ms-duplex="holderInfo.jobCateId">
+                        <option value="1201002">学生</option>
+                        <option value="1801009">警校学生</option>
+                        <option value="0001001">内勤人员</option>
+                        <option value="0001002">外勤人员</option>
+                        <option value="0002001">私营企业主</option>
+                        <option value="0001002">村委会、居委会人员</option>
+                        <option value="1701002">家政服务人员</option>
+                        <option value="1801001">警务行政及内勤人员</option>
+                        <option value="0000003">离退休人员（无兼职）</option>
+                        <option value="1701001">家庭主妇（夫）</option>
+                        <option value="1501006">小商贩（有固定摊位、店铺）</option>
+                        <option value="0000002">无业人员</option>
+                    </select>
+                </span>
+            </li>
+            <li class="inputInfo">
+                <label>投保人年收入</label>
+                <span><input type="text" class="dateTime" placeholder="单位:(万元)"
+                             ms-duplex="holderInfo.income">单位:(万元)</span>
+            </li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">被保人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>与投保人关系</label>
+                <span>
+                    <select ms-duplex="insuredList[0].insuredRelation" class="Relationship ">
+                        <option value="00">本人</option>
+                        <option value="01">配偶</option>
+                        <option value="02">父母</option>
+                        <option value="03">子女</option>
+                    </select>
+                </span>
+            </li>
+            <div ms-if="Status">
+                <li class="inputInfo">
+                    <label>姓名</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入名字"
+                             ms-duplex="insuredList[0].insuredName"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>身份证号</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入身份证号" ms-duplex="insuredList[0].insuredCardNo"
+                             ms-on-blur="cardNoBlur(insuredList[0].insuredCardNo,'2')"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>证件有效期</label>
+                 <span>
+                     <select ms-duplex='LCardNoTime' ms-change="validity(LCardNoTime,'2')">
+                         <option value="0">长期</option>
+                         <option value="1">指定有效期</option>
+                     </select>
+                </span>
+                </li>
+                <li class="inputInfo" ms-if="Lflag">
+                    <label>证件有效期</label>
+                    <span><input type="date" id="Idate" class="dateTime" ms-duplex="insuredList[0].cardEndDate"  ms-blur="getDate(insuredList[0].cardEndDate,'2')"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>国籍</label>
+                 <span>
+                    <select>
+                        <option>中国</option>
+                    </select>
+                </span>
+                </li>
+                <li class="inputInfo">
+                    <label>移动电话</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入手机号"
+                             ms-duplex="insuredList[0].insuredPhone"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>邮箱</label>
+                    <span><input type="text" class="dateTime" placeholder="请输入邮箱" ms-duplex="insuredList[0].insuredEmail"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>所属地区</label>
+                <span>
+                    <!--<select class="select provinceSel" name="province"-->
+                            <!--ms-on-change="areaChange(2,holderInfo.residentProvince)"-->
+                            <!--ms-duplex="holderInfo.residentProvince">-->
+                        <!--<option ms-attr-value="-1">请选择</option>-->
+                        <!--<option ms-repeat="holderProvinceList" ms-attr-value="el.code">{{el.name}}</option>-->
+                    <!--</select>-->
+                    <select class="select provinceSel" ms-duplex="insuredList[0].residentProvince">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="arr1" ms-attr-value="el.code">{{el.name}}</option>
+                    </select>
+
+                    <!--<select class="select citySel" name="city" ms-on-change="areaChange(3,holderInfo.residentCity)"-->
+                            <!--ms-duplex="holderInfo.residentCity">-->
+                        <!--<option ms-attr-value="-1">请选择</option>-->
+                        <!--<option 　ms-repeat="holderCityList" ms-attr-value="el.code">{{el.name}}</option>-->
+                    <!--</select>-->
+                    <select class="select citySel" ms-duplex="insuredList[0].residentCity">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="arr2" ms-attr-value="el.code">{{el.name}}</option>
+                    </select>
+                    <!--<select class="select areaSel" name="area" ms-duplex="holderInfo.residentAddress">-->
+                        <!--<option ms-attr-value="-1">请选择</option>-->
+                        <!--<option ms-repeat="holderAreaList" ms-attr-value="el.code">{{el.name}}</option>-->
+                    <!--</select>-->
+                    <select class="select areaSel" ms-duplex="insuredList[0].residentAddress">
+                        <option ms-attr-value="-1">请选择</option>
+                        <option ms-repeat="arr3" ms-attr-value="el.code" ms-if-loop="el.parentCode == insuredList[0].residentCity">{{el.name}}</option>
+                    </select>
+                </span>
+                    <
+                </li>
+                <li class="inputInfo">
+                    <label>详细地址</label>
+                <span><input type="text" class="dateTime" placeholder="请填写地区"
+                             ms-duplex="insuredList[0].insuredAddress" ms-blur="fullInfo(insuredList[0].residentAddress,'b')"></span>
+                </li>
+                <!--<li class="inputInfo">-->
+                    <!--<label>邮编</label>-->
+                    <!--<span><input type="text" class="dateTime" placeholder="请输入邮编" ms-duplex="insuredList[0].insuredZip"></span>-->
+                <!--</li>-->
+            </div>
+            <li class="inputInfo">
+                <label>被保人身高</label>
+                <span><input type="text" class="dateTime" placeholder="单位:(cm)"
+                             ms-duplex="insuredList[0].height"></span>
+            </li>
+            <li class="inputInfo">
+                <label>被保人体重</label>
+                <span><input type="text" class="dateTime" placeholder="单位:(kg)"
+                             ms-duplex="insuredList[0].weightl">单位:(万元)</span>
+            </li>
+            <li class="inputInfo" ms-if="Status">
+                <label>被保人年收入</label>
+                <span><input type="text" class="dateTime" placeholder="单位:(万元)"
+                             ms-duplex="insuredList[0].income">单位:(万元)</span>
+            </li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">受益人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>受益人</label>
+                <span>
+                    <select ms-duplex="insuredList[0].isLegal">
+                        <option value="1">法定</option>
+                        <option value="0">指定</option>
+                    </select>
+                </span>
+            </li>
+            <div ms-if="!isshow">
+                <li class="inputInfo">
+                    <label>与被保人关系</label>
+                <span>
+                    <select ms-duplex="insuredList[0].benefitList[0].benefitRelation" class="Relationship ">
+                        <option value="01">配偶</option>
+                        <option value="02">父母</option>
+                        <option value="03">子女</option>
+                    </select>
+                </span>
+                </li>
+                <li class="inputInfo">
+                    <label>受益人类别</label>
+                <span>
+                    <select ms-duplex="insuredList[0].benefitList[0].benType">
+                        <option value="1">死亡受益人</option>
+                    </select>
+                </span>
+                </li>
+                <li class="inputInfo">
+                    <label>受益人级别</label>
+                <span>
+                    <select ms-duplex="insuredList[0].benefitList[0].benefitOrder">
+                        <option value="1">第一受益人</option>
+                    </select>
+                </span>
+                </li>
+                <li class="inputInfo">
+                    <label>姓名</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入名字"
+                             ms-duplex="insuredList[0].benefitList[0].benefitName"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>身份证号</label>
+                <span><input type="text" class="dateTime" placeholder="必填,请输入身份证号" ms-duplex="insuredList[0].benefitList[0].benefitCardNo"
+                             ms-on-blur="cardNoBlur(insuredList[0].benefitList[0].benefitCardNo,'3')"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>证件有效期</label>
+                <span>
+                    <select ms-duplex='BCardNoTime' ms-change="validity(BCardNoTime,'3')">
+                        <option value="0">长期</option>
+                        <option value="1">指定有效期</option>
+                    </select>
+                </span>
+                </li>
+                <li class="inputInfo" ms-if="Bflag">
+                    <label>证件有效期</label>
+                    <span><input type="date" id="Bdate" class="dateTime" ms-duplex="insuredList[0].benefitList[0].cardEndDate"  ms-blur="getDate(insuredList[0].benefitList[0].cardEndDate,'3')"></span>
+                </li>
+                <li class="inputInfo">
+                    <label>收益份额</label>
+                    <span>1</span>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">代理人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>代理人编码</label>
+                <span><input type="text" class="dateTime" placeholder="请填写代理人编码"
+                             ms-duplex="coreNeedVar.agentCode"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="boxLine">
+    </div>
+    <div class="buyBtn">
+        <span class="price">￥{{premiums}}</span>
+        <button class="Buy" ms-click="submitInfo">立即购买</button>
+    </div>
+</div>

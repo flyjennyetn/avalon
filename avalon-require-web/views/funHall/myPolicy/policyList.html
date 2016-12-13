@@ -1,0 +1,38 @@
+<div id="policyList" ms-controller="policyList">
+    <div class="Download_banner">
+        <img src="images/Result_banner.png" alt=""/>
+    </div>
+    <div class="Download_content">
+        <div class="nav_content">
+            当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > 保单查询
+        </div>
+        <div class="info_content">
+            <div class="title_content">
+                君康人寿保单列表
+            </div>
+            <div class="line"></div>
+            <ul class="ul_content">
+                <li class="title_List">
+                    <span>产品名称</span>
+                    <span class="policyNum">保单号</span>
+                    <span class="guarantee">保障期间</span>
+                    <span>状态</span>
+                    <span>操作</span>
+                </li>
+                <li class="List_concent" ms-repeat="policyInfo">
+                    <span>{{el.products[0].productName}}</span>
+                    <span class="policyNum">{{el.policy.policyNo}}</span>
+                    <span class="guarantee"><i>{{el.policy.effectiveDate}}至</i><i>{{el.policy.expiryDate}}</i></span>
+                    <span>{{el.policy.policyStatus|orderState}}</span>
+                    <span><a ms-click="goResult(el.policy.policyNo,el.policy.submitChannel)">查看详情</a>&nbsp;&nbsp;&nbsp;</span>
+                </li>
+                <li style="text-align: center;font-size: 16px;padding: 25px 0 20px" ms-if="policyInfo.length<=0">
+                    <span>
+                        暂无保单
+                    </span>
+                </li>
+            </ul>
+            <div id="page" style="text-align: center;margin: 50px auto;"></div>
+        </div>
+    </div>
+</div>

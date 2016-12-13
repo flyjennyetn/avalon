@@ -1,0 +1,69 @@
+#phone{
+  .Mobile{
+    width: 100%;
+    padding-left: 4%;
+    .text-left{
+      display: block;
+      width: 100%;
+      height:1.4rem;
+      font-size:.25rem;
+      color: #707070;
+      padding-top: .44rem;
+    }
+    .text-right{
+      width: 100%;
+      height: 1.36rem;
+      text-align: center;
+      span{
+        display: inline-block;
+        background: url("../images/Mobile.png") no-repeat;
+        background-size: .3rem .48rem;
+        line-height: .48rem;
+        font-size: .4rem;
+        padding-left: 5%;
+      }
+    }
+  }
+  .inputBox{
+    width: 100%;
+    height: 1.1rem;
+    background: #ffffff;
+    padding-left: 4%;
+    font-size: .26rem;
+    span{
+      display: inline-block;
+      width: 22%;
+      line-height: 1.1rem;
+    }
+    input{
+      border: none;
+      width: 40%;
+      height: .55rem;
+    }
+    button{
+      border: none;
+      width:30%;
+      height:.54rem;
+      background:#f85452;
+      font-size:.26rem;
+      color: #ffffff;
+      border-radius: .5rem;
+      margin-left: 2%;
+    }
+  }
+  .last_box{
+    width: 100%;
+    text-align: center;
+    padding-top: .98rem;
+    .nextStep{
+      width:6rem;
+      height:.92rem ;
+      background:#f85452 ;
+      color: #ffffff;
+      font-size:.34rem ;
+      border-radius: .5rem;
+      text-align: center;
+      line-height: .92rem;
+    }
+  }
+}

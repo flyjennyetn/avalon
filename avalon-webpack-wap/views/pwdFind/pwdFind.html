@@ -1,0 +1,15 @@
+<div ms-controller="pwdFind" id="pwdFind">
+    <div class="content">
+        <div class="sub_content">
+            <input ms-duplex="userName" class="account" type="text" placeholder="请输入用户名"/>
+        </div>
+        <div class="sub_content">
+            <input ms-duplex="userPhone" class="account" type="text" placeholder="请输入登录手机号码" maxlength="11"/>
+        </div>
+        <div class="sub_content">
+            <input ms-duplex="phoneVCode" class="phoneVCode" type="text" placeholder="验证码" maxlength="6"/>
+            <input ms-on-click="sendMes" ms-disabled="status==1" type="button" class="getMessage" value="获取验证码"/>
+        </div>
+    </div>
+    <div class="register"><a href="javascript:" ms-on-click="save">下一步</a></div>
+</div>

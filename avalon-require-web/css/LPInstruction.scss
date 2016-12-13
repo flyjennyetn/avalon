@@ -1,0 +1,80 @@
+@import "public";
+#LPInstruction{
+  .LPIns_de{
+    .LPIns_bn{
+      @include width();
+      height: auto;
+    }
+    .LPIns_ct{
+
+      @include widthCen();
+
+      margin: 0 auto;
+      .ct_title{
+        font-size: 18px;
+        color: #9fa0a0;
+        margin: 45px 0 58px 0;
+        a{
+          color: #9fa0a0;
+        }
+      }
+      .ct_con_title{
+        height: 60px;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        line-height: 60px;
+        background: url("../images/compNotice_title.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .ct_con_line{
+        margin: 1px 0;
+      }
+      .ct_con{
+        background: url("../images/LPInstr_con_back.png");
+        padding: 0 20px;
+        overflow: hidden;
+        .ct_con_p{
+          margin: 20px 0;
+          line-height: 30px;
+          font-size: 18px;
+          color: #5D5D5D; 
+          .p_star{
+            color: #D80E2B;
+          }
+          img{
+            display: block;
+            margin: 0 auto;
+          }
+          img.top{
+            margin-top: 40px;
+          }
+          img.footer{
+            margin-bottom: 40px;
+          }
+          .dlPDF{
+            color: #D80E2B;
+          }
+          form{
+            @include width();
+            table{
+              margin: 0 auto;
+              tr{
+                td{
+                  border: 1px solid #595757;
+                  text-align: center;
+                  padding: 5px 10px;
+                  .table_back{
+                  }
+                }
+                .table_icon1{
+                  color: #D80E2B;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+#hotProductList {
+  width: 100%;
+  .ul_con {
+    width: 100%;
+    .li_con {
+      margin: .15rem .2rem;
+      background: #ffffff;
+      position: relative;
+      .productImg {
+        display: inline-block;
+        height: 2.76rem;
+        overflow: hidden;
+        width: 100%;
+      }
+      .productInfo {
+        padding: .5rem .35rem 0;
+        .title {
+          font-size: .28rem;
+          color: #000000;
+        }
+        .price {
+          float: right;
+          font-size: .26rem;
+          color: #ff6817;
+          .min {
+            font-size: .2rem;
+            display: inline-block;
+            width: .28rem;
+            height: .28rem;
+            border-radius: 50%;
+            background: #ff6817;
+            color: #ffffff;
+            text-align: center;
+            line-height: .28rem;
+          }
+        }
+      }
+      .describe {
+        color: #6d665d;
+        font-size: .2rem;
+        padding: .15rem .35rem .6rem;
+      }
+      .label {
+        position: absolute;
+        padding: .1rem;
+        background: #ed8a46;
+        color: #ffffff;
+        top: .4rem;
+        left: 0;
+      }
+    }
+  }
+}

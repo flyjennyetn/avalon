@@ -1,4 +1,22 @@
-<div ms-controller="common">
-    <div class="fillfather" ms-view=""></div>
+<div id="common" ms-controller="common">
+    <div ms-if="menuStatus" class="swiper-container menu">
+        <ul class="swiper-wrapper ul_con">
+            <li class="swiper-slide li_con" ms-on-click="selectMenu(1)">
+                <span ms-class="{{activeStatus == 1 ?'active':''}}">热销</span>
+            </li>
+            <li class="swiper-slide li_con" ms-on-click="selectMenu(2)">
+                <span ms-class="{{activeStatus == 2 ?'active':''}}">理财</span>
+            </li>
+            <li class="swiper-slide li_con" ms-on-click="selectMenu(3)">
+                <span ms-class="{{activeStatus == 3 ?'active':''}}">健康</span>
+            </li>
+            <li class="swiper-slide li_con" ms-on-click="selectMenu(4)">
+                <span ms-class="{{activeStatus == 4 ?'active':''}}">意外</span>
+            </li>
+            <li class="swiper-slide li_con" ms-on-click="selectMenu(5)">
+                <span ms-class="{{activeStatus == 5 ?'active':''}}">其他</span>
+            </li>
+        </ul>
+    </div>
+    <div ms-view=""></div>
 </div>
-

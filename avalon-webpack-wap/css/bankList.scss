@@ -1,0 +1,22 @@
+#bankList{
+  ul{
+    li{
+      padding: .25rem 0 .25rem 16.7%;
+      background: url("../images/bankLogo.png") 6% center no-repeat;
+      background-size: .6rem .56rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ededed;
+      .bankName{
+        font-size: .26rem;
+      }
+      .limit{
+        font-size: .2rem;
+        color: #999;
+      }
+      &.noLimit{
+        padding: .4rem 0 .4rem 16.7%;
+      }
+    }
+
+  }
+}

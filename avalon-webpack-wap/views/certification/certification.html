@@ -1,0 +1,7 @@
+<div id="certification" ms-controller="certification">
+    <ul class="InputBox">
+        <li class="phone"><span class="mobile">{{mobile}}</span></li>
+        <li class="icon_c"><input type="text" placeholder="验证码" ms-duplex="phoneVCode"><input class="per-getMessage" ms-on-click="sendMes" ms-disabled="status==1" type="button" value="获取校验码"></li>
+    </ul>
+    <div class="btnBox"><button class="nextStep" ms-click="changeStepStatus">下一步</button></div>
+</div>

@@ -6,19 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-<!--http://xat01.e-tianrong.com/hzjh/weixin.html?jack=account-->
-<!--http://xat01.e-tianrong.com/hzjh/weixin.html?jack=baby-->
 <script src="js/openId.js"></script>
 <script>
+    function getUrlParaVul(strName) {
+        var strHref = location.href;
+        var intPos = strHref.indexOf("?");
+        var strRight = strHref.substr(intPos + 1);
+        var arrTmp = strRight.split("&");
+        for (var i = 0; i < arrTmp.length; i++) {
+            var arrTemp = arrTmp[i].split("=");
+            if (arrTemp[0].toUpperCase() == strName.toUpperCase()) {
+                if (arrTemp[1].indexOf('#') > 0) {
+                    arrTemp[1] = arrTemp[1].substring(0, arrTemp[1].length - 1);
+                } else {
+                    return arrTemp[1];
+                }
+            }
+        }
+        return null;
+    }
+    var friendId = getUrlParaVul('friendId');
     getOpenId({
-        IPLocation : 'http://****.com//getOpenId.json', //接口地址
-        redirect_uri:window.location.href,
-        inlet:{
-            "login":'index.html#!/login'
+        IPLocation: 'http://114.113.112.13:8181/jkds/openId/newGetOpenId', //接口地址
+        redirect_uri: window.location.href, //回调地址
+        inlet: {   //多入口进入地址
+            "productDL1": 'index.html#!/proDetailDL/100003',//赠险
+            "productDL2": 'index.html#!/proDetailDL/100004',//赠险
+            "freeInsurance": 'index.html#!/insuredDetail/200001',//赠险
+            "active": 'index.html#!/active',//圣诞活动
+            "activeForFri": 'index.html#!/activeForFri?friOpenId=' + friendId,//圣诞活动
+            "myIncome": 'index.html#!/myIncome',//我的收益
+            "aboutUs": 'index.html#!/aboutUs',//关于我们
+            "certification": 'index.html#!/certification',//微服务-实名认证
+            "policyList": 'index.html#!/policyList',//微服务-我的保单
+            "orderList": 'index.html#!/orderList',//微服务-我的订单
+            "article": 'index.html#!/article',//微活动-聚焦健康
+            "assessment": 'index.html#!/assessment',//微活动-健康测评
+            "accidentInsure": 'index.html#!/accidentInsure',//微商城-意外险
+            "healthInsure": 'index.html#!/healthInsure',//微商城-健康险
+            "lcList": 'index.html#!/lcList',//微商城-理财险
+            "hotProductList": 'index.html#!/hotProductList'//微商城-热销爆款
         },
-        appid:"****"
+        appid: "wx56b138d07022146e"  //微信的appid
     });
-    //http://****/weixin.html?jack=home
 </script>
 </body>
 </html>

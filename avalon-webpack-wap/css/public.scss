@@ -1,0 +1,41 @@
+$mediaType: screen;
+$mediaName: max-width;
+
+/*--------------------- public -----------------------*/
+@mixin inline-block(){
+  display:inline-block;
+  *zoom:1;
+  *display:inline;
+}
+
+@mixin box-shadow () {
+  -webkit-box-shadow:0 0 5px rgba(120, 120, 120, .5);
+  -moz-box-shadow:0 0 5px rgba(120, 120, 120, .5);
+  box-shadow:0 0 5px rgba(120, 120, 120, .5);
+}
+
+@mixin border-radius($sizi){
+  border-radius: $sizi;
+  -webkit-border-radius: $sizi;
+  -moz-border-radius: $sizi;
+}
+
+@mixin opacity(){
+  filter:alpha(opacity=50);
+  -moz-opacity:0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+
+@mixin opacityNo(){
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+@mixin clear(){
+  clear:both
+}
+
+

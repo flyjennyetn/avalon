@@ -54,6 +54,9 @@ module.exports = {
         //别名
         alias: {
             jquery: path.join(__dirname, './js/jquery/jquery-2.0.3.min'),
+            gridLocaleEn: path.join(__dirname, './js/jqGrid/i18n/grid.locale-en'),
+            jqGrid: path.join(__dirname, './js/jqGrid/jquery.jqGrid.min'),
+            jqGridCss: path.join(__dirname, './js/jqGrid/css/ui.jqgrid.css'),
             echarts: path.join(__dirname, './js/echarts/echarts'),
             validate: path.join(__dirname, './js/jquery/jquery.validate.min'),
             slimscroll: path.join(__dirname, './js/jquery/jquery.slimscroll.min'),

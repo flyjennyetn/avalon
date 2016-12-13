@@ -1,0 +1,165 @@
+#confirmInfo{
+  background-color: #f5f5f5;
+  .productInfo{
+    width: 100%;
+    background: #ffffff;
+    .productTitle{
+      height:1.06rem;
+      background-color:#f2f2f2;
+      color:#f05f46;
+      font-size:.28rem;
+      line-height:1.06rem;
+      padding-left:7.3%;
+      background-image: url("../images/orange.png");
+      background-repeat: no-repeat;
+      background-position:4% center;
+      a{
+        display: inline-block;
+        float: left;
+        width: 30%;
+      }
+      .applicant{
+        text-align: right;
+        display: inline-block;
+        width: 70%;
+        float: right;
+        padding-right:4.4%;
+        .Relationship{
+          width: 25%;
+          height:.6rem ;
+          //margin-left:54%;
+        }
+      }
+    }
+    .Info{
+      width: 100%;
+      padding: .1rem 0;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        font-size:.28rem;
+        overflow: hidden;
+        padding: 0 4% 0 8.8%;
+        label{
+          width:30%;
+          float: left;
+        }
+        span{
+          width: 70%;
+          display: inline-block;
+          float: right;
+          text-align: left;
+          em{
+            color:#ed8a46;
+          }
+        }
+        .address{
+          line-height: .35rem;
+          padding-top: .35rem;
+        }
+      }
+      .inputInfo{
+        width:92%;
+        height: .7rem;
+        border: 1px solid #cccccc;
+        border-radius: .1rem;
+        margin: 0.2rem auto;
+        line-height: .7rem;
+        padding: 0 0 0 4.6%;
+        span{
+          input{
+            width: 100%;
+          }
+          select{
+            border:none;
+            width: 30%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .terms{
+    width: 100%;
+    //height: .74rem;
+    margin: .3rem 0 0;
+    line-height:.74rem;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    i{
+      display: inline-block;
+      width:.3rem;
+      height:.3rem;
+      background:url("../images/duigou.png") no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: .2rem;
+      left: 3%;
+      &.active{
+        display: inline-block;
+        width:.3rem;
+        height:.3rem;
+        background:url("../images/duigou_1.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: .2rem;
+        left: 3%;
+      }
+    }
+    p{
+      padding-left: 9%;
+      a{
+        color: #268ec2;
+      }
+    }
+  }
+  .boxLine{
+    width: 100%;
+    height: .3rem;
+    background-color: #f5f5f5;
+    padding-bottom:1.32rem;
+  }
+  .buyBtn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.02rem;
+    background: #ffffff;
+    overflow: hidden;
+    //.kefu{
+    //  display: inline-block;
+    //  width:15%;
+    //  float: left;
+    //  text-align: center;
+    //  padding-top:0.6rem;
+    //  background-image: url("../images/phone.png");
+    //  background-repeat: no-repeat;
+    //  background-position: center .2rem;
+    //  background-size: .4rem .4rem;
+    //}
+    .price{
+      display: inline-block;
+      width:40% ;
+      height: .65rem;
+      font-size:.4rem;
+      margin-top:.2rem ;
+      color:#ed8a46;
+      border-left: 1px solid #eeeeee;
+      padding-left: 4%;
+      line-height: .65rem;
+    }
+    .Buy{
+      display: inline-block;
+      border: none;
+      width: 56%;
+      height: .8rem;
+      background-color: #f05f46;
+      border-radius:.1rem ;
+      color:#ffffff;
+      font-size:.36rem;
+      text-align: center;
+      line-height: .8rem;
+    }
+  }
+}

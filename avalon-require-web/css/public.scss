@@ -1,0 +1,79 @@
+$mediaType: screen;
+$mediaName: max-width;
+
+/*--------------------- public -----------------------*/
+@mixin inline-block(){
+  display:inline-block;
+  *zoom:1;
+  *display:inline;
+}
+
+@mixin box-shadow () { //阴影效果
+  -webkit-box-shadow:0 0 5px rgba(120, 120, 120, .5);
+  -moz-box-shadow:0 0 5px rgba(120, 120, 120, .5);
+  box-shadow:0 0 5px rgba(120, 120, 120, .5);
+}
+
+@mixin border-radius($sizi){ //圆角效果
+  border-radius: $sizi;
+  -webkit-border-radius: $sizi;
+  -moz-border-radius: $sizi;
+}
+
+@mixin opacity($num){ //透明效果
+  filter:alpha(opacity=$num*100);
+  -moz-opacity:$num;
+  -khtml-opacity:$num;
+  opacity: $num;
+}
+
+@mixin opacityNo(){
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+
+//@mixin font-face1(){
+//
+//    font-family: '779_CAI978';
+//    src: url("Font/779_CAI978.ttf");
+//}
+@mixin background-color(){ //背景颜色
+  background-color:#d20a24;
+  //background-color:#1b2735;
+}
+@mixin color(){ //字体颜色
+  color:#3E3A39;
+}
+@mixin  width(){ //默认宽度百分百
+  width:100%;
+}
+@mixin  widthOut(){ //最外层宽度
+  width:1280px;
+}
+@mixin  widthCen(){//中间可视部分宽度
+  width:1064px;
+}
+$baseSize: 1064px !default; //宽度转换
+@function baseSize($px) {
+  @return $px / $baseSize * 100%;
+}
+@mixin clear(){
+  clear:both
+}
+@mixin placeholder($color){ //input 字体颜色
+  &::-webkit-input-placeholder {
+    color:$color;
+  };
+  :-moz-placeholder {
+    color: #acacac !important; text-overflow: ellipsis;
+  };
+  ::-moz-placeholder {
+    color: #acacac !important; text-overflow: ellipsis;
+  }; /* for the future */
+  :-ms-input-placeholder {
+    color: #acacac !important; text-overflow: ellipsis;
+  };
+}

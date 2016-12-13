@@ -1,0 +1,39 @@
+<div id="joinUs" ms-controller="joinUs">
+    <p><img src="images/joinUs_bn.jpg" alt=""/></p>
+    <div class="nc">
+        <p class="place">当前位置：<a href="#!/home">首页</a> > 人才招聘</p>
+        <div class="cont">
+            <p>
+                <span class="left">礼贤招募</span>
+                <span class="right">招聘职位</span>
+            </p>
+            <div>
+                <ul class="left_tit">
+                    <li class="sx">
+                        <div class="serchP">
+                            <input type="text" placeholder="请输入搜索关键词" ms-duplex="content" ms-on-keyup="keyUp()" ms-change="clean"/>
+                            <label  ms-click="search(1,'init',content)">搜索</label>
+                        </div>
+                    </li>
+                    <li class="concentBox">
+                        <!--<span><img src="images/joinUs_yx.png" alt=""/></span>-->
+                        <span>请在投递简历时邮件主题务必标明应聘的部门和职位，简历请投递：</span>
+                        <span class="mailBox">HR@ZDLIFE.CN</span>
+                    </li>
+                </ul>
+                <ul class="right_tit">
+                    <!--<img style="width: 100%" src="images/rczp_line.jpg" alt=""/>-->
+                    <li ms-click="rczp(el.name)" ms-repeat="nameList">
+                        <span><img src="images/rczp_i1.png" alt=""/></span>
+                        <span class="cen">{{el.name}}</span>
+                        <span>{{el.createTime |date("yyyy-MM-dd")}}</span>
+                    </li>
+                    <li ms-if="Disflag">
+                        <span style="text-align: center;display: block;">暂无内容</span>
+                    </li>
+                </ul>
+                <div id="pager" style="text-align: center;margin-top:40px;"></div>
+            </div>
+        </div>
+    </div>
+</div>

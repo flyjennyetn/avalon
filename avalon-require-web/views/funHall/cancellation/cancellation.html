@@ -1,0 +1,80 @@
+<div id="cancellation" ms-controller="cancellation">
+    <div class="Download_banner">
+        <img src="images/Result_banner.png" alt=""/>
+    </div>
+    <div class="Download_content">
+        <div class="nav_content">
+            当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > 退保试算
+        </div>
+        <div class="info_content">
+            <div class="title_content">
+                君康人寿退保试算
+            </div>
+            <div class="line"></div>
+            <ul class="ul_content">
+                <li>
+                    <label>保单号：</label><span>{{cancellationInfo.policyNo}}</span>
+                </li>
+                <!--<li>-->
+                    <!--<label>保单价值：</label><span>{{cancellationInfo.surrendValue}}</span>元-->
+                <!--</li>-->
+                <li>
+                    <label>手续费：</label><span>{{cancellationInfo.handlingFee}}</span>元
+                </li>
+
+                <li>
+                    <label>转出金额：</label><span>{{cancellationInfo.surrendValue}}</span>元
+                </li>
+                <li>
+                    <label>赎回银行卡：</label><span>{{payAccount}}</span>
+                </li>
+                <li>
+                    <label>手机号：</label><span>{{mobile}}</span>
+                </li>
+                <li>
+                    <label>短信验证码：</label>
+                    <input type="text" class="fill-in" maxlength="6" ms-duplex="Verification">
+                    <input type="button" value="获取验证码" class="getVertify" ms-click="waitTime" ms-disabled="status==1">
+                    <span class="wait" ms-if="status==1">{{wait}}s</span>
+                </li>
+                <li>
+                    <label>到账说明：</label><span>预计0-3个工作日内到账</span>
+                </li>
+                <li class="btn-area" style="padding: 0px">
+                    <button class="fill-btn" ms-click='goResult'>确认退保</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--<div class="refund-affirm">-->
+        <!--<div class="fill-area">-->
+            <!--<ul>-->
+                <!--<li class="fill-item">-->
+                    <!--<label>保单号：</label><span>{{cancellationInfo.policyNo}}</span>-->
+                <!--</li>-->
+                <!--<li class="fill-item">-->
+                    <!--<label>保单价值：</label><span>{{cancellationInfo.policyValue}}</span>元-->
+                <!--</li>-->
+                <!--<li class="fill-item">-->
+                    <!--<label>手续费：</label><span>{{cancellationInfo.fee}}</span>元-->
+                <!--</li>-->
+
+                <!--<li class="fill-item">-->
+                    <!--<label>转出金额：</label><span>{{cancellationInfo.policyValue}}</span>元-->
+                <!--</li>-->
+                <!--<li class="fill-item">-->
+                    <!--<label>赎回银行卡：</label><span>{{cancellationInfo.acount}}</span>-->
+                <!--</li>-->
+                <!--<li class="fill-item">-->
+                    <!--<label>手机号：</label><span>{{cancellationInfo.mobilePhone}}</span>-->
+                <!--</li>-->
+                <!--<li class="fill-item">-->
+                    <!--<label>短信验证码：</label><input type="text" class="fill-in" maxlength="6"><input type="button" value="获取验证码" class="getVertify">-->
+                <!--</li>-->
+                <!--<li class="fill-item">-->
+                    <!--<label>到账说明：</label><span>预计0-3个工作日内到账</span>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>

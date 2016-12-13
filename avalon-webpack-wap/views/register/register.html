@@ -1,0 +1,32 @@
+<div ms-controller="register" id="register">
+    <div class="banner">
+        <p class="p1">注册领赠险</p>
+        <p class="p2">360度全方位保障</p>
+    </div>
+    <div class="content">
+        <div class="sub_content">
+            <input ms-duplex="userPhone" class="account" type="text" placeholder="请输入手机号码" maxlength="11"/>
+        </div>
+        <div class="sub_content">
+            <input ms-duplex="phoneVCode" class="phoneVCode" type="text" placeholder="验证码" maxlength="6"/>
+            <input ms-on-click="sendMes" ms-disabled="status==1" type="button" class="getMessage" value="获取校验码"/>
+        </div>
+        <div class="sub_content">
+            <input ms-duplex="userPwd" class="password" ms-attr-type="{{pwdType}}" placeholder="请输入密码"/>
+            <div class="eye" ms-on-click="isEyeShowFun"></div>
+        </div>
+        <div class="forget_pwd">
+            <div class="checkbox checkbox1" ms-if="isAgree==true" ms-click="agree" >
+
+            </div>
+            <div class="checkbox checkbox2" ms-if="isAgree==false" ms-click="agree">
+
+            </div>
+            <div class="protocal">我已阅读<a href="#!/registerPro">《注册协议》</a></div>
+            <div class="prompt">已有账号？<a href="#!/login">立即登录</a></div>
+        </div>
+
+    </div>
+    <div class="register"><a href="javascript:" ms-on-click="goRegister">创建账号</a></div>
+    <div class="service">客服电话：4000123456（09:00-21:00）</div>
+</div>

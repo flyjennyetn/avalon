@@ -1,0 +1,17 @@
+<img  ms-if="navStatus == 1" class="LPIns_bn" src="images/funHall_banner.png" alt=""/>
+<div id="inquire" ms-controller="inquire">
+    <div class="nc">
+        <p class="place" ms-if="navStatus == 1">当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > {{name}}</p>
+        <p class="place" ms-if="navStatus == 0">当前位置：<a href="#!/home">首页</a> > {{name}}</p>
+        <div ms-if="contentsList!=''" ms-repeat="contentsList" class="contentsList">
+            <h3>{{el.name}}</h3>
+            <p class="line"></p>
+            <span class="content">{{el.content |html}}</span>
+        </div>
+        <div ms-if="contentsList==''" class="contentsList">
+            <h3>{{name}}</h3>
+            <p class="line"></p>
+            <span style="text-align: center;font-size: 18px;padding: 20px 0  70px 0;">暂无内容</span>
+        </div>
+    </div>
+</div>

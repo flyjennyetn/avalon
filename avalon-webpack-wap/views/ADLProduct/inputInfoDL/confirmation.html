@@ -1,0 +1,176 @@
+<div id="confirmation" ms-controller="confirmation">
+    <div class="productInfo">
+        <h3 class="productTitle">投保计划</h3>
+        <ul class="element">
+            <li class="el_li">
+                <span class="el_li_left">产品名称</span>
+                <span class="el_li_right">{{productName}}</span>
+            </li>
+            <li class="el_li">
+                <span class="el_li_left">保费</span>
+                <span class="el_li_right text_color">{{premium}}元</span>
+            </li>
+            <li class="el_li">
+                <span class="el_li_left">生效日期</span>
+                <span class="el_li_right">{{insuranceBeginDate}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">投保人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>姓名</label>
+                <span>{{holderInfo.holderName}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>身份证号</label>
+                <span>{{holderInfo.holderCardNo}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>证件有效期</label>
+                <span ms-if="holderInfo.cardEndDate == null||holderInfo.cardEndDate == ''">长期</span>
+                <span ms-if="holderInfo.cardEndDate != null||holderInfo.cardEndDate != ''">{{holderInfo.cardEndDate}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>国籍</label>
+                <span>{{holderInfo.citizenship|nationality}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>移动电话</label>
+                <span>{{holderInfo.holderPhone}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>邮箱</label>
+                <span>{{holderInfo.holderEmail}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>所属地区</label>
+                <span><a ms-repeat="arr1" ms-if-loop="el.code == holderInfo.residentProvince">{{el.name}}</a><a ms-repeat="arr2" ms-if-loop="el.code == holderInfo.residentCity">{{el.name}}</a><a ms-repeat="arr3" ms-if-loop="el.code == holderInfo.residentAddress">{{el.name}}</a></span>
+            </li>
+            <li class="inputInfo">
+                <label>详细地址</label>
+                <span>{{holderInfo.holderAddress}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>职业类别</label>
+                <span>{{holderInfo.jobCateId|professional}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>投保人年收入</label>
+                <span>{{holderInfo.income}}万元</span>
+            </li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">被保人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>投保人是被保人的</label>
+                <span>{{insuredInfo.insuredRelation | relationType}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>姓名</label>
+                <span>{{insuredInfo.insuredName}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>身份证号</label>
+                <span>{{insuredInfo.insuredCardNo}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>证件有效期</label>
+                <span ms-if="insuredInfo.cardEndDate == null||insuredInfo.cardEndDate == ''">长期</span>
+                <span ms-if="insuredInfo.cardEndDate != null||insuredInfo.cardEndDate != ''">{{insuredInfo.cardEndDate}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>国籍</label>
+                <span>{{holderInfo.citizenship|nationality}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>移动电话</label>
+                <span>{{insuredInfo.insuredPhone}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>邮箱</label>
+                <span>{{insuredInfo.insuredEmail}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>所属地区</label>
+                <span><a ms-repeat="arr1" ms-if-loop="el.code == insuredInfo.residentProvince">{{el.name}}</a><a ms-repeat="arr2" ms-if-loop="el.code == insuredInfo.residentCity">{{el.name}}</a><a ms-repeat="arr3" ms-if-loop="el.code == insuredInfo.residentAddress">{{el.name}}</a></span>
+            </li>
+            <li class="inputInfo">
+                <label>详细地址</label>
+                <span>{{insuredInfo.insuredAddress}}</span>
+            </li>
+            <li class="inputInfo">
+                <label>被保人身高</label>
+                <span>{{insuredInfo.height}}cm</span>
+            </li>
+            <li class="inputInfo">
+                <label>被保人体重</label>
+                <span>{{insuredInfo.weightl}}kg</span>
+            </li>
+            <li class="inputInfo">
+                <label>被保人年收入</label>
+                <span>{{insuredInfo.income}}万元</span>
+            </li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">受益人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>受益人</label>
+                <span>{{benefitInfoType}}</span>
+            </li>
+            <ul ms-if="insuredInfo.isLegal == 0">
+                <li class="inputInfo">
+                    <label>与被保人关系</label>
+                    <span>{{benefitInfo.benefitRelation|relationType}}</span>
+                </li>
+                <li class="inputInfo">
+                    <label>受益人类别</label>
+                    <span>死亡受益人</span>
+                </li>
+                <li class="inputInfo">
+                    <label>受益人级别</label>
+                    <span>第一受益人</span>
+                </li>
+                <li class="inputInfo">
+                    <label>姓名</label>
+                    <span>{{benefitInfo.benefitName}}</span>
+                </li>
+                <li class="inputInfo">
+                    <label>身份证号</label>
+                    <span>{{benefitInfo.benefitCardNo}}</span>
+                </li>
+                <li class="inputInfo">
+                    <label>证件有效期</label>
+                    <span ms-if="benefitInfo.cardEndDate == null||benefitInfo.cardEndDate == ''">长期</span>
+                    <span ms-if="benefitInfo.cardEndDate != null||benefitInfo.cardEndDate != ''">{{benefitInfo.cardEndDate}}</span>
+                </li>
+                <li class="inputInfo">
+                    <label>收益份额</label>
+                    <span>1</span>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">代理人信息</h3>
+        <ul class="Info">
+            <li class="inputInfo">
+                <label>代理人编码</label>
+                <span>{{orderInfo.agentCode}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="read_info">
+    <i ms-click="agreeFun" ms-class="{{checkBoxStatus?'':'active'}}"></i><span class="content">本人已充分了解本产品，同意并接受<a href="doc/DL1BXTK.pdf">《产品条款》</a>、<a href="doc/DL1CPSMS.pdf">《产品说明书》</a>、<a href="#!/tipBook">《人身保险投保提示书》</a>中的有关责任免除，确认并接受全部内容</span>
+    </div>
+    <div class="boxLine"></div>
+    <div class="buyBtn">
+        <span class="price">￥{{premium}}元</span>
+        <button class="Buy" ms-click="submitInfo">立即购买</button>
+    </div>
+</div>

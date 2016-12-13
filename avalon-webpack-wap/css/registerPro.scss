@@ -1,0 +1,14 @@
+#registerPro{
+  padding: .55rem .50rem;
+  background-color: #fff;
+  font-size: .26rem;
+  p{
+    &.first{
+      margin-bottom: .6rem;
+    }
+    &.sub{
+      color: #989898;
+      padding: .38rem 0;
+    }
+  }
+}

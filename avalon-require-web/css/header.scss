@@ -1,0 +1,92 @@
+@import "public";
+#header{
+  @include width();
+  position: relative;
+  height:120px;
+  background-color: white;
+  z-index: 88;
+  .top{
+    width: 100%;
+    background: url("../images/header_back.png");
+    background-size: cover;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/header_back.png',sizingMethod='scale');
+    .topConcent{
+      width: 1064px;
+      height: 30px;
+      margin: 0 auto;
+      line-height: 30px;
+      color: #fff;
+      .rt{
+        padding-right: 34px;
+        float: right;
+        a{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .bottom{
+    @include widthCen();
+    margin: 0 auto;
+    height: 95px;
+    position: relative;
+    left: 0;
+    top: 0;
+    .floatBox{
+      width: 148px;
+      height: 90px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      a{
+        width: 100%;
+        display: block;
+        img{
+          width: 100%;
+        }
+
+      }
+    }
+    .bottomBox{
+      width: 810px;
+      float: right;
+      text-align: center;
+      height: 88px;
+      line-height: 88px;
+      a{
+        @include inline-block();
+        width: 110px;
+        height: 88px;
+        position: relative;
+        line-height: 86px;
+        vertical-align: middle;
+        span{
+          @include color();
+          z-index: 99;
+        }
+        .font1{
+          display: inline;
+          color: #5D5D5D;
+          font-size: 16px;
+          font-family: "方正兰亭细黑_GBK";
+        }
+        .font0{
+          display: none;
+        }
+        img{
+          //height: 82px;
+          z-index: -1;
+          left: 38px;
+          vertical-align: middle;
+        }
+      }
+      a:hover .a_font{
+        display: none;
+      }
+      a:hover img{
+        display: inline;
+      }
+    }
+  }
+}

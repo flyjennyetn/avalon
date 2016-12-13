@@ -1,0 +1,93 @@
+<div id="active" ms-controller="active">
+    <div class="hd">
+        <img ms-on-click="quit" src="images/activeTitle.png" alt=""/>
+        <p><a ms-on-click="showRule" href="javascript:">活动规则</a></p>
+    </div>
+    <p class="gift">集糖果赢取iPhone7、ipad mini4、京东E卡</p>
+    <div class="myCandy">
+        <img src="images/activeBg01.png" alt=""/>
+        <p class="num"><span>{{amount}}</span> 颗</p>
+        <p ms-if="friendsAmount != 0" class="friNum" ms-on-click="showFriList"><span>{{friendsAmount}}</span>位好友为你积攒糖果 </p>
+        <p ms-if="friendsAmount == 0" class="friNum"><span>{{friendsAmount}}</span>位好友为你积攒糖果 </p>
+    </div>
+    <div class="getCandy">
+        <img ms-if="isOkDate" ms-on-click="showInfo" src="images/activeBg02.png" alt=""/>
+        <img ms-if="!isOkDate" src="images/activeBg14.png" alt=""/>
+    </div>
+    <!--<div class="chance" ms-if="overPlus != 0 && overPlus == 10">*你还有<span>{{overPlus}}</span>次领取机会!</div>-->
+    <!--<div class="chance" ms-if="overPlus != 0 && overPlus != 10">*你还有<span>{{overPlus}}</span>次领取机会，距离下次领取还有<span>{{minutes}}</span>分<span>{{seconds}}</span>秒</div>-->
+    <!--<div class="chance" ms-if="overPlus == 0">*你还有<span>{{overPlus}}</span>次领取机会，请明天再来领取！</div>-->
+    <div class="headerBg">
+        <img src="images/activeBg33.png" style="position: relative;z-index: 99;"/>
+    </div>
+    <div class="listAll">
+        <div class="bg">
+            <img src="images/activeBg03.png"/>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper list">
+                <div class="swiper-slide subList" ms-repeat="rankingArr">
+                    <span class="listNum">{{$index+1}}</span>
+                    <img class="hdImg" ms-attr-src="{{el.headimgurl}}"/>
+                    <span class="name">{{el.nickname}}</span>
+                    <span class="numCandy"><i>{{el.amount}}</i>颗</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="service">如有任何问题请联系君康人寿客服电话400-889-3311</p>
+    <div ms-if="bouncedStatus" class="shade"></div>
+    <div  ms-if="bouncedStatus && bouncedIndex == 4" class="bounced">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg06.png" alt=""/>
+        <ul class="bouncedList">
+            <li class="subList" ms-repeat="friendArr">
+                <img class="hdImg" ms-src="{{el.headimgurl}}" alt=""/>
+                <span class="name">{{el.nickname}}</span>
+                <span class="numCandy"><i>{{el.amount}}</i>颗</span>
+            </li>
+        </ul>
+    </div>
+    <div ms-if="bouncedStatus && bouncedIndex == 3" class="bounced">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg09.png" alt=""/>
+    </div>
+    <div ms-if="bouncedStatus && bouncedIndex == 2" class="bounced">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg07.png" alt=""/>
+        <p class="congra">恭喜您，成功领取{{getAmount}}颗糖果！</p>
+    </div>
+    <div ms-if="bouncedStatus && bouncedIndex == 1" class="bounced">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg08.png" alt=""/>
+        <p class="congraNew">恭喜您，成功领取{{getAmount}}颗糖果！</p>
+        <div class="forNew">
+            <p class="line1">为了确保您账户安全及赢取大奖，请完成</p>
+            <p class="line2"><span ms-on-click="getFreeInsurance(0)">身份认证 </span>或<img ms-on-click="getFreeInsurance(1)" src="images/activeBg10.png" alt=""/></p>
+        </div>
+    </div>
+    <div  ms-if="bouncedStatus && bouncedIndex == 5" class="bounced">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg11.png" alt=""/>
+        <p class="noQuick">太心急啦<br/>等会再来吧！</p>
+    </div>
+    <div  ms-if="bouncedStatus && bouncedIndex == 6" class="bounced">
+        <div class="cancel"><img ms-on-click="cancel" src="images/cancel.png" alt=""/></div>
+        <img class="bg" src="images/activeBg11.png" alt=""/>
+        <p class="noGreed">不能太贪心哦<br/>今天领取次数已经使用完毕啦<br/>明天再来领取吧！</p>
+    </div>
+</div>
+<style>
+    /*.swiper-container {*/
+        /*position: absolute;*/
+        /*margin-top: -8rem;*/
+        /*z-index: 1;*/
+    /*}*/
+    /*.swiper-wrapper{*/
+        /*transform: translate3d(0px, .3rem, 0px)!important;*/
+    /*}*/
+    .swiper-slide{
+        /*height: 2.9rem!important;*/
+        /*height: 22%!important;*/
+    }
+</style>

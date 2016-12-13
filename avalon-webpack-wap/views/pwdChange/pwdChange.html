@@ -1,0 +1,12 @@
+<div ms-controller="pwdChange" id="pwdChange">
+    <div class="content">
+        <div class="sub_content">
+            <input ms-duplex="newPwd" class="password" ms-attr-type="{{pwdType}}" placeholder="密码"/>
+            <div class="eye" ms-on-click="isEyeShowFun"></div>
+        </div>
+        <div class="sub_content">
+            <input ms-duplex="confirmPwd" class="password" type="password" placeholder="确认密码"/>
+        </div>
+    </div>
+    <div class="register"><a href="javascript:" ms-on-click="save">提交</a></div>
+</div>

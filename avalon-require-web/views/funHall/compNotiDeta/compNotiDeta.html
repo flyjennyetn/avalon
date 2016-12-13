@@ -1,0 +1,38 @@
+<div id="compNotiDeta" ms-controller="compNotiDeta">
+    <div class="compNotice_de">
+        <img class="compNotice_bn" src="images/compNotice_banner.png" alt=""/>
+        <div class="compNotice_ct">
+            <p class="ct_title">当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > <a href=""></a>理赔查询</p>
+            <div class="ct_con_title">君康人寿理赔查询</div>
+            <div class="ct_con_line">
+                <img src="images/compNotice_line.png" alt=""/>
+            </div>
+            <div class="ct_con">
+                <ul>
+                    <li class="ct_con_th">
+                        <span class="th_one">保单号</span>
+                        <span class="th_one">索赔资料<br/>审核结果</span>
+                        <span class="th_one">索赔<br>审核结果</span>
+                        <span class="th_one">拒付原因</span>
+                        <span class="th_one">支付方式</span>
+                        <span class="th_one">支付金额</span>
+                        <span class="th_one">支付时间</span>
+                        <span class="th_one">领取人姓名</span>
+                        <span class="th_one">证件号码</span>
+                    </li>
+                    <li class="ct_con_td" ms-repeat="claimsData">
+                        <span class="th_two">{{el.policyNo}}</span>
+                        <span class="th_two">{{el.claimDataAuditResult}}</span>
+                        <span class="th_two">{{el.claimAuditResult}}</span>
+                        <span class="th_two">{{el.refuseCause}}</span>
+                        <span class="th_two">{{el.payMode}}</span>
+                        <span class="th_two">{{el.payAmount}}</span>
+                        <span class="th_two">{{el.payTime}}</span>
+                        <span class="th_two">{{el.name}}</span>
+                        <span class="th_two">{{el.cardNo}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

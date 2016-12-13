@@ -1,0 +1,78 @@
+<div id="confirmInfo" ms-controller="confirmInfo">
+    <div class="productInfo">
+        <h3 class="productTitle">确认保单信息</h3>
+        <ul class="Info">
+            <li><label>产品名称</label><span>{{product.productName}}</span></li>
+            <!--<li><label>购买金额</label><span><em>{{price/100|number(2)}}</em>元</span></li>-->
+            <li class="time">
+                <label>起保时间</label>
+                <span>
+                    {{item.insuranceBeginDate | date("yyyy-MM-dd")}}至{{item.insuranceEndDate|date("yyyy-MM-dd")}}
+                </span>
+            </li>
+            <li><label>保障期间</label><span>{{item.insurancePeriod | getPeriodName}}</span></li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">投保人信息</h3>
+        <ul class="Info">
+            <li><label>姓名</label><span>{{holderInfo.holderName}}</span></li>
+            <li><label>身份证号</label><span>{{holderInfo.holderCardNo}}</span></li>
+            <li><label>手机号码</label><span>{{holderInfo.holderPhone}}</span></li>
+            <li><label>邮箱地址</label><span>{{holderInfo.holderEmail}}</span></li>
+            <li><label>邮政编码</label><span>{{holderInfo.holderZip}}</span></li>
+            <li><label>详细地址</label><span  class="address">{{holderInfo.holderAddress}}</span></li>
+        </ul>
+    </div>
+    <div class="productInfo" ms-if="productType != 0">
+        <h3 class="productTitle">被保人信息</h3>
+        <ul class="Info">
+            <li ms-repeat="insuredInfoList"><label>与投保人关系</label><span>{{el.insuredRelation | relationType}}</span></li>
+        </ul>
+        <ul class="Info" ms-if="insuredInfoList[0].insuredRelation != 1">
+            <li><label>姓名</label><span>{{insuredInfoList[0].insuredName}}</span></li>
+            <li><label>身份证号</label><span>{{insuredInfoList[0].insuredCardNo}}</span></li>
+            <li><label>手机号码</label><span>{{insuredInfoList[0].insuredPhone}}</span></li>
+            <li><label>邮箱地址</label><span>{{insuredInfoList[0].insuredEmail}}</span></li>
+            <li><label>邮政编码</label><span>{{insuredInfoList[0].insuredZip}}</span></li>
+            <li><label>详细地址</label><span class="address">{{insuredInfoList[0].insuredAddress}}</span></li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">受益人</h3>
+        <ul class="Info" ms-if="insuredInfoList[0].insuredRelation != 1">
+            <li>法定</li>
+        </ul>
+    </div>
+
+
+    <div class="terms">
+        <i ms-click="agreeFun" ms-class="{{checkBoxStatus?'':'active'}}"></i>
+        <p>本人充分已阅读并同意<a ms-repeat="productComment" ms-href="el.proCommDetailList[0].productCommentFilePath" target="_blank">《{{el.productCommentName}}》</a></p>
+    </div>
+    <div class="boxLine"></div>
+    <div class="buyBtn">
+        <span class="price">￥{{premiums}}</span>
+        <button class="Buy" ms-click="submitPay">立即购买</button>
+    </div>
+    <form name="payForm" id="payForm" ms-attr-action="payURL"  method="post">
+        <input type="hidden"  id="clientSysCode" name="clientSysCode"  ms-attr-value="payInfo.clientSysCode" />
+        <input type="hidden"  id="transCode" name="transCode" ms-attr-value="payInfo.transCode"/>
+        <input type="hidden"  id="shopId" name="shopId" ms-attr-value="payInfo.shopId" />
+        <input type="hidden"  id="shopUid" name="shopUid" ms-attr-value="payInfo.shopUid" />
+        <input type="hidden"  id="busiOrderId" name="busiOrderId" ms-attr-value="payInfo.busiOrderId" />
+        <input type="hidden"  id="busiOrderAmt" name="busiOrderAmt" ms-attr-value="payInfo.busiOrderAmt" />
+        <input type="hidden"  id="busiOrderDesc" name="busiOrderDesc" ms-attr-value="payInfo.busiOrderDesc" />
+        <input type="hidden"  id="busiOrderTime" name="busiOrderTime" ms-attr-value="payInfo.busiOrderTime" />
+        <input type="hidden"  id="busiSeqId" name="busiSeqId" ms-attr-value="payInfo.busiSeqId" />
+        <input type="hidden"  id="noticeUrl" name="noticeUrl" ms-attr-value="payInfo.noticeUrl" />
+        <input type="hidden"  id="pgType1" name="pgType1" ms-attr-value="payInfo.pgType1" />
+        <input type="hidden"  id="pgType2" name="pgType2" ms-attr-value="payInfo.pgType2" />
+        <input type="hidden"  id="pgType3" name="pgType3" ms-attr-value="payInfo.pgType3" />
+        <input type="hidden"  id="shopNonce" name="shopNonce" ms-attr-value="payInfo.shopNonce" />
+        <input type="hidden"  id="shopSign" name="shopSign" ms-attr-value="payInfo.shopSign" />
+        <input type="hidden"  id="shopVer" name="shopVer" ms-attr-value="payInfo.shopVer" />
+        <input type="hidden"  id="successUrl" name="successUrl" ms-attr-value="payInfo.successUrl" />
+        <input type="hidden"  id="token" name="token" ms-attr-value="payInfo.token"/>
+    </form>
+</div>

@@ -1,0 +1,85 @@
+#policyList{
+  background: #f2f2f2;
+  padding: 0 .3rem;
+  min-height: 100%;
+  .list{
+    padding-top: .3rem;
+    li{
+      position: relative;
+      padding: .45rem 0 .55rem .55rem;
+      margin-top: .3rem;
+      background: url('../images/policyList02.png') 93% center no-repeat;
+      background-size: 1.4rem 1.4rem;
+      background-color: #fff;
+      &:first-child{
+        margin-top: 0;
+      }
+      &.active{
+        background: url('../images/policyList01.png') 93% center no-repeat;
+        background-size: 1.4rem 1.4rem;
+        background-color: #fff;
+      }
+      .p_name{
+        font-size: .3rem;
+        color: #f05e45;
+        margin-bottom: .6rem;
+      }
+      .p_guarantee{
+        font-size: .24rem;
+        color: #999;
+        span{
+          color: #666;
+        }
+      }
+      .status{
+        position: absolute;
+        top: 43%;
+        right: 10%;
+        font-size: .26rem;
+        color: #268ec2;
+        transform:rotate(-28deg);
+      }
+    }
+    .bottomLine{
+      padding: .5rem 0;
+      text-align: center;
+      color: #f05f46;
+      font-size: .3rem;
+      background: none;
+      margin: 0;
+      .line{
+        vertical-align: middle;
+        display: inline-block;
+        width: 30%;
+        border-bottom: 2px solid #f05f46;
+      }
+    }
+    .getMore {
+      text-align: center;
+      padding: .2rem 0;
+      background: #f05f46;
+      color: #fff;
+      font-size: .3rem;
+    }
+  }
+
+  .none{
+    margin-top: 2.3rem;
+    text-align: center;
+    .prompt{
+      font-size: .24rem;
+      color: #b1b1b1;
+      padding-top: 1.1rem;
+      margin-bottom: .4rem;
+      background: url("../images/policyList03.png") center top no-repeat;
+    }
+    .open{
+      font-size: .24rem;
+      padding: .2rem .75rem;
+      border: 1px solid #bfbebe;
+      border-radius: .1rem;
+      color: #625f5f;
+      background-color: #fff;
+    }
+  }
+}

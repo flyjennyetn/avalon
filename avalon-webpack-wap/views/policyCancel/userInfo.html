@@ -1,0 +1,21 @@
+<div id="userInfo" ms-controller="userInfo">
+    <div class="title">
+        <li><label>付款信息</label><span>银行转账</span></li>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">账户信息</h3>
+        <ul class="Info">
+            <li><label>用户名</label><span>{{Info.insName}}</span></li>
+            <li><label>证件类型</label><span>{{Info.holderCertiType|codeNum}}</span></li>
+            <li><label>证件号码</label><span>{{Info.holderCertiCode}}</span></li>
+            <li><label>开户银行</label><span>{{Info.accountBank}}</span></li>
+            <li><label>手续费</label><span ms-if="Info.handlingFee ==''||Info.handlingFee==null">0元</span>
+                <span ms-if="Info.handlingFee !=''||Info.handlingFee!=null">{{Info.handlingFee}}元</span></li>
+            <li class="last_li"><i ms-click="consent" ms-class="{{state?'active':''}}"></i>我已阅读并同意<a href="#!/customer">《转账授权客户须知》</a></li>
+        </ul>
+    </div>
+    <div class="lastBox">
+        <p>提示： 您可以拨打银行卡面上的咨询热线，查询分支行信息</p>
+        <button ms-click="next">核实账户信息</button>
+    </div>
+</div>

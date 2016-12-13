@@ -1,0 +1,53 @@
+<div id="policyDetail" ms-controller="policyDetail">
+    <div class="productInfo">
+        <h3 class="productTitle">产品信息</h3>
+        <ul class="Info">
+            <li><label>名称</label><span>{{insuranceInfo.productName}}</span></li>
+            <li><label>首交保费</label><span>1000元</span></li>
+            <li><label>保障期限</label><span>{{insuranceInfo.guaranteePeriod|getPeriodName}}</span></li>
+            <li><label>保障金额</label><span>50万</span></li>
+            <li><label>保障期间</label><span><em>{{policyInfo.insuranceBeginDate|date('yyyy-MM-dd')}}</em>至<em>{{policyInfo.insuranceEndDate|date('yyyy-MM-dd')}}</em></span></li>
+            <div class="responsibility">
+                <h3>保障责任</h3>
+                <p><label>人身意外伤害-身故、残疾</label><span>50万</span></p>
+                <p><label>意外医疗费用（免赔额100元，90%赔付）</label><span>50万</span></p>
+            </div>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">投保人信息</h3>
+        <ul class="Info">
+            <li><label>姓名</label><span>{{HolderInfo.holderName}}</span></li>
+            <li><label>身份证号</label><span>{{HolderInfo.holderCardNo}}</span></li>
+            <li><label>详细地址</label><span class="adderss">{{HolderInfo.holderAddress}}</span></li>
+            <li><label>邮编</label><span>缺少字段</span></li>
+            <li><label>手机号</label><span>{{HolderInfo.holderPhone}}</span></li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">被保人信息</h3>
+        <ul class="Info">
+            <li><label>与投保人关系</label><span>{{InsuredInfo.insuredRelation|relationType}}</span></li>
+            <li><label>姓名</label><span>{{InsuredInfo.insuredName}}</span></li>
+            <li><label>身份证号</label><span>{{InsuredInfo.insuredCardNo}}</span></li>
+            <li><label>手机号</label><span>{{InsuredInfo.insuredPhone}}</span></li>
+        </ul>
+    </div>
+    <div class="productInfo" style="padding-bottom: 1.16rem" ms-if="InsuredInfo.isLegal=='1'">
+        <h3 class="productTitle">受益人<span class="beneficiary">法定</span></h3>
+    </div>
+
+    <div class="productInfo" style="padding-bottom: 1.16rem" ms-if="InsuredInfo.isLegal!='1'">
+        <h3 class="productTitle">受益人</h3>
+        <ul class="Info">
+        <li><label>与投保人关系</label><span>父子</span></li>
+        <li><label>姓名</label><span>马小跳</span></li>
+        <li><label>身份证号</label><span>410728199105182018</span></li>
+        <li><label>手机号</label><span>15727338979</span></li>
+        </ul>
+    </div>
+    <!--<div class="buyBtn">-->
+        <!--<span class="price">¥<em>10000.00</em></span>-->
+        <!--<button class="goPay">去支付</button>-->
+    <!--</div>-->
+</div>

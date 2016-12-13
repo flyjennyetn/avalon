@@ -1,0 +1,66 @@
+<div id="myPolicy" ms-controller="myPolicy">
+    <div class="policy_banner">
+        <img src="images/funHall_banner.png" alt=""/>
+    </div>
+    <div class="policy_content">
+        <div class="nav_content">
+            当前位置：<a href="#!/home">首页</a> > <a href="#!/funHall">服务大厅</a> > 保单查询
+        </div>
+        <div class="info_content">
+            <div class="title_content">
+                君康人寿保单查询
+            </div>
+            <div class="line"></div>
+            <ul class="ul_content">
+                <li class="li_content clearFix">
+                    <span class="spanLeft"><i>*</i>&nbsp;客户姓名:</span>
+                    <input class="elRight" type="text" ms-duplex="name"  placeholder="请输入投保人的姓名" maxlength="40"/>
+                </li>
+                <li class="li_content clearFix">
+                    <span class="spanLeft"><i>*</i>&nbsp;证件类型:</span>
+                    <select class="elRight" ms-duplex="codeNum">
+                        <option value="" ms-attr-value="0">身份证</option>
+                        <option value="" ms-attr-value="1">护照</option>
+                        <option value="" ms-attr-value="2">军官证</option>
+                        <option value="" ms-attr-value="3">驾照</option>
+                        <option value="" ms-attr-value="4">户口本</option>
+                        <option value="" ms-attr-value="5">学生证</option>
+                        <!--<option value="" ms-attr-value="6">工作证</option>-->
+                        <!--<option value="" ms-attr-value="9">无证件</option>-->
+                    </select>
+                </li>
+                <li class="li_content clearFix">
+                    <span class="spanLeft"><i>*</i>&nbsp;证件号:</span>
+                    <input class="elRight" type="text" ms-duplex="codeId" placeholder="请输入投保人的证件号" maxlength="20"/>
+                </li>
+                <!--<li class="li_content clearFix">-->
+                    <!--<span class="spanLeft"><i>*</i>&nbsp;角色:</span>-->
+                    <!--&lt;!&ndash;<input class="elRight" type="text" ms-duplex="policyId"  placeholder="请输入保单号" maxlength="25"/>&ndash;&gt;-->
+                    <!--<select class="elRight" ms-duplex="cp">-->
+                        <!--<option value="" ms-attr-value="1">投保人</option>-->
+                        <!--<option value="" ms-attr-value="2">被保人</option>-->
+                    <!--</select>-->
+                <!--</li>-->
+                <li class="li_content clearFix">
+                    <span class="spanLeft"><i>*</i>&nbsp;手机号:</span>
+                    <input class="elRight" type="text" ms-duplex="mobile"  placeholder="请输入您投保时在我司预留的手机号" maxlength="11"/>
+                </li>
+                <li class="li_content clearFix">
+                    <span class="spanLeft"><i>*</i>&nbsp;手机验证码:</span>
+                    <input class="elRight" type="text" ms-duplex="Verification"  placeholder="请输入验证码" maxlength="6"/>
+                    <input  type="button" value="点击获取验证码" ms-click="waitTime" ms-attr-disabled="status==1" class="sendMsg">
+                    <span class="wait" ms-if="status==1">{{wait}}s</span>
+                </li>
+                <li class="button">
+                    <button class="btn" ms-on-click="submit()">保单查询</button>
+                </li>
+                <li class="wxts">
+                    <p class="title">温馨提示：</p>
+                    <p>证件投保人证件号支持多种证件类型，如身份证、护照、军官证、驾照、户口本、学生证等。</p>
+                    <p>请输入投保时预留手机号码；若您的手机号码已更改或投保时未预留，请到柜台办理或拨打400-889-3311行信息变更。</p>
+                    <p>团体保单客户可拨打400-889-3311进行查询号。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

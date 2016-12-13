@@ -1,0 +1,32 @@
+<div ms-controller="myIncomeD" id="myIncomeD">
+    <div class="list">
+        <ul>
+            <li>
+                <div class="pro_title">
+                    <p class="title">{{productName}}</p>
+                    <p class="intro">保单号：<span>{{policyNo}}</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="info">
+        <div class="infoSub">
+            <p class="infoSubL">积累天数（天）</p>
+            <p class="infoSubM">{{count}}</p>
+        </div>
+        <div class="infoSub">
+            <p class="infoSubL">累计收益（元）</p>
+            <p class="infoSubM">{{totalIncome}}</p>
+        </div>
+    </div>
+    <div class='infoD'>
+        <ul>
+            <li ms-repeat="list">
+                <span class="time">{{el.settleDate.substring(0,10)}}</span><span class="income">收益 <i>{{el.cint}}</i></span>
+                <div ms-if="$index==0" class="arrowTwo"></div>
+                <div ms-if="$index!=0" class="arrowOne"></div>
+            </li>
+        </ul>
+    </div>
+    <p class="loadMore">加载更多</p>
+</div>

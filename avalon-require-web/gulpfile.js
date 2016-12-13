@@ -50,33 +50,34 @@ gulp.task('watch', function() {
 //        .pipe(notify({ message: '合并压缩js' }));
 //});
 
-gulp.task('css', function() {
-    gulp.src(['css/*.css','js/libs/layer/skin/layer.css','js/libs/laypage/skin/laypage.css','js/libs/icheck/skins/square/_all.css'])
-        //.pipe(concat('main.css'))                            //- 合并后的文件名
-        //.pipe(minifycss())                                      //- 压缩处理成一行
-        .pipe(gulp.dest('.temp/css'))                               //- 输出文件本地
-        .pipe(notify({ message: 'css合并压缩' }));
-});
+// gulp.task('css', function() {
+//     gulp.src(['css/*.css','js/libs/layer/skin/layer.css','js/libs/laypage/skin/laypage.css','js/libs/icheck/skins/square/_all.css'])
+//         //.pipe(concat('main.css'))                            //- 合并后的文件名
+//         //.pipe(minifycss())                                      //- 压缩处理成一行
+//         .pipe(gulp.dest('.temp/css'))                               //- 输出文件本地
+//         .pipe(notify({ message: 'css合并压缩' }));
+// });
 
 
 //压缩图片mian
 gulp.task('images', function() {
     return gulp.src('images/*')
-        //.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }).on('error', function(e){
+        // .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }).on('error', function(e){
         //    console.log(e);
-        //}))
+        // }))
         .pipe(gulp.dest('dist/images'))
-        .pipe(notify({ message: 'Images压缩生成成功' })
-    );
+    // .pipe(notify({ message: 'Images压缩生成成功' }));
+
 });
 
 
 gulp.task('rjs', function () {
     return gulp.src('js/main.js')
         .pipe(requirejsOptimize({
-            name: 'js/main',
             baseUrl: './',
-            mainConfigFile: './require-config.js',
+            name: 'js/main',
+            exclude:['js/require/normalize'] ,
+            mainConfigFile: './js/main.js',
             findNestedDependencies: true,
             optimize: 'none',
             include: ['requireLib']
@@ -87,54 +88,68 @@ gulp.task('rjs', function () {
         //.pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('.temp/js'))
-        .pipe(notify({ message: 'js关联成功' })
-    );
-});
+    // .pipe(notify({ message: 'js关联成功' }));
 
-gulp.task('concat', function () {
-    return gulp.src(['.temp/js/main.js','js/libs/tongji.js'])
-        .pipe(jshint.reporter('default'))
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('.temp/js'))
-        //.pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('.temp/js'))
-        .pipe(notify({ message: 'js合并成功' })
-    );
 });
+//
+// gulp.task('concat', function () {
+//     return gulp.src(['.temp/js/main.js','js/libs/tongji.js'])
+//         .pipe(jshint.reporter('default'))
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('.temp/js'))
+//         //.pipe(rename({suffix: '.min'}))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('.temp/js'))
+//         .pipe(notify({ message: 'js合并成功' })
+//     );
+// });
 
 gulp.task('dev', function () {
-    return gulp.src(['.temp/js/*.js','.temp/css/*.css'],{ base:'.temp'})
+    return gulp.src(['.temp/js/*.js'],{ base:'.temp'})
         .pipe(rev())
         .pipe(gulp.dest('dist/'))
         .pipe(rev.manifest())
         .pipe(gulp.dest('.temp/'))
-        .pipe(notify({ message: '添加版本号' }))
+    // .pipe(notify({ message: '添加版本号' }))
 });
 
-gulp.task('copy', function(){
+gulp.task('html5shiv', function(){
     return gulp.src([
-        'js/libs/html5shiv.min.js',
-        'js/libs/respond.min.js',
+        'js/html5shiv.min.js'
     ])
-    .pipe(gulp.dest('dist/js'))
-    .pipe(notify({message : 'copy成功'}))
+        .pipe(gulp.dest('dist/js'))
+    // .pipe(notify({message : 'copy成功'}))
 });
 
 gulp.task('doc', function(){
     return gulp.src('doc/*')
         .pipe(gulp.dest('dist/doc/'))
-        .pipe(notify({message : 'copy成功'}))
+    // .pipe(notify({message : 'copy成功'}))
 });
 
+gulp.task('ttf', function(){
+    return gulp.src('Fonts/*')
+        .pipe(copy('dist/'))
+        .pipe(notify({message : 'Fonts copy成功'}))
+});
+
+
+
 gulp.task('layer', function(){
-    return gulp.src('js/libs/layer/skin/default/*').pipe(copy('dist/css',{prefix: 4}))
-        .pipe(notify({message : 'copy成功'}))
+    return gulp.src('js/layer/skin/default/*').pipe(copy('dist/js',{prefix: 1}))
+    // .pipe(notify({message : 'copy成功'}))
 });
-gulp.task('icheck', function(){
-    return gulp.src('js/libs/icheck/skins/square/*.png').pipe(copy('dist/css',{prefix: 5}))
-        .pipe(notify({message : 'copy成功'}))
+
+gulp.task('laydate', function(){
+    return gulp.src('js/laydate/skins/default/icon.*').pipe(copy('dist/js',{prefix: 1}))
+    // .pipe(notify({message : 'copy成功'}))
 });
+
+gulp.task('ueditor', function(){
+    return gulp.src('js/ueditor/**/*').pipe(copy('dist/js',{prefix: 1}))
+    // .pipe(notify({message : 'copy成功'}))
+});
+
 
 gulp.task('html', function(){
     return gulp.src("build.html")
@@ -142,7 +157,7 @@ gulp.task('html', function(){
             manifest: gulp.src('.temp/rev-manifest.json')
         }))
         .pipe(rename('index.html'))
-        .pipe(notify({message : '替换版本号移动成功'}))
+        // .pipe(notify({message : '替换版本号移动成功'}))
         .pipe(gulp.dest('dist/'))
 });
 
@@ -159,10 +174,9 @@ gulp.task('temp', function() {
 gulp.task('build', function () {
     runSequence(
         'clean',
-        ['images','copy','layer','icheck','doc'],
-        'css',
+        ['images','html5shiv','ueditor','layer'],
         'rjs',
-        'concat',
+        'ttf',
         'dev',
         'html',
         'temp'

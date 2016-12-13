@@ -2,72 +2,71 @@
  * Created by hejing on 15/11/25.
  */
 
-function getOpenId(options){
+function getOpenId(options) {
     var option = {
-        IPLocation:options.IPLocation,
-        inlet:options.inlet,
-        jackU : getUrlPara('jack'),
-        codes : getUrlPara('code'),
-        openid:localStorage.getItem('openid'),
-        appid:options.appid,
-        redirect_uri:options.redirect_uri
-    }
-
+        IPLocation: options.IPLocation,
+        inlet: options.inlet,
+        jackU: getUrlPara('jack'),//Ë¶ÅÂéªÁöÑÂú∞Êñπ  Âàó Ôºö‚Äòlogin‚Äô
+        codes: getUrlPara('code'),
+        openid: localStorage.getItem('wxds_openid'),
+        appid: options.appid,
+        redirect_uri: options.redirect_uri
+    };
+    //ÊòØÂê¶ÊòØÂæÆ‰ø°ÈáåÈù¢ÊâìÂºÄ
     var ua = navigator.userAgent.toLowerCase();
-    if(ua.match(/MicroMessenger/i)!="micromessenger") {
-        localStorage.setItem('jack',option.jackU);
+    if (ua.match(/MicroMessenger/i) != "micromessenger") {
+        localStorage.setItem('jack', option.jackU);
         specify();
         return false;
     }
-
-    if(isObj(option.jackU)){
-        localStorage.setItem('jack',option.jackU);
+    if (isObj(option.jackU)) {
+        localStorage.setItem('jack', option.jackU);
         localStorage.removeItem('code');
         //localStorage.removeItem('openid');
-        if(isObj(option.openid)){
+        if (isObj(option.openid)) {
             specify();
         }
     }
 
-    if(!isObj(option.openid) && !isObj(option.codes)){
+    if (!isObj(option.openid) && !isObj(option.codes)) {
         window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?" +
-            "appid="+option.appid+"&"+
-            "redirect_uri="+option.redirect_uri+
+            "appid=" + option.appid + "&" +
+            "redirect_uri=" + option.redirect_uri +
             "&response_type=code" +
             "&scope=snsapi_base" +
             "&state=1" +
             "&connect_redirect=1#wechat_redirect";
-    }else if(!isObj(option.openid) && isObj(option.codes)){
+    } else if (!isObj(option.openid) && isObj(option.codes)) {
         ga_ajax({
-            "async" : true,
-            "method" : "get",
-            "url" : option.IPLocation,
-            "data":{
-                "code":option.codes
+            "async": true,
+            "method": "get",
+            "url": option.IPLocation,
+            "data": {
+                "code": option.codes
             },
-            "success" : function(data){
+            "success": function (data) {
                 var obj = eval('(' + data + ')');
-                option.openid = obj.openid;
-                localStorage.setItem('openid',obj.openid);
+                option.openid = obj.result.openid;
+                localStorage.setItem('wxds_openid', obj.result.openid);
                 specify();
             },
-            "Error": function(text){
+            "Error": function (text) {
                 alert(text);
             }
         });
     }
 
-    function getUrlPara(strName){
-        var strHref =  location.href;
+    function getUrlPara(strName) {
+        var strHref = location.href;
         var intPos = strHref.indexOf("?");
         var strRight = strHref.substr(intPos + 1);
         var arrTmp = strRight.split("&");
-        for(var i = 0; i < arrTmp.length; i++) {
+        for (var i = 0; i < arrTmp.length; i++) {
             var arrTemp = arrTmp[i].split("=");
-            if(arrTemp[0].toUpperCase() == strName.toUpperCase()) {
-                if(arrTemp[1].indexOf('#') > 0){
-                    arrTemp[1] = arrTemp[1].substring(0,arrTemp[1].length-1);
-                }else{
+            if (arrTemp[0].toUpperCase() == strName.toUpperCase()) {
+                if (arrTemp[1].indexOf('#') > 0) {
+                    arrTemp[1] = arrTemp[1].substring(0, arrTemp[1].length - 1);
+                } else {
                     return arrTemp[1];
                 }
             }
@@ -75,107 +74,109 @@ function getOpenId(options){
         return null;
     }
 
-    function specify(){
+    function specify() {
         var jack = localStorage.getItem('jack');
         window.location.href = option.inlet[jack];
     }
 
-    function isObj(str){
+    function isObj(str) {
         var state = true;
-        if(str == null){
+        if (str == null) {
             state = false;
         }
-        if(str == undefined){
+        if (str == undefined) {
             state = false;
         }
-        if(str == 'undefined'){
+        if (str == 'undefined') {
             state = false;
         }
-        if(str == ""){
+        if (str == "") {
             state = false;
         }
-        if(str == "null"){
+        if (str == "null") {
             state = false;
         }
         return state;
     }
 
-    function writeObj(obj){
+    function writeObj(obj) {
         var description = "";
-        for(var i in obj){
-            var property=obj[i];
-            description+=i+" = "+property+"\n";
+        for (var i in obj) {
+            var property = obj[i];
+            description += i + " = " + property + "\n";
         }
         alert(description);
     }
 
 
-    // ºÊ»›xhr∂‘œÛ
-    function createXHR(){
-        if(typeof XMLHttpRequest != "undefined"){ // ∑«IE6‰Ø¿¿∆˜
+    // ÂÖºÂÆπxhrÂØπË±°
+    function createXHR() {
+        if (typeof XMLHttpRequest != "undefined") { // ÈùûIE6ÊµèËßàÂô®
             return new XMLHttpRequest();
-        }else if(typeof ActiveXObject != "undefined"){   // IE6‰Ø¿¿∆˜
+        } else if (typeof ActiveXObject != "undefined") {   // IE6ÊµèËßàÂô®
             var version = [
                 "MSXML2.XMLHttp.6.0",
                 "MSXML2.XMLHttp.3.0",
                 "MSXML2.XMLHttp",
             ];
-            for(var i = 0; i < version.length; i++){
-                try{
+            for (var i = 0; i < version.length; i++) {
+                try {
                     return new ActiveXObject(version[i]);
-                }catch(e){
-                    //Ã¯π˝
+                } catch (e) {
+                    //Ë∑≥Ëøá
                 }
             }
-        }else{
-            throw new Error("ƒ˙µƒœµÕ≥ªÚ‰Ø¿¿∆˜≤ª÷ß≥÷XHR∂‘œÛ£°");
+        } else {
+            throw new Error("ÊÇ®ÁöÑÁ≥ªÁªüÊàñÊµèËßàÂô®‰∏çÊîØÊåÅXHRÂØπË±°ÔºÅ");
         }
     }
-    // ◊™“Â◊÷∑˚
-    function params(data){
+
+    // ËΩ¨‰πâÂ≠óÁ¨¶
+    function params(data) {
         var arr = [];
-        for(var i in data){
+        for (var i in data) {
             arr.push(encodeURIComponent(i) + "=" + encodeURIComponent(data[i]));
         }
         return arr.join("&");
     }
-    // ∑‚◊∞ajax
-    function ga_ajax(obj){
+
+    // Â∞ÅË£Öajax
+    function ga_ajax(obj) {
         var xhr = createXHR();
-        obj.url = obj.url + "?rand=" + Math.random(); // «Â≥˝ª∫¥Ê
-        obj.data = params(obj.data);      // ◊™“Â◊÷∑˚¥Æ
-        if(obj.method === "get"){      // ≈–∂œ π”√µƒ «∑Ò «get∑Ω Ω∑¢ÀÕ
+        obj.url = obj.url + "?rand=" + Math.random(); // Ê∏ÖÈô§ÁºìÂ≠ò
+        obj.data = params(obj.data);      // ËΩ¨‰πâÂ≠óÁ¨¶‰∏≤
+        if (obj.method === "get") {      // Âà§Êñ≠‰ΩøÁî®ÁöÑÊòØÂê¶ÊòØgetÊñπÂºèÂèëÈÄÅ
             obj.url += obj.url.indexOf("?") == "-1" ? "?" + obj.data : "&" + obj.data;
         }
-        // “Ï≤Ω
-        if(obj.async === true){
-            // “Ï≤Ωµƒ ±∫Ú–Ë“™¥•∑¢onreadystatechange ¬º˛
-            xhr.onreadystatechange = function(){
-                // ÷¥––ÕÍ≥…
-                if(xhr.readyState == 4){
+        // ÂºÇÊ≠•
+        if (obj.async === true) {
+            // ÂºÇÊ≠•ÁöÑÊó∂ÂÄôÈúÄË¶ÅËß¶Âèëonreadystatechange‰∫ã‰ª∂
+            xhr.onreadystatechange = function () {
+                // ÊâßË°åÂÆåÊàê
+                if (xhr.readyState == 4) {
                     callBack();
                 }
             }
         }
-        xhr.open(obj.method,obj.url,obj.async);  // false «Õ¨≤Ω true «“Ï≤Ω // "demo.php?rand="+Math.random()+"&name=ga&ga",
-        if(obj.method === "post"){
-            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.open(obj.method, obj.url, obj.async);  // falseÊòØÂêåÊ≠• trueÊòØÂºÇÊ≠• // "demo.php?rand="+Math.random()+"&name=ga&ga",
+        if (obj.method === "post") {
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.send(obj.data);
-        }else{
+        } else {
             xhr.send(null);
         }
-        // xhr.abort(); // »°œ˚“Ï≤Ω«Î«Û
-        // Õ¨≤Ω
-        if(obj.async === false){
+        // xhr.abort(); // ÂèñÊ∂àÂºÇÊ≠•ËØ∑Ê±Ç
+        // ÂêåÊ≠•
+        if (obj.async === false) {
             callBack();
         }
-        // ∑µªÿ ˝æ›
-        function callBack(){
-            // ≈–∂œ «∑Ò∑µªÿ’˝»∑
-            if(xhr.status == 200){
+        // ËøîÂõûÊï∞ÊçÆ
+        function callBack() {
+            // Âà§Êñ≠ÊòØÂê¶ËøîÂõûÊ≠£Á°Æ
+            if (xhr.status == 200) {
                 obj.success(xhr.responseText);
-            }else{
-                obj.Error("ªÒ»° ˝æ› ß∞‹£¨¥ÌŒÛ¥˙∫≈Œ™£∫"+xhr.status+"¥ÌŒÛ–≈œ¢Œ™£∫"+xhr.statusText);
+            } else {
+                obj.Error("Ëé∑ÂèñÊï∞ÊçÆÂ§±Ë¥•ÔºåÈîôËØØ‰ª£Âè∑‰∏∫Ôºö" + xhr.status + "ÈîôËØØ‰ø°ÊÅØ‰∏∫Ôºö" + xhr.statusText);
             }
         }
     }

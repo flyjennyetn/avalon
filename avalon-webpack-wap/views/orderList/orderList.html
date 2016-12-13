@@ -1,0 +1,49 @@
+<!--&lt;!&ndash;<style>&ndash;&gt;-->
+    <!--&lt;!&ndash;/*滚动加载*/&ndash;&gt;-->
+    <!--&lt;!&ndash;.scrollable {&ndash;&gt;-->
+        <!--&lt;!&ndash;position: absolute;&ndash;&gt;-->
+        <!--&lt;!&ndash;width: 100%;&ndash;&gt;-->
+        <!--&lt;!&ndash;height: 100%;&ndash;&gt;-->
+        <!--&lt;!&ndash;top: 0;&ndash;&gt;-->
+        <!--&lt;!&ndash;bottom: 0;&ndash;&gt;-->
+        <!--&lt;!&ndash;left: 0;&ndash;&gt;-->
+        <!--&lt;!&ndash;right: 0;&ndash;&gt;-->
+        <!--&lt;!&ndash;/*overflow: hidden;*/&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;.scrollable-content {&ndash;&gt;-->
+        <!--&lt;!&ndash;width: 100%;&ndash;&gt;-->
+        <!--&lt;!&ndash;height: 100%;&ndash;&gt;-->
+        <!--&lt;!&ndash;overflow: auto;&ndash;&gt;-->
+        <!--<!-&#45;&#45;webkit-overflow-scrolling: touch;&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;</style>&ndash;&gt;-->
+<div id="orderList" ms-controller="orderList">
+    <div class="swiper-container">
+        <ul class="swiper-wrapper nav">
+            <li class="swiper-slide"  ms-repeat="orderType" ms-click="TypeList(el.id)">
+                {{el.name}}
+                <span ms-class="{{TypeCode == el.id? 'active':''}}"></span>
+            </li>
+        </ul>
+    </div>
+    <ul class="List">
+        <li ms-repeat="orderArr" class="ListArr" ms-click="goDetail(el.orderId)">
+            <h3 class="orderName">{{el.productName}}</h3>
+            <p class="order_1">
+                <span class="orderNum">保单号：</span>
+                <span class="Number">{{el.orderId}}</span>
+            </p>
+            <p class="order_2">
+                <span class="orderTime">创建时间：</span>
+                <span class="Time">{{el.createTime}}</span>
+            </p>
+        </li>
+        <li ms-if="loadStatus && orderArr.length != 0"  ms-on-click="getMore" class="getMore">加载更多</li>
+        <li ms-if="!loadStatus && orderArr.length != 0" class="bottomLine">
+            <span class="line"></span>我是有底线的！<span class="line"></span>
+        </li>
+        <li class="ListNone" ms-if="orderArr.length == 0">
+            <p>暂无{{TypeCode|ordernav}}订单</p>
+        </li>
+    </ul>
+</div>

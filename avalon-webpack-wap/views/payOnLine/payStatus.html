@@ -1,0 +1,21 @@
+<div ms-controller="payStatus" id="payStatus">
+    <div class="suc" ms-if="payResult == '0002'">
+        <span class="gx">恭喜您</span>
+        <p class="p2">购买已成功</p>
+        <div class="btn">
+            <span>返回首页</span>
+        </div>
+    </div>
+    <div class="fail"  ms-if="payResult == '0001' || payResult == '0003'">
+        <span class="failT">支付失败</span>
+        <div class="btn">
+            <span>重新支付</span>
+        </div>
+    </div>
+    <div class="wait" ms-if="payResult == '0007' || payResult == '0009'">
+        <span class="waitT">支付处理中</span>
+        <div class="btn">
+            <span>返回首页</span>
+        </div>
+    </div>
+</div>

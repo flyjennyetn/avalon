@@ -1,0 +1,57 @@
+#healthTold {
+  padding: .65rem 7% 0;
+  p {
+    font-size: .26rem;
+    color: #707070;
+    clear: both;
+  }
+  ul {
+    margin: .45rem 0;
+    overflow: hidden;
+    li {
+      float: left;
+      color: #707070;
+      padding: .12rem .4rem;
+      border: 1px solid #999;
+      border-radius: .4rem;
+      margin-left: 6%;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active {
+        color: #f85452;
+        border-color: #f85452;
+      }
+    }
+
+  }
+  .btn {
+    text-align: center;
+    span {
+      display: inline-block;
+      color: #fff;
+      border-radius: .4rem;
+      width: 80%;
+      height: .9rem;
+      line-height: .9rem;
+      background-color: #f85452;
+    }
+  }
+}
+
+#tipBook {
+  padding: 0 7% .5rem;
+  h2 {
+    font-size: .4rem;
+    text-align: center;
+    padding: .2rem 0;
+  }
+  h4 {
+    font-size: .3rem;
+    text-align: center;
+    padding: 0 0 .2rem 0;
+  }
+  p{
+    font-size: .24rem;
+  }
+}

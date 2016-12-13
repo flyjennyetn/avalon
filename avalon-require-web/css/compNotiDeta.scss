@@ -1,0 +1,104 @@
+@import "public";
+#compNotiDeta{
+  .compNotice_de{
+    .compNotice_bn{
+      @include width();
+      height: auto;
+    }
+    .compNotice_ct{
+      @include widthCen();
+      margin: 0 auto;
+      .ct_title{
+        font-size: 18px;
+        color: #9fa0a0;
+        margin: 45px 0 58px 0;
+        a{
+          color: #9fa0a0;
+        }
+      }
+      .ct_con_title{
+        height: 60px;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        line-height: 60px;
+        background: url("../images/compNotice_title.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .ct_con_line{
+        margin: 1px 0;
+      }
+      .ct_con{
+        ul{
+          .ct_con_th{
+            background-color: #5d5d5d;
+            .th_one{
+              display: table-cell;
+              width: 118px;
+              height: 70px;
+              color: #fff;
+              font-size: 18px;
+              //line-height: 70px;
+              vertical-align: middle;
+              text-align: center;
+              border-right: 1px solid #bababa;
+
+            }
+            .th_one:last-child{
+              border-right: none;
+            }
+          }
+          .ct_con_td{
+            background-color: #fcfcfc;
+            .th_two{
+              display: table-cell;
+              padding: 5px 5px;
+              color: #5d5d5d;
+              width: 118px;
+              height: 70px;
+              font-size: 19px;
+              vertical-align: middle;
+              text-align: center;
+              border-bottom: 1px dashed #bababa;
+              border-right: 1px solid #bababa;
+              word-break: break-all;
+            }
+            .th_two:last-child{
+              border-right: none;
+            }
+          }
+        }
+      }
+      form{
+        margin-bottom: 40px;
+        table{
+          @include width();
+          th{
+            background-color: #5d5d5d;
+            height: 70px;
+            color: #fff;
+            font-size: 19px;
+            text-align: center;
+            border-right: 1px solid #bababa;
+          }
+          th:last-child{
+            border-right: none;
+          }
+          td{
+            background-color: #fcfcfc;
+            color: #5d5d5d;
+            height: 70px;
+            font-size: 19px;
+            text-align: center;
+            border-bottom: 1px dashed #bababa;
+            border-right: 1px solid #bababa;
+          }
+          td:last-child{
+            border-right: none;
+          }
+        }
+      }
+
+    }
+  }
+}

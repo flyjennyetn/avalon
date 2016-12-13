@@ -1,0 +1,76 @@
+<div id="myIncome" ms-controller="myIncome">
+    <div class="hd">
+        <p class="ti">{{totalIncome}}</p>
+        <span class="tim">累计收益（元）</span>
+    </div>
+    <div class="info">
+        <div class="infoSub">
+            <p class="infoSubL">总金额（元）</p>
+            <p class="infoSubM">{{totalValue}}</p>
+        </div>
+        <div class="infoSub">
+            <p class="infoSubL">昨日收益（元）</p>
+            <p class="infoSubM">{{yIncome}}</p>
+        </div>
+    </div>
+    <!--<div class="noDetail">-->
+        <!--<p class="prompt">-->
+            <!--提示信息：您暂无投保产品，可联系客服进行咨询,<br/>客服电话为 <span> 400-889-3311</span>-->
+        <!--</p>-->
+        <!--<p></p>-->
+    <!--</div>-->
+    <div class="detail">
+        <div class="comp">
+            <span class="compN">君康人寿保险股份有限公司出品</span>
+        </div>
+
+        <div class="list">
+            <ul>
+                <li ms-repeat="policyList" ms-on-click="goDetail(el.policyNo,el.productName)">
+                    <div class="pro_title">
+                        <p class="title">{{el.productName}}</p>
+                    </div>
+                    <div class="income_area">
+                        <p class="income"><span>{{el.settleRate}}</span>%</p>
+                        <p>历史年化结算利率</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="price_area">
+                        <p class="price">持有金额 <span>{{el.endPrinInt}}<i>元</i></span></p>
+                        <p>昨日收益 <span>{{el.cint}}<i>元</i></span></p>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--<div class="detail">-->
+        <!--<span class="comp">君康人寿保险股份有限公司出品</span>-->
+        <!--<div class="list">-->
+            <!--<ul>-->
+                <!--<li ms-repeat="listArr" ms-on-click="goProDetail(el.productId)">-->
+                    <!--<div class="pro_title">-->
+                        <!--<p class="title">{{el.productName}}</p>-->
+                        <!--<p class="intro">{{el.productRemark}}</p>-->
+                    <!--</div>-->
+                    <!--<div class="income_area">-->
+                        <!--<p class="income"><span>{{el.yearIncome}}</span>%</p>-->
+                        <!--<p>历史年化投资回报率</p>-->
+                    <!--</div>-->
+                    <!--<div class="line"></div>-->
+                    <!--<div class="price_area">-->
+                        <!--<p class="price">投资金额 <span> {{el.price/100}} <i>元</i></span></p>-->
+                        <!--<p>投资期限 <span> {{el.guaranteePeriod|getPeriodName}} </span></p>-->
+                    <!--</div>-->
+                    <!--<div class="clear"></div>-->
+                <!--</li>-->
+                <!--<li ms-if="loadStatus"  ms-on-click="getMore" class="getMore">加载更多</li>-->
+
+            <!--</ul>-->
+            <!--<div ms-if="!loadStatus" class="bottomLine">-->
+                <!--<span class="line"></span>我是有底线的！<span class="line"></span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>

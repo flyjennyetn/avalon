@@ -1,0 +1,462 @@
+#inputInfoDL{
+  .productInfo{
+    width: 100%;
+    background: #ffffff;
+    .productTitle{
+      height:1.06rem;
+      background-color:#f2f2f2;
+      color:#f05f46;
+      font-size:.28rem;
+      line-height:1.06rem;
+      padding-left:7.3%;
+      background-image: url("../images/orange.png");
+      background-repeat: no-repeat;
+      background-position:4% center;
+      a{
+        display: inline-block;
+        float: left;
+        width: 30%;
+      }
+      .applicant{
+        text-align: right;
+        display: inline-block;
+        width: 70%;
+        float: right;
+        padding-right:4.4%;
+        .Relationship{
+          width: 25%;
+          height:.6rem ;
+        }
+      }
+    }
+    .element {
+      background: #ffffff;
+      width: 100%;
+      font-size: .28rem;
+      color: #707070;
+      .el_li {
+        padding: .36rem .4rem;
+        border-bottom: 1px solid #e5e5e5;
+        &:first-child {
+          border-top: 1px solid #e5e5e5;
+        }
+        .el_li_left {
+          display: inline-block;
+          width: 35%;
+          position: relative;
+        }
+        .el_li_right {
+          float: right;
+          width: 65%;
+          text-align: left;
+        }
+        .text_color{
+          color: #ed8a46;
+        }
+        .add_subtract {
+          height: .62rem;
+          position: relative;
+          .subtract {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: .62rem;
+            height: .62rem;
+            background: url('../images/subtract_ico.png') no-repeat;
+            background-size: cover;
+          }
+          input {
+            position: absolute;
+            top: 0;
+            left: .62rem;
+            width: 1.8rem;
+            height: .62rem;
+            border: 0;
+            text-align: center;
+            font-size: .3rem;
+            outline: none;
+          }
+          .add {
+            position: absolute;
+            top: 0;
+            right: 30%;
+            display: inline-block;
+            width: .62rem;
+            height: .62rem;
+            background: url('../images/add_ico.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        .buy_quick{
+          display: block;
+          margin-top: .3rem;
+          float: none;
+          width: 100%;
+          text-align: left;
+          a{
+            width: 17%;
+            height: .55rem;
+            display: inline-block;
+            font-size: .28rem;
+            border-radius: 1rem;
+            border: 1px solid #cccccc;
+            text-align: center;
+            line-height: .55rem;
+            margin-left: 9%;
+            &:first-child{
+              margin-left: 0;
+            }
+            &.active{
+              color: #ff6817;
+              border-color: #ff6817;
+            }
+          }
+
+        }
+      }
+    }
+    .Info{
+      width: 100%;
+      padding: .1rem 0;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        font-size:.28rem;
+        overflow: hidden;
+        padding: 0 4% 0 8.8%;
+        label{
+          width:30%;
+          float: left;
+        }
+        span{
+          width: 70%;
+          display: inline-block;
+          float: right;
+          text-align: left;
+          em{
+            color:#ed8a46;
+          }
+          .dateTime{
+            border: none;
+            width: 100%;
+          }
+        }
+      }
+      .time{
+        width:92%;
+        height: .7rem;
+        border: 1px solid #cccccc;
+        border-radius: .1rem;
+        margin: 0 auto;
+        line-height: .7rem;
+        padding: 0 0 0 4.7%;
+      }
+      .inputInfo{
+        width:92%;
+        height: .7rem;
+        border: 1px solid #cccccc;
+        border-radius: .1rem;
+        margin: 0.2rem auto;
+        line-height: .7rem;
+        padding: 0 0 0 4.6%;
+        span{
+          input{
+            width: 100%;
+          }
+          select{
+            border:none;
+            width: 50%;
+            height: 100%;
+          }
+          .select{
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+  .boxLine{
+    width: 100%;
+    height: .3rem;
+    background-color: #f5f5f5;
+    padding-bottom:1.32rem;
+  }
+  .buyBtn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.02rem;
+    background: #ffffff;
+    overflow: hidden;
+    .price{
+      display: inline-block;
+      width:40% ;
+      height: .65rem;
+      font-size:.4rem;
+      margin-top:.2rem ;
+      color:#ed8a46;
+      border-left: 1px solid #eeeeee;
+      padding-left: 4%;
+      line-height: .65rem;
+    }
+    .Buy{
+      display: inline-block;
+      border: none;
+      width: 56%;
+      height: .8rem;
+      background-color: #f05f46;
+      border-radius:.1rem ;
+      color:#ffffff;
+      font-size:.36rem;
+      text-align: center;
+      line-height: .8rem;
+    }
+  }
+}
+#confirmation{
+  .productInfo{
+    width: 100%;
+    background: #ffffff;
+    .productTitle{
+      height:1.06rem;
+      background-color:#f2f2f2;
+      color:#f05f46;
+      font-size:.28rem;
+      line-height:1.06rem;
+      padding-left:7.3%;
+      background-image: url("../images/orange.png");
+      background-repeat: no-repeat;
+      background-position:4% center;
+      a{
+        display: inline-block;
+        float: left;
+        width: 30%;
+      }
+      .applicant{
+        text-align: right;
+        display: inline-block;
+        width: 70%;
+        float: right;
+        padding-right:4.4%;
+        .Relationship{
+          width: 25%;
+          height:.6rem ;
+        }
+      }
+    }
+    .element {
+      background: #ffffff;
+      width: 100%;
+      font-size: .28rem;
+      color: #707070;
+      .el_li {
+        padding: .36rem .4rem;
+        border-bottom: 1px solid #e5e5e5;
+        &:first-child {
+          border-top: 1px solid #e5e5e5;
+        }
+        .el_li_left {
+          display: inline-block;
+          width: 35%;
+          position: relative;
+        }
+        .el_li_right {
+          float: right;
+          width: 65%;
+          text-align: left;
+        }
+        .text_color{
+          color: #ed8a46;
+        }
+        .add_subtract {
+          height: .62rem;
+          position: relative;
+          .subtract {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: .62rem;
+            height: .62rem;
+            background: url('../images/subtract_ico.png') no-repeat;
+            background-size: cover;
+          }
+          input {
+            position: absolute;
+            top: 0;
+            left: .62rem;
+            width: 1.8rem;
+            height: .62rem;
+            border: 0;
+            text-align: center;
+            font-size: .3rem;
+            outline: none;
+          }
+          .add {
+            position: absolute;
+            top: 0;
+            right: 30%;
+            display: inline-block;
+            width: .62rem;
+            height: .62rem;
+            background: url('../images/add_ico.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        .buy_quick{
+          display: block;
+          margin-top: .3rem;
+          float: none;
+          width: 100%;
+          text-align: left;
+          a{
+            width: 17%;
+            height: .55rem;
+            display: inline-block;
+            font-size: .28rem;
+            border-radius: 1rem;
+            border: 1px solid #cccccc;
+            text-align: center;
+            line-height: .55rem;
+            margin-left: 9%;
+            &:first-child{
+              margin-left: 0;
+            }
+            &.active{
+              color: #ff6817;
+              border-color: #ff6817;
+            }
+          }
+
+        }
+      }
+    }
+    .Info{
+      width: 100%;
+      padding: .1rem 0;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        font-size:.28rem;
+        overflow: hidden;
+        padding: 0 4% 0 8.8%;
+        label{
+          width:30%;
+          float: left;
+        }
+        span{
+          width: 70%;
+          display: inline-block;
+          float: right;
+          text-align: left;
+          em{
+            color:#ed8a46;
+          }
+          .dateTime{
+            border: none;
+            width: 100%;
+          }
+        }
+      }
+      .time{
+        width:92%;
+        height: .7rem;
+        border: 1px solid #cccccc;
+        border-radius: .1rem;
+        margin: 0 auto;
+        line-height: .7rem;
+        padding: 0 0 0 4.7%;
+      }
+      .inputInfo{
+        width:92%;
+        height: .7rem;
+        border: 1px solid #cccccc;
+        border-radius: .1rem;
+        margin: 0.2rem auto;
+        line-height: .7rem;
+        padding: 0 0 0 4.6%;
+        span{
+          input{
+            width: 100%;
+          }
+          select{
+            border:none;
+            width: 50%;
+            height: 100%;
+          }
+          .select{
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+  .read_info {
+    margin: .3rem 0 0 0;
+    padding: .25rem .6rem .2rem .25rem;
+    background-color: #ffffff;
+    i {
+      display: inline-block;
+      width: .3rem;
+      height: .3rem;
+      background: url('../images/blue_ico.png') no-repeat;
+      background-size: .3rem .3rem;
+      vertical-align: top;
+      &.active {
+        display: inline-block;
+        width: .3rem;
+        height: .3rem;
+        background: url('../images/duigou_1.png') no-repeat;
+        background-size: .3rem .3rem;
+        vertical-align: top;
+      }
+    }
+    .content {
+      display: inline-block;
+      padding: 0 0 0 .1rem;
+      font-size: .24rem;
+      width: 95%;
+      a{
+        color: #268ec2;
+      }
+    }
+  }
+  .boxLine{
+    width: 100%;
+    height: .3rem;
+    background-color: #f5f5f5;
+    padding-bottom:1.32rem;
+  }
+  .buyBtn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.02rem;
+    background: #ffffff;
+    overflow: hidden;
+    .price{
+      display: inline-block;
+      width:40% ;
+      height: .65rem;
+      font-size:.4rem;
+      margin-top:.2rem ;
+      color:#ed8a46;
+      border-left: 1px solid #eeeeee;
+      padding-left: 4%;
+      line-height: .65rem;
+    }
+    .Buy{
+      display: inline-block;
+      border: none;
+      width: 56%;
+      height: .8rem;
+      background-color: #f05f46;
+      border-radius:.1rem ;
+      color:#ffffff;
+      font-size:.36rem;
+      text-align: center;
+      line-height: .8rem;
+    }
+  }
+}

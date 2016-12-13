@@ -1,10 +1,20 @@
 /**
  * Created by flyjennyetn on 2016/1/12.
  */
-define([], function() {
+define(["style!../../css/footer"], function() {
     var footer = avalon.define({
-        $id: "footer"
+        $id: "footer",
+        cxfw:function(type){
+            location.href="#!/inquire/"+type
+        },
+        bdcx:function(){
+            location.href="#!/myPolicy"
+        },
+        wdcx:function(num){
+            location.href="#!/aboutUs/"+num
+        }
     });
+
     return avalon.controller(function($ctrl) {
         // 进入视图
         $ctrl.$onEnter = function() {
@@ -17,4 +27,4 @@ define([], function() {
         // 指定一个avalon.scan视图的vmodels，vmodels = $ctrl.$vmodels.concact(DOM树上下文vmodels)
         $ctrl.$vmodels = [footer];
     });
-})
+});

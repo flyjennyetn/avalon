@@ -1,0 +1,11 @@
+<div id="newsD" ms-controller="newsD">
+    <p><img src="images/newsC_bn.jpg" alt=""/></p>
+    <div class="nd_tit">
+        <p class="place">当前位置：<a href="#!/home">首页</a> > 新闻中心</p>
+        <h3>{{articleDetail.title |html}}</h3>
+        <p class="fbrq">发布日期：{{articleDetail.createDate}}    责任编辑：{{articleDetail.author}}</p>
+        <p class="cont">{{articleDetail.content |html}}</p>
+        <p class="xyp"  ms-repeat="doubleData" ms-if-loop="el.type=='up'" ms-click="detail(el.articleId,el.folderId)">上一篇：<span>{{el.title |html}}</span></p>
+        <p class="xyp"  ms-repeat="doubleData" ms-if-loop="el.type=='down'" ms-click="detail(el.articleId,el.folderId)">下一篇：<span>{{el.title |html}}</span></p>
+    </div>
+</div>

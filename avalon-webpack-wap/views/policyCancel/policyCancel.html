@@ -1,0 +1,31 @@
+<div id="policyCancel" ms-controller="policyCancel">
+    <p class="concent">
+        您购买的单品已过犹豫期，选择提前退保，保险公司将按一定比例收取手续费，但持有期间收益仍可取回.
+    </p>
+    <div class="productInfo">
+        <h3 class="productTitle">保单信息</h3>
+        <ul class="Info">
+            <li><label>保险名称</label><span>{{Info.mainProdName}}</span></li>
+            <li><label>生效日期</label><span>{{Info.effectiveDate}}</span></li>
+            <li><label>犹豫期截止日</label><span>{{Info.hesitantPeriodEndDate}}</span></li>
+        </ul>
+    </div>
+    <div class="productInfo">
+        <h3 class="productTitle">退款信息</h3>
+        <ul class="Info">
+            <li><label>手持金额</label>
+                <span ms-if="Info.handlingFee ==''||Info.handlingFee==null">{{Info.surrendValue}}元</span>
+                <span ms-if="Info.handlingFee !=''||Info.handlingFee!=null">{{Info.handlingFee+Info.surrendValue}}元</span>
+            </li>
+            <li><label>手续费</label>
+                <span ms-if="Info.handlingFee ==''||Info.handlingFee==null">0元</span>
+                <span ms-if="Info.handlingFee !=''||Info.handlingFee!=null">{{Info.handlingFee}}元</span>
+            </li>
+            <li><label></label><span class="last_li">实际退款金额&nbsp<i class="price">{{Info.surrendValue}}</i>元</span></li>
+        </ul>
+    </div>
+    <div class="lastBox">
+        <p>提示： 本次退款将在3-5个工作日退回您投保时使用的银行账户中</p>
+        <a ms-href="#!/userInfo/{{policyNo}}/{{mobile}}">核实保单信息</a>
+    </div>
+</div>

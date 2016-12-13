@@ -1,0 +1,16 @@
+<div id="phone" ms-controller="phone">
+    <div class="Mobile">
+        <span class="text-left">您的手机号为</span>
+        <p class="text-right">
+            <span>{{mobile}}</span>
+        </p>
+    </div>
+    <div class="inputBox">
+        <span>手机验证码</span>
+        <input type="number" placeholder="请输入验证码" oninput="if(value.length>6)value=value.slice(0,6)" ms-duplex="Verification">
+        <button ms-click="waitTime" ms-disabled="display==1">发送验证码<em ms-if="display==1">[{{wait}}]s</em></button>
+    </div>
+    <div class="last_box">
+        <button class="nextStep" ms-click="goResult">下一步</button>
+    </div>
+</div>
